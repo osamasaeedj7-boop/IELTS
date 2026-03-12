@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Student profile icon</title>
+  <desc id="desc">A rounded profile tile with a white student silhouette.</desc>
+  <defs>
+    <linearGradient id="tile" x1="20" y1="18" x2="140" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8f95ff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#6e6bf2" stop-opacity="0.18"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0" cy="0" r="1" gradientTransform="translate(114 34) rotate(90) scale(44)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="14" y="14" width="132" height="132" rx="40" fill="url(#tile)"/>
+  <rect x="14.5" y="14.5" width="131" height="131" rx="39.5" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+  <circle cx="113" cy="43" r="34" fill="url(#shine)"/>
+  <circle cx="80" cy="57" r="23" fill="#ffffff"/>
+  <path d="M35 131.2C35 107.1 55.1 88 80 88s45 19.1 45 43.2c0 8.2-6.6 14.8-14.8 14.8H49.8c-8.2 0-14.8-6.6-14.8-14.8Z" fill="#ffffff"/>
+</svg>

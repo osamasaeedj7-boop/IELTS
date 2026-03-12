@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">IELTS Speaking Mastery icon</title>
+  <desc id="desc">A blue rounded-square icon with a white microphone for the IELTS Speaking platform by T. Osama Saeed.</desc>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="20" x2="232" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5b56ef"/>
+      <stop offset="0.48" stop-color="#5049e7"/>
+      <stop offset="1" stop-color="#453fd9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(184 66) rotate(90) scale(52)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="url(#bg)"/>
+  <circle cx="184" cy="72" r="48" fill="url(#glow)"/>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="100" y="52" width="56" height="92" rx="28" fill="#ffffff" stroke="none"/>
+    <path d="M85 114c0 24.85 19.15 44 43 44s43-19.15 43-44" stroke-width="10"/>
+    <path d="M128 158v28" stroke-width="10"/>
+    <path d="M103 188h50" stroke-width="10"/>
+    <path d="M114 74h28" stroke="#5954ec" stroke-width="6" opacity="0.22"/>
+  </g>
+</svg>
