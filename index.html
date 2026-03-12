@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS Speaking Mastery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+  <link rel="stylesheet" href="assets/platform.css">
+  <script src="assets/platform.js" defer></script>
+</head>
+<body class="platform-body text-slate-800 font-sans">
+
+  <div class="platform-watermark">
+    <div class="text-slate-900/[0.03] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
+      T. Osama Saeed
+    </div>
+  </div>
+
+  <main class="platform-shell mx-auto max-w-5xl px-4 py-6 sm:px-8 sm:py-10">
+
+    <section class="platform-hero glass-card rounded-[2rem] border border-white/80 px-6 py-10 shadow-xl sm:px-10 sm:py-14">
+      <div class="hero-layout flex flex-col gap-8 text-left lg:flex-row lg:items-center lg:justify-between">
+        <div class="hero-copy max-w-3xl">
+          <p class="hero-kicker inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">
+            <i class="fa-solid fa-graduation-cap hero-kicker-icon" aria-hidden="true"></i>
+            <span>IELTS Speaking Course by T. Osama Saeed</span>
+          </p>
+          <h1 class="hero-title mt-4 text-4xl font-black text-slate-900 sm:text-5xl">IELTS Speaking Mastery</h1>
+          <p class="hero-subtitle mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+            Practice your speaking step by step with simple interactive lessons.
+          </p>
+        </div>
+        <div class="hero-icon-wrap mx-auto lg:mx-0" aria-hidden="true">
+          <div class="hero-icon-shell">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 glass-card rounded-3xl border border-white/80 px-5 py-5 shadow-sm sm:px-6">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-lg font-bold text-slate-900">Your progress</p>
+          <p class="mt-1 text-sm text-slate-500">Your progress is saved on this device.</p>
+        </div>
+        <p id="course-progress-label" class="text-sm font-semibold text-slate-600">0 of 3 lessons completed</p>
+      </div>
+      <div class="mt-4 h-3 rounded-full bg-slate-200">
+        <div id="course-progress-bar" class="h-full w-0 rounded-full bg-indigo-600"></div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="section-kicker inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">
+            <i class="fa-solid fa-circle-info section-kicker-icon" aria-hidden="true"></i>
+            <span>Info</span>
+          </p>
+        </div>
+        <p class="text-sm font-semibold text-slate-500">T. Osama Saeed</p>
+      </div>
+
+      <section class="glass-card rounded-[2rem] border border-white/80 p-6 shadow-sm sm:p-7">
+        <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          <article class="info-top-card rounded-[1.75rem] p-5 sm:p-6">
+            <div class="flex items-start gap-4">
+              <img class="info-top-avatar h-20 w-20 shrink-0" src="assets/profile-can.svg" alt="Can profile icon">
+              <div>
+                <p class="info-top-kicker text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">Student</p>
+                <h3 class="info-top-name mt-2 text-2xl font-black text-slate-900">Can</h3>
+                <p class="info-top-copy mt-2 text-sm leading-7 text-slate-500">
+                  Private IELTS speaking classes with T. Osama Saeed.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Level</p>
+              <p class="mt-2 text-xl font-black text-slate-900">B2</p>
+            </article>
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Program Type</p>
+              <p class="mt-2 text-lg font-black text-slate-900">Private Classes</p>
+            </article>
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Purpose</p>
+              <p class="mt-2 text-lg font-black text-slate-900">IELTS Speaking</p>
+            </article>
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Schedule</p>
+              <p class="mt-2 text-lg font-black text-slate-900">5 days a week</p>
+            </article>
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Duration</p>
+              <p class="mt-2 text-lg font-black text-slate-900">One month</p>
+            </article>
+            <article class="info-card rounded-3xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Teacher</p>
+              <p class="mt-2 text-lg font-black text-slate-900">T. Osama Saeed</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="summary-card rounded-3xl p-5">
+          <div class="flex items-center justify-between gap-3">
+            <p class="text-sm font-semibold text-slate-600">Done</p>
+            <span class="status-pill" data-state="done">Done</span>
+          </div>
+          <p class="mt-3 text-3xl font-black text-slate-900">3</p>
+        </article>
+        <article class="summary-card rounded-3xl p-5">
+          <div class="flex items-center justify-between gap-3">
+            <p class="text-sm font-semibold text-slate-600">Postponed</p>
+            <span class="status-pill" data-state="postponed">Postponed</span>
+          </div>
+          <p class="mt-3 text-3xl font-black text-slate-900">0</p>
+        </article>
+        <article class="summary-card rounded-3xl p-5">
+          <div class="flex items-center justify-between gap-3">
+            <p class="text-sm font-semibold text-slate-600">Undone</p>
+            <span class="status-pill" data-state="undone">Undone</span>
+          </div>
+          <p class="mt-3 text-3xl font-black text-slate-900">17</p>
+        </article>
+        <article class="summary-card rounded-3xl p-5">
+          <div class="flex items-center justify-between gap-3">
+            <p class="text-sm font-semibold text-slate-600">Make-up</p>
+            <span class="status-pill" data-state="makeup">Make-up</span>
+          </div>
+          <p class="mt-3 text-3xl font-black text-slate-900">0</p>
+        </article>
+      </div>
+
+      <section class="calendar-shell mt-5 glass-card rounded-[2rem] border border-white/80 p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h3 class="calendar-title text-xl font-black sm:text-2xl">Study Calendar</h3>
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              A quick view of every day from your first class to your last one.
+            </p>
+          </div>
+          <div class="calendar-meta">
+            <span class="rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-700 sm:text-sm">20 class days</span>
+          </div>
+        </div>
+
+        <div class="calendar-legend mt-4">
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="done"></span>Done</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="postponed"></span>Postponed</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="undone"></span>Undone</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="makeup"></span>Make-up</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="off"></span>No class</span>
+        </div>
+
+        <div class="study-month-grid mt-5">
+          <section class="study-month-track">
+            <div class="study-month-header">
+              <div>
+                <p class="study-month-label">March 2026</p>
+                <p class="study-month-subtitle">17 class days</p>
+              </div>
+            </div>
+
+            <div class="study-day-list">
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="done" title="Mon 9 Mar 2026, 05:00 P.M.">9</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="done" title="Tue 10 Mar 2026, 11:30 A.M.">10</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 11 Mar 2026, 11:30 A.M.">11</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="undone" title="Thu 12 Mar 2026, 11:30 A.M.">12</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="undone" title="Fri 13 Mar 2026, 11:30 A.M.">13</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 14 Mar 2026, no class">14</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 15 Mar 2026, no class">15</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="undone" title="Mon 16 Mar 2026, 05:00 P.M.">16</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="undone" title="Tue 17 Mar 2026, 11:30 A.M.">17</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="undone" title="Wed 18 Mar 2026, 11:30 A.M.">18</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="undone" title="Thu 19 Mar 2026, 11:30 A.M.">19</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="undone" title="Fri 20 Mar 2026, 11:30 A.M.">20</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 21 Mar 2026, no class">21</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 22 Mar 2026, no class">22</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="undone" title="Mon 23 Mar 2026, 05:00 P.M.">23</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="undone" title="Tue 24 Mar 2026, 11:30 A.M.">24</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="undone" title="Wed 25 Mar 2026, 11:30 A.M.">25</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="undone" title="Thu 26 Mar 2026, 11:30 A.M.">26</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="undone" title="Fri 27 Mar 2026, 11:30 A.M.">27</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 28 Mar 2026, no class">28</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 29 Mar 2026, no class">29</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="undone" title="Mon 30 Mar 2026, 05:00 P.M.">30</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="undone" title="Tue 31 Mar 2026, 05:00 P.M.">31</span></span>
+            </div>
+          </section>
+
+          <section class="study-month-track">
+            <div class="study-month-header">
+              <div>
+                <p class="study-month-label">April 2026</p>
+                <p class="study-month-subtitle">3 class days</p>
+              </div>
+            </div>
+
+            <div class="study-day-list">
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="undone" title="Wed 1 Apr 2026, 11:30 A.M.">1</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="undone" title="Thu 2 Apr 2026, 11:30 A.M.">2</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="undone" title="Fri 3 Apr 2026, 11:30 A.M.">3</span></span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="upcoming-card mt-3 glass-card rounded-3xl border border-white/80 px-4 py-3 shadow-sm sm:px-5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p class="upcoming-copy text-sm font-semibold text-slate-700">
+            Next class: <span class="upcoming-time font-black text-slate-900">Thu 12 Mar 2026 at 11:30 A.M.</span>
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="status-pill upcoming-pill" data-state="undone">Undone</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5">
+        <h2 class="section-kicker inline-flex items-center gap-3 text-2xl font-black sm:text-3xl">
+          <i class="fa-solid fa-book-open section-kicker-icon" aria-hidden="true"></i>
+          <span>Lessons</span>
+        </h2>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-indigo-200 p-6 shadow-md" data-lesson-id="lesson-1">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-xl font-black text-indigo-700">1</div>
+            <span class="status-pill" data-role="badge" data-state="live">Start Here</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Speaking Basics</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Learn the speaking format and the most important rules for better answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-indigo-600" data-role="status">Start with this lesson first.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson1.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-indigo-50 px-4 py-3 text-sm font-bold text-indigo-700 transition-colors hover:bg-indigo-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-2">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">2</div>
+            <span class="status-pill" data-role="badge" data-state="live">Next</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Clear Answers</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practice clear sentences, one main idea, and stronger simple answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 1.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson2.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-700 transition-colors hover:bg-blue-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-3">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">3</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Developing Answers</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Make your answers longer, more organized, and more confident.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 2.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson3.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md opacity-95">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-200 text-xl font-black text-slate-600">4</div>
+            <span class="status-pill" data-state="soon">Coming Soon</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Coming Soon</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            A new lesson will be added here soon so you can keep going step by step.
+          </p>
+          <div class="mt-auto pt-6">
+            <div class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm font-bold text-slate-500">
+              Coming Soon
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="mt-10 pb-2 text-center text-sm text-slate-500">
+      <p class="font-semibold text-slate-600">T. Osama Saeed</p>
+    </footer>
+
+  </main>
+</body>
+</html>

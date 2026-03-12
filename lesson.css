@@ -1,0 +1,544 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --royal-indigo-50: #eef2ff;
+    --royal-indigo-100: #e0e7ff;
+    --royal-indigo-200: #c7d2fe;
+    --royal-indigo-300: #a5b4fc;
+    --royal-indigo-500: #6366f1;
+    --royal-indigo-600: #5954ec;
+    --royal-indigo-700: #524ce7;
+    --royal-indigo-800: #4b45e0;
+    --royal-indigo-900: #463fda;
+}
+
+body.lesson-page {
+    background:
+        radial-gradient(circle at top, rgba(99, 102, 241, 0.14), transparent 32%),
+        linear-gradient(180deg, var(--royal-indigo-50) 0%, #f8fafc 42%, #f8fafc 100%);
+}
+
+.lesson-shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-watermark {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.lesson-header {
+    backdrop-filter: blur(14px);
+}
+
+.lesson-header .course-home-link {
+    border: 1px solid rgba(199, 210, 254, 0.24) !important;
+    background:
+        radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.12), transparent 28%),
+        linear-gradient(135deg, var(--royal-indigo-600) 0%, var(--royal-indigo-700) 42%, var(--royal-indigo-800) 74%, var(--royal-indigo-900) 100%) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 18px 34px -22px rgba(76, 70, 229, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease !important;
+}
+
+.lesson-header .course-home-link:hover {
+    transform: translateY(-1px);
+    background:
+        radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.14), transparent 28%),
+        linear-gradient(135deg, #6863f3 0%, #5f58ee 42%, #5550e7 74%, #4c47e0 100%) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 20px 38px -22px rgba(76, 70, 229, 0.56),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.lesson-header .course-home-link i {
+    color: #ffffff;
+}
+
+.lesson-main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: flex;
+    animation: lesson-fade-in 0.35s ease-out forwards;
+}
+
+@keyframes lesson-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bad-answer {
+    border-left: 4px solid #ef4444;
+    background: #fef2f2;
+    padding: 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    margin-bottom: 1rem;
+}
+
+.good-answer {
+    border-left: 4px solid #22c55e;
+    background: #f0fdf4;
+    padding: 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    margin-bottom: 1rem;
+}
+
+#progress-bar {
+    transition: width 0.25s ease-out;
+}
+
+#download-btn[hidden] {
+    display: none !important;
+}
+
+.lesson-complete #download-btn {
+    box-shadow: 0 18px 45px -22px rgba(79, 70, 229, 0.55);
+}
+
+.text-indigo-100,
+.text-blue-100 {
+    color: var(--royal-indigo-100) !important;
+}
+
+.text-indigo-200,
+.text-blue-200 {
+    color: var(--royal-indigo-200) !important;
+}
+
+.text-indigo-300,
+.text-blue-300 {
+    color: var(--royal-indigo-300) !important;
+}
+
+.text-indigo-400,
+.text-blue-400 {
+    color: var(--royal-indigo-500) !important;
+}
+
+.text-indigo-500,
+.text-blue-500 {
+    color: var(--royal-indigo-600) !important;
+}
+
+.text-indigo-600,
+.text-blue-600 {
+    color: var(--royal-indigo-700) !important;
+}
+
+.text-indigo-700,
+.text-blue-700 {
+    color: var(--royal-indigo-800) !important;
+}
+
+.text-indigo-800,
+.text-blue-800 {
+    color: var(--royal-indigo-900) !important;
+}
+
+.text-indigo-900,
+.text-blue-900 {
+    color: #312e81 !important;
+}
+
+.bg-indigo-50,
+.bg-blue-50 {
+    background-color: var(--royal-indigo-50) !important;
+}
+
+.bg-indigo-50\/50,
+.bg-blue-50\/50 {
+    background-color: rgba(238, 242, 255, 0.5) !important;
+}
+
+.bg-indigo-100,
+.bg-blue-100 {
+    background-color: var(--royal-indigo-100) !important;
+}
+
+.bg-indigo-500,
+.bg-blue-500 {
+    background-color: var(--royal-indigo-500) !important;
+}
+
+.bg-indigo-600,
+.bg-blue-600 {
+    background-color: var(--royal-indigo-600) !important;
+}
+
+.bg-indigo-700,
+.bg-blue-700 {
+    background-color: var(--royal-indigo-700) !important;
+}
+
+.border-indigo-100,
+.border-blue-100 {
+    border-color: rgba(224, 231, 255, 0.95) !important;
+}
+
+.border-indigo-200,
+.border-blue-200 {
+    border-color: rgba(199, 210, 254, 0.95) !important;
+}
+
+.border-indigo-300,
+.border-blue-300 {
+    border-color: rgba(165, 180, 252, 0.95) !important;
+}
+
+.border-indigo-400,
+.border-blue-400 {
+    border-color: rgba(129, 140, 248, 0.95) !important;
+}
+
+.hover\:bg-indigo-50:hover,
+.hover\:bg-blue-50:hover {
+    background-color: var(--royal-indigo-50) !important;
+}
+
+.hover\:bg-indigo-100:hover,
+.hover\:bg-blue-100:hover {
+    background-color: var(--royal-indigo-100) !important;
+}
+
+.hover\:bg-indigo-700:hover,
+.hover\:bg-blue-700:hover {
+    background-color: var(--royal-indigo-700) !important;
+}
+
+.hover\:border-indigo-200:hover,
+.hover\:border-blue-200:hover,
+.hover\:border-indigo-300:hover,
+.hover\:border-blue-300:hover {
+    border-color: rgba(165, 180, 252, 0.95) !important;
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 8mm;
+    }
+
+    html,
+    body,
+    body.lesson-page.print-ready-lesson.print-compact-lesson,
+    body.lesson-page.print-ready-lesson.print-compact-lesson *,
+    body.lesson-page.print-ready-lesson.print-compact-lesson *::before,
+    body.lesson-page.print-ready-lesson.print-compact-lesson *::after {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    html,
+    body,
+    body.lesson-page.print-ready-lesson.print-compact-lesson {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+        background: #ffffff !important;
+        overflow: visible !important;
+    }
+
+    .lesson-header,
+    .lesson-footer,
+    .screen-only {
+        display: none !important;
+    }
+
+    .lesson-watermark {
+        position: fixed !important;
+        inset: auto 8mm 8mm auto !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: flex-end !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        z-index: 0 !important;
+        opacity: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .lesson-watermark > div {
+        color: rgba(15, 23, 42, 0.34) !important;
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.14em !important;
+        line-height: 1 !important;
+        transform: none !important;
+        white-space: nowrap !important;
+    }
+
+    .lesson-shell {
+        position: static !important;
+        min-height: auto;
+        height: auto !important;
+        display: block !important;
+    }
+
+    .lesson-main.print-ready-main.print-compact-main {
+        display: block !important;
+        flex: none !important;
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide,
+    .print-ready-main.print-compact-main .slide.active {
+        position: relative !important;
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0.75rem !important;
+        margin: 0 0 3.5mm 0 !important;
+        box-sizing: border-box !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 1rem !important;
+        box-shadow: none !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        break-after: auto !important;
+        page-break-after: auto !important;
+    }
+
+    .print-ready-main.print-compact-main .slide::after,
+    .print-ready-main.print-compact-main .slide.active::after {
+        content: "T. Osama Saeed";
+        display: inline-flex;
+        margin-top: 0.4rem;
+        margin-left: auto;
+        padding: 0.18rem 0.55rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.96);
+        color: #475569;
+        font-size: 7pt;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+    }
+
+    .print-ready-main.print-compact-main .slide:last-child {
+        margin-bottom: 0 !important;
+        break-after: auto !important;
+        page-break-after: auto !important;
+    }
+
+    .print-ready-main.print-compact-main .slide + .slide {
+        margin-top: 0 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide,
+    .print-ready-main.print-compact-main .slide * {
+        min-height: 0 !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .p-8,
+    .print-ready-main.print-compact-main .slide .p-6 {
+        padding: 0.75rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .p-5,
+    .print-ready-main.print-compact-main .slide .p-4 {
+        padding: 0.6rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .p-3 {
+        padding: 0.45rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .px-6,
+    .print-ready-main.print-compact-main .slide .px-5,
+    .print-ready-main.print-compact-main .slide .px-4 {
+        padding-left: 0.7rem !important;
+        padding-right: 0.7rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .py-3,
+    .print-ready-main.print-compact-main .slide .py-2,
+    .print-ready-main.print-compact-main .slide .py-1 {
+        padding-top: 0.3rem !important;
+        padding-bottom: 0.3rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .gap-8,
+    .print-ready-main.print-compact-main .slide .gap-6 {
+        gap: 0.6rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .gap-4,
+    .print-ready-main.print-compact-main .slide .gap-3 {
+        gap: 0.4rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .gap-2 {
+        gap: 0.25rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .space-y-6 > :not([hidden]) ~ :not([hidden]),
+    .print-ready-main.print-compact-main .slide .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.45rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .space-y-3 > :not([hidden]) ~ :not([hidden]),
+    .print-ready-main.print-compact-main .slide .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.3rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mb-8 {
+        margin-bottom: 0.65rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mt-8 {
+        margin-top: 0.65rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mb-6 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mt-6 {
+        margin-top: 0.5rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mb-4 {
+        margin-bottom: 0.35rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mt-4 {
+        margin-top: 0.35rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mb-3,
+    .print-ready-main.print-compact-main .slide .mb-2 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mt-3,
+    .print-ready-main.print-compact-main .slide .mt-2 {
+        margin-top: 0.25rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .mt-12 {
+        margin-top: 0.75rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .pb-8 {
+        padding-bottom: 0.45rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .pt-4 {
+        padding-top: 0.3rem !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-6xl,
+    .print-ready-main.print-compact-main .slide .text-5xl {
+        font-size: 1.9rem !important;
+        line-height: 1.05 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-4xl {
+        font-size: 1.55rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-3xl {
+        font-size: 1.28rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-2xl {
+        font-size: 1.1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-xl,
+    .print-ready-main.print-compact-main .slide .text-lg {
+        font-size: 0.95rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .text-sm,
+    .print-ready-main.print-compact-main .slide .text-xs {
+        line-height: 1.3 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .leading-relaxed {
+        line-height: 1.35 !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .h-full,
+    .print-ready-main.print-compact-main .slide .flex-1,
+    .print-ready-main.print-compact-main .slide [class*="h-[60vh]"],
+    .print-ready-main.print-compact-main .slide .overflow-y-auto,
+    .print-ready-main.print-compact-main .slide .overflow-hidden,
+    .print-ready-main.print-compact-main .slide .overflow-x-hidden {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .print-ready-main.print-compact-main .slide .flex-1 {
+        flex: 0 1 auto !important;
+    }
+
+    .print-ready-main.print-compact-main .slide [style*="scrollbar-width"] {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding-right: 0 !important;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
