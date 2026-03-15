@@ -3,32 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Speaking Feedback - Can</title>
+    <title>IELTS Speaking Lesson 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+    <link rel="stylesheet" href="assets/lesson.css">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .lesson-4-report {
+            width: 100%;
+        }
+
         @media print {
-            body { background-color: white; padding: 0; }
             .shadow-xl, .shadow-sm, .shadow-md { box-shadow: none !important; }
-            .print-break-inside-avoid { break-inside: avoid; }
-            .print-page-break-before { break-before: page; }
+            .print-break-inside-avoid {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .print-page-break-before {
+                break-before: page;
+                page-break-before: always;
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            try {
-                localStorage.setItem("ilets:lesson-4:completed", "true");
-            } catch (error) {
-                // Ignore storage errors so the page still renders normally.
-            }
-        });
-    </script>
 </head>
-<body class="bg-gray-100 text-gray-800 py-8 px-4 sm:px-8">
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-id="lesson-4" data-lesson-title="Lesson 4: Speaking Feedback">
 
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div class="lesson-watermark">
+        <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
+            T. Osama Saeed
+        </div>
+    </div>
+
+    <div class="lesson-shell">
+
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="index.html" class="course-home-link screen-only inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200">
+                    <i class="fas fa-arrow-left"></i>
+                    Course Home
+                </a>
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">IELTS Speaking</p>
+                    <h1 class="text-xl font-black text-slate-900 sm:text-2xl">Lesson 4: Speaking Feedback</h1>
+                </div>
+            </div>
+            <div class="flex w-full max-w-xl items-center gap-4 lg:ml-auto">
+                <span class="w-14 text-right text-sm font-semibold text-slate-500" id="slide-counter">1 / X</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200">
+                    <div id="progress-bar" class="h-full w-0 bg-indigo-600"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-main print-ready-main print-compact-main relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8" id="touch-area">
+
+        <div class="slide active flex-col w-full max-w-3xl bg-indigo-600 text-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
+            <div class="w-20 h-20 bg-white/20 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                <i class="fas fa-file-lines"></i>
+            </div>
+            <h2 class="text-sm uppercase tracking-widest text-indigo-200 font-bold mb-2">IELTS Speaking</h2>
+            <h1 class="text-5xl sm:text-6xl font-extrabold mb-6">Lesson 4</h1>
+            <p class="text-2xl text-indigo-100 font-medium">Speaking Feedback and Targets</p>
+        </div>
+
+        <div class="slide flex-col w-full max-w-5xl p-0 bg-transparent shadow-none lesson-4-report">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         
         <!-- Header Section -->
         <div class="bg-indigo-600 text-white p-8">
@@ -812,5 +856,55 @@
         </div>
     </div>
 
+        </div>
+    </main>
+
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-3">
+                <span class="font-semibold text-slate-700">Lesson 4</span>
+                <span class="hidden h-4 w-px bg-slate-300 sm:inline-block"></span>
+                <p id="lesson-status">Finish the lesson to unlock PDF export.</p>
+                <span class="hidden h-4 w-px bg-slate-300 lg:inline-block"></span>
+                <p class="font-semibold text-slate-500">T. Osama Saeed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button id="prev-btn" class="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 font-semibold text-slate-700 transition-colors hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-50">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="download-btn" hidden class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-emerald-600">
+                    <i class="fas fa-file-pdf"></i> Save as PDF
+                </button>
+                <button id="next-btn" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <script>
+        (function () {
+            try {
+                const completionKey = "ilets:lesson-4:completed";
+                const lastSlideKey = "ilets:lesson-4:last-slide";
+                const migratedKey = "ilets:lesson-4:migrated-v2";
+                const alreadyMigrated = localStorage.getItem(migratedKey) === "true";
+                const lastSlide = Number(localStorage.getItem(lastSlideKey));
+
+                if (!alreadyMigrated) {
+                    if (!Number.isFinite(lastSlide) || lastSlide < 1) {
+                        localStorage.removeItem(completionKey);
+                    }
+
+                    localStorage.setItem(migratedKey, "true");
+                }
+            } catch (error) {
+                // Ignore storage errors so the lesson still works normally.
+            }
+        })();
+    </script>
+    <script src="assets/lesson.js" defer></script>
 </body>
 </html>
