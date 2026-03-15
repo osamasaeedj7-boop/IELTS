@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Vocabulary & Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+    <link rel="stylesheet" href="assets/lesson.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .lesson-vocab-main::-webkit-scrollbar { width: 8px; }
+        .lesson-vocab-main::-webkit-scrollbar-track { background: #f1f5f9; }
+        .lesson-vocab-main::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-title="Vocabulary & Tasks">
+
+    <div class="lesson-watermark">
+        <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
+            T. Osama Saeed
+        </div>
+    </div>
+
+    <div class="lesson-shell">
+
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="index.html" class="course-home-link screen-only inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200">
+                    <i class="fas fa-arrow-left"></i>
+                    Course Home
+                </a>
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">IELTS Speaking</p>
+                    <h1 class="text-xl font-black text-slate-900 sm:text-2xl">Vocabulary & Tasks</h1>
+                </div>
+            </div>
+            <div class="flex w-full max-w-xl items-center gap-4 lg:ml-auto">
+                <span class="w-14 text-right text-sm font-semibold text-slate-500" id="slide-counter">1 / 1</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200">
+                    <div id="progress-bar" class="h-full w-full bg-indigo-600"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-main lesson-vocab-main print-ready-main print-compact-main relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8" id="touch-area">
+        <div id="selected-day-container" class="w-full"></div>
+
+    </main>
+
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-3">
+                <span class="font-semibold text-slate-700">Vocabulary & Tasks</span>
+                <span class="hidden h-4 w-px bg-slate-300 sm:inline-block"></span>
+                <p id="lesson-status">Ready to save this day as PDF.</p>
+                <span class="hidden h-4 w-px bg-slate-300 lg:inline-block"></span>
+                <p class="font-semibold text-slate-500">T. Osama Saeed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button id="download-btn" class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-emerald-600">
+                    <i class="fas fa-file-pdf"></i> Save as PDF
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic & Data Engine -->
+    <script>
+        // Data Structure for all 21 Days with Full Translations
+        // Structure: [word, meaningTR, collocationEN, collocationTR, exampleEN, exampleTR]
+        const lessonData = [
+            // WEEK 1
+            {
+                title: "WEEK 1 - Sunday", subtitle: "Weekend Program",
+                words: [
+                    ["benefit", "fayda, yarar", "a major benefit", "büyük bir fayda", "One major benefit of learning English is better job opportunities.", "İngilizce öğrenmenin önemli bir faydası daha iyi iş fırsatlarıdır."],
+                    ["improve", "geliştirmek", "improve your speaking", "konuşmanı geliştirmek", "I want to improve my speaking before the IELTS exam.", "IELTS sınavından önce konuşmamı geliştirmek istiyorum."],
+                    ["influence", "etkilemek, etki", "have an influence on", "üzerinde etkiye sahip olmak", "Teachers can have a strong influence on students’ lives.", "Öğretmenler öğrencilerin hayatları üzerinde güçlü bir etkiye sahip olabilir."],
+                    ["goal", "hedef", "main goal", "ana hedef", "My main goal is to get a good IELTS band score.", "Ana hedefim iyi bir IELTS puanı almak."],
+                    ["opportunity", "fırsat", "great opportunity", "harika fırsat", "Studying abroad is a great opportunity for my future.", "Yurt dışında okumak geleceğim için harika bir fırsat."],
+                    ["challenge", "zorluk", "face a challenge", "bir zorlukla karşılaşmak", "Speaking confidently is a big challenge for many students.", "Kendinden emin konuşmak birçok öğrenci için büyük bir zorluktur."],
+                    ["focus", "odaklanmak", "focus on", "odaklanmak", "In the speaking test, I need to focus on one main idea.", "Konuşma sınavında tek bir ana fikre odaklanmam gerekiyor."],
+                    ["advantage", "avantaj", "one advantage", "bir avantaj", "One advantage of learning English is better communication.", "İngilizce öğrenmenin bir avantajı daha iyi iletişim kurmaktır."],
+                    ["disadvantage", "dezavantaj", "one disadvantage", "bir dezavantaj", "One disadvantage of social media is wasting too much time.", "Sosyal medyanın bir dezavantajı çok fazla zaman harcatmasıdır."],
+                    ["confident", "kendinden emin", "feel confident", "kendinden emin hissetmek", "I want to feel more confident when I speak English.", "İngilizce konuşurken kendimi daha güvende hissetmek istiyorum."],
+                    ["practice", "pratik yapmak", "regular practice", "düzenli pratik", "Regular practice can improve speaking ability.", "Düzenli pratik konuşma yeteneğini geliştirebilir."],
+                    ["affect", "etkilemek", "affect people", "insanları etkilemek", "Social media can affect the way people think and dress.", "Sosyal medya insanların düşünme ve giyinme tarzını etkileyebilir."],
+                    ["similar", "benzer", "similar to", "-e benzer", "People with similar interests can influence each other.", "Benzer ilgi alanlarına sahip insanlar birbirlerini etkileyebilir."],
+                    ["reason", "neden, sebep", "main reason", "ana neden", "One main reason is that English is important for university study.", "Ana nedenlerden biri İngilizcenin üniversite eğitimi için önemli olmasıdır."],
+                    ["opinion", "görüş, fikir", "in my opinion", "bence / benim fikrime göre", "In my opinion, students should practice speaking every day.", "Bence öğrenciler her gün konuşma pratiği yapmalı."]
+                ],
+                wIntro: "Write a short paragraph about:", wIntroTR: "Şu konuda kısa bir paragraf yazın:",
+                wTopic: "Why English is important for your future", wTopicTR: "İngilizcenin geleceğin için neden önemli olduğu",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What are the benefits of learning English?", sTopicTR: "İngilizce öğrenmenin faydaları nelerdir?",
+                sRule: "Use at least 5 words from today’s list.", sRuleTR: "Bugünün listesinden en az 5 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Monday", subtitle: "Weekday Program",
+                words: [
+                    ["environment", "çevre, ortam", "learning environment", "öğrenme ortamı", "A good learning environment can help students improve faster.", "İyi bir öğrenme ortamı öğrencilerin daha hızlı gelişmesine yardımcı olabilir."],
+                    ["develop", "geliştirmek", "develop skills", "becerileri geliştirmek", "I want to develop my speaking skills this month.", "Bu ay konuşma becerilerimi geliştirmek istiyorum."],
+                    ["solution", "çözüm", "practical solution", "pratik çözüm", "A practical solution is to practice speaking every day.", "Pratik bir çözüm her gün konuşma pratiği yapmaktır."],
+                    ["compare", "karşılaştırmak", "compared to", "-e kıyasla / -e göre", "Compared to the past, students now use more technology.", "Geçmişe kıyasla, öğrenciler artık daha fazla teknoloji kullanıyor."],
+                    ["different", "farklı", "different from", "-den farklı", "Learning online is different from learning in a classroom.", "Çevrimiçi öğrenmek sınıfta öğrenmekten farklıdır."],
+                    ["explain", "açıklamak", "explain clearly", "net bir şekilde açıklamak", "In IELTS, you need to explain your ideas clearly.", "IELTS'te fikirlerinizi net bir şekilde açıklamanız gerekir."],
+                    ["describe", "anlatmak, tanımlamak", "describe a person", "bir kişiyi anlatmak", "In Part 2, you may need to describe a person or a place.", "Bölüm 2'de bir kişiyi veya yeri anlatmanız gerekebilir."],
+                    ["require", "gerektirmek", "require a score", "bir puan gerektirmek", "This university may require an IELTS certificate.", "Bu üniversite bir IELTS sertifikası gerektirebilir."],
+                    ["communicate", "iletişim kurmak", "communicate clearly", "net iletişim kurmak", "English helps people communicate with others from different countries.", "İngilizce, insanların farklı ülkelerden insanlarla iletişim kurmasına yardımcı olur."],
+                    ["prepare", "hazırlanmak", "prepare for the exam", "sınava hazırlanmak", "I am preparing for the IELTS speaking test.", "IELTS konuşma sınavına hazırlanıyorum."]
+                ],
+                wIntro: "Write a short paragraph about:", wIntroTR: "Şu konuda kısa bir paragraf yazın:",
+                wTopic: "How you are preparing for IELTS", wTopicTR: "IELTS'e nasıl hazırlandığınız",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this question in a voice note:", sIntroTR: "Bu soruyu bir ses kaydıyla cevaplayın:",
+                sTopic: "How are you preparing for your IELTS exam?", sTopicTR: "IELTS sınavınıza nasıl hazırlanıyorsunuz?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Tuesday", subtitle: "Weekday Program",
+                words: [
+                    ["regular", "düzenli", "regular practice", "düzenli pratik", "Regular practice is more effective than last-minute study.", "Düzenli pratik, son dakika çalışmasından daha etkilidir."],
+                    ["effective", "etkili", "effective way", "etkili yol", "Watching and repeating model answers is an effective way to learn.", "Model cevapları izlemek ve tekrarlamak öğrenmenin etkili bir yoludur."],
+                    ["result", "sonuç", "good result", "iyi sonuç", "Hard work usually leads to a better result.", "Sıkı çalışma genellikle daha iyi bir sonuca yol açar."],
+                    ["progress", "ilerleme", "make progress", "ilerleme kaydetmek", "I want to make clear progress in the next three weeks.", "Önümüzdeki üç hafta içinde belirgin bir ilerleme kaydetmek istiyorum."],
+                    ["skill", "beceri", "language skill", "dil becerisi", "Speaking is an important skill for IELTS.", "Konuşma IELTS için önemli bir beceridir."],
+                    ["achieve", "başarmak, elde etmek", "achieve a goal", "bir hedefe ulaşmak", "I hope to achieve my target band this month.", "Bu ay hedef puanıma ulaşmayı umuyorum."],
+                    ["motivate", "motive etmek", "feel motivated", "motive hissetmek", "My future plans motivate me to study harder.", "Gelecek planlarım beni daha sıkı çalışmaya motive ediyor."],
+                    ["clear", "net, açık", "clear answer", "net cevap", "A clear answer is better than a long but confusing answer.", "Net bir cevap, uzun ama kafa karıştırıcı bir cevaptan daha iyidir."],
+                    ["organize", "düzenlemek", "organize ideas", "fikirleri düzenlemek", "In Part 2, you should organize your ideas clearly.", "Bölüm 2'de fikirlerinizi net bir şekilde düzenlemelisiniz."],
+                    ["detail", "detay", "give details", "detay vermek", "Good speakers give details and examples.", "İyi konuşmacılar detaylar ve örnekler verir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What helps a student improve speaking quickly", wTopicTR: "Bir öğrencinin konuşmasını hızlıca geliştirmesine ne yardımcı olur?",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What is the best way to make progress in speaking?", sTopicTR: "Konuşmada ilerleme kaydetmenin en iyi yolu nedir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Wednesday", subtitle: "Weekday Program",
+                words: [
+                    ["connect", "bağlamak, ilişkilendirmek", "connect ideas", "fikirleri bağlamak", "You should connect your ideas with linking words.", "Fikirlerinizi bağlayıcı kelimelerle birleştirmelisiniz."],
+                    ["calm", "sakin", "stay calm", "sakin kalmak", "It is important to stay calm during the speaking test.", "Konuşma sınavı sırasında sakin kalmak önemlidir."],
+                    ["positive", "olumlu", "positive effect", "olumlu etki", "Good teachers can have a positive effect on students.", "İyi öğretmenlerin öğrenciler üzerinde olumlu bir etkisi olabilir."],
+                    ["negative", "olumsuz", "negative effect", "olumsuz etki", "Too much stress can have a negative effect on learning.", "Çok fazla stresin öğrenme üzerinde olumsuz bir etkisi olabilir."],
+                    ["encourage", "teşvik etmek", "encourage students", "öğrencileri teşvik etmek", "Teachers should encourage students to speak more.", "Öğretmenler öğrencileri daha fazla konuşmaya teşvik etmelidir."],
+                    ["responsible", "sorumlu", "be responsible for", "sorumlu olmak", "Students should be responsible for their own learning.", "Öğrenciler kendi öğrenmelerinden sorumlu olmalıdır."],
+                    ["independent", "bağımsız", "become independent", "bağımsız olmak", "Studying abroad can help young people become more independent.", "Yurt dışında okumak gençlerin daha bağımsız olmasına yardımcı olabilir."],
+                    ["useful", "faydalı", "useful skill", "faydalı beceri", "English is a very useful skill for university life.", "İngilizce üniversite hayatı için çok faydalı bir beceridir."],
+                    ["common", "yaygın, ortak", "common mistake", "yaygın hata", "Repetition is a common mistake in IELTS speaking.", "Tekrar, IELTS konuşmasında yaygın bir hatadır."],
+                    ["response", "cevap, yanıt", "give a response", "yanıt vermek", "A short response is not enough in the IELTS test.", "IELTS sınavında kısa bir yanıt yeterli değildir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What makes a good IELTS speaking answer", wTopicTR: "İyi bir IELTS konuşma cevabını ne oluşturur?",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "What are common mistakes in IELTS speaking?", sTopicTR: "IELTS konuşmasında yaygın hatalar nelerdir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Thursday", subtitle: "Weekday Program",
+                words: [
+                    ["review", "gözden geçirmek", "review words", "kelimeleri gözden geçirmek", "You should review new words every weekend.", "Yeni kelimeleri her hafta sonu gözden geçirmelisin."],
+                    ["weak", "zayıf", "weak point", "zayıf nokta", "Part 3 is still his weakest part.", "Bölüm 3 hala onun en zayıf kısmı."],
+                    ["method", "yöntem", "useful method", "faydalı yöntem", "Repeating model answers is a useful method for IELTS speaking.", "Model cevapları tekrarlamak IELTS konuşması için faydalı bir yöntemdir."],
+                    ["issue", "sorun, konu", "important issue", "önemli konu", "Education is an important issue in many countries.", "Eğitim birçok ülkede önemli bir konudur."],
+                    ["factor", "faktör", "key factor", "kilit faktör", "Motivation is a key factor in language learning.", "Motivasyon dil öğreniminde kilit bir faktördür."],
+                    ["involve", "içermek", "involve practice", "pratik içermek", "Good speaking practice should involve real communication.", "İyi bir konuşma pratiği gerçek iletişim içermelidir."],
+                    ["identify", "belirlemek", "identify a problem", "bir problemi belirlemek", "Students should identify their common mistakes.", "Öğrenciler yaygın hatalarını belirlemelidir."],
+                    ["manage", "yönetmek", "manage stress", "stresi yönetmek", "It is important to manage stress before the exam.", "Sınavdan önce stresi yönetmek önemlidir."],
+                    ["respond", "cevap vermek", "respond clearly", "net bir şekilde cevap vermek", "In IELTS, students should respond clearly and directly.", "IELTS'te öğrenciler net ve doğrudan cevap vermelidir."],
+                    ["specific", "belirli, özel", "specific example", "özel/belirli örnek", "A specific example makes your answer stronger.", "Spesifik bir örnek cevabınızı daha güçlü yapar."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What factors help students get a better IELTS speaking score", wTopicTR: "Öğrencilerin daha iyi bir IELTS konuşma puanı almasına hangi faktörler yardımcı olur?",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "Why is it important to give specific examples in speaking?", sTopicTR: "Konuşmada belirli/spesifik örnekler vermek neden önemlidir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Friday", subtitle: "Weekday Program",
+                words: [
+                    ["essential", "temel, çok önemli", "essential skill", "temel beceri", "Vocabulary is an essential part of speaking.", "Kelime bilgisi konuşmanın temel bir parçasıdır."],
+                    ["consider", "düşünmek, ele almak", "consider carefully", "dikkatlice düşünmek", "Students should carefully consider the question before answering.", "Öğrenciler cevaplamadan önce soruyu dikkatlice düşünmelidir."],
+                    ["community", "topluluk", "online community", "çevrimiçi topluluk", "Social media can connect people with an online community.", "Sosyal medya insanları çevrimiçi bir topluluğa bağlayabilir."],
+                    ["culture", "kültür", "different cultures", "farklı kültürler", "Learning English helps people understand different cultures.", "İngilizce öğrenmek insanların farklı kültürleri anlamasına yardımcı olur."],
+                    ["global", "küresel", "global communication", "küresel iletişim", "English is important for global communication.", "İngilizce küresel iletişim için önemlidir."],
+                    ["local", "yerel", "local culture", "yerel kültür", "Tourists can learn more about local culture by speaking English.", "Turistler İngilizce konuşarak yerel kültür hakkında daha fazla şey öğrenebilir."],
+                    ["access", "erişim", "access to information", "bilgiye erişim", "Technology gives students easy access to information.", "Teknoloji öğrencilere bilgiye kolay erişim sağlar."],
+                    ["resource", "kaynak", "learning resource", "öğrenme kaynağı", "YouTube can be a useful learning resource.", "YouTube faydalı bir öğrenme kaynağı olabilir."],
+                    ["digital", "dijital", "digital tools", "dijital araçlar", "Many students now use digital tools to learn English.", "Pek çok öğrenci artık İngilizce öğrenmek için dijital araçlar kullanıyor."],
+                    ["technology", "teknoloji", "modern technology", "modern teknoloji", "Modern technology has changed the way students learn.", "Modern teknoloji öğrencilerin öğrenme şeklini değiştirdi."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How technology helps students learn English", wTopicTR: "Teknolojinin öğrencilerin İngilizce öğrenmesine nasıl yardımcı olduğu",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this question in a voice note:", sIntroTR: "Bu soruyu bir ses kaydıyla cevaplayın:",
+                sTopic: "How has technology changed education?", sTopicTR: "Teknoloji eğitimi nasıl değiştirdi?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 1 - Saturday", subtitle: "Weekend Program",
+                words: [
+                    ["practical", "pratik, uygulamalı", "practical skill", "pratik beceri", "Communication is a practical skill for daily life.", "İletişim günlük yaşam için pratik bir beceridir."],
+                    ["academic", "akademik", "academic vocabulary", "akademik kelime", "Academic vocabulary is useful for IELTS preparation.", "Akademik kelime bilgisi IELTS hazırlığı için faydalıdır."],
+                    ["concentrate", "odaklanmak", "concentrate on", "odaklanmak", "It is easier to concentrate in a quiet place.", "Sessiz bir yerde konsantre olmak daha kolaydır."],
+                    ["routine", "rutin", "study routine", "çalışma rutini", "A strong study routine can improve results.", "Güçlü bir çalışma rutini sonuçları iyileştirebilir."],
+                    ["adapt", "uyum sağlamak", "adapt quickly", "hızlıca uyum sağlamak", "Students need to adapt to new learning methods.", "Öğrencilerin yeni öğrenme yöntemlerine uyum sağlaması gerekir."],
+                    ["alternative", "alternatif", "alternative method", "alternatif yöntem", "Online learning is a good alternative for busy students.", "Çevrimiçi öğrenme meşgul öğrenciler için iyi bir alternatiftir."],
+                    ["complex", "karmaşık", "complex idea", "karmaşık fikir", "Some IELTS questions are complex, so students need time to think.", "Bazı IELTS soruları karmaşıktır, bu nedenle öğrencilerin düşünmek için zamana ihtiyacı vardır."],
+                    ["simple", "basit", "simple answer", "basit cevap", "A simple but clear answer is better than a confusing one.", "Basit ama net bir cevap, kafa karıştırıcı bir cevaptan daha iyidir."],
+                    ["relevant", "uygun, ilgili", "relevant example", "alakalı örnek", "You should give a relevant example in your answer.", "Cevabınızda alakalı bir örnek vermelisiniz."],
+                    ["evidence", "kanıt", "clear evidence", "açık kanıt", "Real examples are like evidence in speaking.", "Gerçek örnekler konuşmada kanıt gibidir."],
+                    ["estimate", "tahmin etmek", "estimate the future", "geleceği tahmin etmek", "It is hard to estimate how education will change in 20 years.", "Eğitimin 20 yıl içinde nasıl değişeceğini tahmin etmek zor."],
+                    ["trend", "eğilim", "growing trend", "büyüyen eğilim", "Online study is a growing trend these days.", "Çevrimiçi eğitim bu günlerde büyüyen bir trend."],
+                    ["impact", "etki", "strong impact", "güçlü etki", "Social media has a strong impact on young people.", "Sosyal medyanın gençler üzerinde güçlü bir etkisi var."],
+                    ["participate", "katılmak", "participate in class", "derse katılmak", "Students should actively participate in speaking lessons.", "Öğrenciler konuşma derslerine aktif olarak katılmalıdır."],
+                    ["discussion", "tartışma", "class discussion", "sınıf tartışması", "Group discussion can help students practice opinions.", "Grup tartışması öğrencilerin fikirlerini pratik etmesine yardımcı olabilir."]
+                ],
+                wIntro: "Write a longer paragraph about:", wIntroTR: "Şu konuda daha uzun bir paragraf yazın:",
+                wTopic: "The impact of technology on education", wTopicTR: "Teknolojinin eğitim üzerindeki etkisi",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What are the advantages and disadvantages of online learning?", sTopicTR: "Çevrimiçi öğrenmenin avantajları ve dezavantajları nelerdir?",
+                sRule: "Use at least 6 words from today’s list.", sRuleTR: "Bugünün listesinden en az 6 kelime kullanın."
+            },
+
+            // WEEK 2
+            {
+                title: "WEEK 2 - Sunday", subtitle: "Weekend Program",
+                words: [
+                    ["approach", "yaklaşım, yöntem", "different approach", "farklı yaklaşım", "Every student needs a different approach to learning.", "Her öğrencinin öğrenmeye farklı bir yaklaşıma ihtiyacı vardır."],
+                    ["establish", "kurmak, oluşturmak", "establish a routine", "bir rutin oluşturmak", "It is useful to establish a daily speaking habit.", "Günlük bir konuşma alışkanlığı oluşturmak faydalıdır."],
+                    ["maintain", "sürdürmek", "maintain progress", "ilerlemeyi sürdürmek", "Students need to maintain regular practice.", "Öğrencilerin düzenli pratiği sürdürmesi gerekir."],
+                    ["limit", "sınırlamak", "limit screen time", "ekran süresini sınırlamak", "Limited vocabulary can make answers weaker.", "Sınırlı kelime bilgisi cevapları zayıflatabilir."],
+                    ["pressure", "baskı", "feel pressure", "baskı hissetmek", "Many students feel pressure before the IELTS exam.", "Pek çok öğrenci IELTS sınavından önce baskı hisseder."],
+                    ["balance", "denge", "keep a balance", "dengeyi korumak", "Students should keep a balance between study and rest.", "Öğrenciler çalışma ve dinlenme arasında bir denge kurmalıdır."],
+                    ["commit", "adamak, bağlanmak", "commit to learning", "öğrenmeye kendini adamak", "You need to commit to daily practice if you want fast improvement.", "Hızlı gelişim istiyorsanız günlük pratiğe kendinizi adamanız gerekir."],
+                    ["private", "özel", "private lesson", "özel ders", "Some students improve faster with private lessons.", "Bazı öğrenciler özel derslerle daha hızlı gelişir."],
+                    ["public", "kamusal", "public education", "kamusal eğitim", "Public education should support language learning.", "Devlet okulları dil öğrenimini desteklemelidir."],
+                    ["promote", "teşvik etmek", "promote learning", "öğrenmeyi teşvik etmek", "Schools should promote reading and communication skills.", "Okullar okuma ve iletişim becerilerini teşvik etmelidir."],
+                    ["consume", "tüketmek", "consume time", "zaman tüketmek", "Social media can consume too much time if it is not controlled.", "Sosyal medya kontrol edilmezse çok fazla zaman tüketebilir."],
+                    ["interact", "etkileşim kurmak", "interact with others", "başkalarıyla etkileşim kurmak", "Students improve speaking when they interact with others.", "Öğrenciler başkalarıyla etkileşim kurduklarında konuşmalarını geliştirirler."],
+                    ["perspective", "bakış açısı", "different perspective", "farklı bakış açısı", "Traveling can give people a different perspective.", "Seyahat etmek insanlara farklı bir bakış açısı kazandırabilir."],
+                    ["priority", "öncelik", "top priority", "en yüksek öncelik", "Improving speaking should be your top priority now.", "Konuşmayı geliştirmek şu an en büyük önceliğiniz olmalı."],
+                    ["strategy", "strateji", "learning strategy", "öğrenme stratejisi", "Repetition and recording are a good learning strategy.", "Tekrar ve kayıt iyi bir öğrenme stratejisidir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What is the best strategy for improving IELTS speaking?", wTopicTR: "IELTS konuşmasını geliştirmek için en iyi strateji nedir?",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "Why is speaking practice your top priority now?", sTopicTR: "Konuşma pratiği şu anda neden en büyük önceliğiniz?",
+                sRule: "Use at least 6 words from today’s list.", sRuleTR: "Bugünün listesinden en az 6 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Monday", subtitle: "Weekday Program",
+                words: [
+                    ["efficient", "verimli", "efficient method", "verimli yöntem", "Short daily practice can be more efficient than long weekly study.", "Kısa günlük pratik, uzun haftalık çalışmadan daha verimli olabilir."],
+                    ["experience", "deneyim", "valuable experience", "değerli deneyim", "Studying abroad can be a valuable experience.", "Yurt dışında okumak değerli bir deneyim olabilir."],
+                    ["significant", "önemli", "significant role", "önemli rol", "Technology has played a significant role in education.", "Teknoloji eğitimde önemli bir rol oynamıştır."],
+                    ["consequence", "sonuç", "possible consequence", "olası sonuç", "One possible consequence of poor English is fewer opportunities.", "Zayıf İngilizcenin olası bir sonucu daha az fırsattır."],
+                    ["discourage", "cesaret kırmak", "feel discouraged", "cesareti kırılmış hissetmek", "Too much criticism can discourage students.", "Çok fazla eleştiri öğrencilerin cesaretini kırabilir."],
+                    ["habit", "alışkanlık", "daily habit", "günlük alışkanlık", "Daily speaking practice is a good habit.", "Günlük konuşma pratiği iyi bir alışkanlıktır."],
+                    ["discipline", "disiplin", "self-discipline", "öz disiplin", "Self-discipline helps students improve faster.", "Öz disiplin öğrencilerin daha hızlı gelişmesine yardımcı olur."],
+                    ["responsibility", "sorumluluk", "take responsibility", "sorumluluk almak", "Students should take responsibility for their own learning.", "Öğrenciler kendi öğrenmelerinin sorumluluğunu almalıdır."],
+                    ["potential", "potansiyel", "full potential", "tam potansiyel", "Every student has the potential to improve.", "Her öğrencinin gelişme potansiyeli vardır."],
+                    ["evaluate", "değerlendirmek", "evaluate progress", "ilerlemeyi değerlendirmek", "Teachers should evaluate speaking regularly.", "Öğretmenler konuşmayı düzenli olarak değerlendirmelidir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "Why self-discipline is important in language learning", wTopicTR: "Öz disiplinin dil öğreniminde neden önemli olduğu",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "How can students reach their full potential in English?", sTopicTR: "Öğrenciler İngilizcede tam potansiyellerine nasıl ulaşabilirler?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Tuesday", subtitle: "Weekday Program",
+                words: [
+                    ["innovation", "yenilik", "innovation in education", "eğitimde yenilik", "Innovation in education has made learning more flexible.", "Eğitimdeki yenilikler öğrenmeyi daha esnek hale getirdi."],
+                    ["traditional", "geleneksel", "traditional method", "geleneksel yöntem", "Traditional education is still important in many countries.", "Geleneksel eğitim birçok ülkede hala önemlidir."],
+                    ["modern", "modern", "modern life", "modern hayat", "English is very useful in modern life.", "İngilizce modern hayatta çok kullanışlıdır."],
+                    ["personalized", "kişiselleştirilmiş", "personalized learning", "kişiselleştirilmiş öğrenme", "In the future, learning may become more personalized.", "Gelecekte öğrenme daha kişiselleştirilmiş hale gelebilir."],
+                    ["flexible", "esnek", "flexible learning", "esnek öğrenme", "Online courses offer more flexible learning.", "Çevrimiçi kurslar daha esnek öğrenme sunar."],
+                    ["online", "çevrim içi", "online learning", "çevrimiçi öğrenme", "Online learning can help busy students save time.", "Çevrimiçi öğrenme meşgul öğrencilerin zaman kazanmasına yardımcı olabilir."],
+                    ["offline", "çevrim dışı", "offline class", "çevrimdışı ders (yüz yüze)", "Some students prefer offline classes because of direct interaction.", "Bazı öğrenciler doğrudan etkileşim nedeniyle yüz yüze dersleri tercih eder."],
+                    ["device", "cihaz", "mobile device", "mobil cihaz", "Many students use a mobile device to study vocabulary.", "Birçok öğrenci kelime çalışmak için mobil cihaz kullanıyor."],
+                    ["platform", "platform", "learning platform", "öğrenme platformu", "YouTube is a popular learning platform.", "YouTube popüler bir öğrenme platformudur."],
+                    ["system", "sistem", "education system", "eğitim sistemi", "Every country has a different education system.", "Her ülkenin farklı bir eğitim sistemi vardır."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "Is online learning better than traditional learning?", wTopicTR: "Çevrimiçi öğrenme geleneksel öğrenmeden daha mı iyidir?",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "How can online platforms help students learn better?", sTopicTR: "Çevrimiçi platformlar öğrencilerin daha iyi öğrenmesine nasıl yardımcı olabilir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Wednesday", subtitle: "Weekday Program",
+                words: [
+                    ["stress", "stres", "reduce stress", "stresi azaltmak", "Hobbies can reduce stress after a long day.", "Hobiler uzun bir günden sonra stresi azaltabilir."],
+                    ["relax", "rahatlamak", "help people relax", "insanların rahatlamasına yardımcı olmak", "Music can help people relax.", "Müzik insanların rahatlamasına yardımcı olabilir."],
+                    ["productivity", "verimlilik", "improve productivity", "verimliliği artırmak", "A good study plan can improve productivity.", "İyi bir çalışma planı verimliliği artırabilir."],
+                    ["success", "başarı", "future success", "gelecekteki başarı", "English may be important for future success.", "İngilizce gelecekteki başarı için önemli olabilir."],
+                    ["failure", "başarısızlık", "fear of failure", "başarısızlık korkusu", "Fear of failure can stop students from speaking.", "Başarısızlık korkusu öğrencilerin konuşmasını engelleyebilir."],
+                    ["overcome", "üstesinden gelmek", "overcome fear", "korkunun üstesinden gelmek", "Practice helps students overcome fear.", "Pratik yapmak öğrencilerin korkularını yenmelerine yardımcı olur."],
+                    ["mistake", "hata", "common mistake", "yaygın hata", "Repetition is a common mistake in speaking.", "Tekrarlama, konuşmada yaygın bir hatadır."],
+                    ["correct", "düzeltmek", "correct mistakes", "hataları düzeltmek", "Students should correct their mistakes regularly.", "Öğrenciler hatalarını düzenli olarak düzeltmelidir."],
+                    ["feedback", "geri bildirim", "useful feedback", "faydalı geri bildirim", "Teacher feedback helps students see their weak points.", "Öğretmen geri bildirimi öğrencilerin zayıf noktalarını görmelerine yardımcı olur."],
+                    ["compare", "karşılaştırmak", "compare with", "ile karşılaştırmak", "Compared to the past, education is more digital today.", "Geçmişle karşılaştırıldığında eğitim bugün daha dijitaldir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How students can overcome fear in speaking", wTopicTR: "Öğrenciler konuşma korkusunu nasıl yenebilir?",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this question in a voice note:", sIntroTR: "Bu soruyu bir ses kaydıyla cevaplayın:",
+                sTopic: "Why is feedback important for improvement?", sTopicTR: "Geri bildirim gelişim için neden önemlidir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Thursday", subtitle: "Weekday Program",
+                words: [
+                    ["contrast", "karşılaştırmak, zıtlık", "in contrast", "aksine / tam tersine", "In contrast to the past, students now use apps and videos more often.", "Geçmişin aksine, öğrenciler artık uygulamaları ve videoları daha sık kullanıyor."],
+                    ["increase", "artırmak", "increase confidence", "özgüveni artırmak", "Daily speaking can increase confidence.", "Günlük konuşma özgüveni artırabilir."],
+                    ["decrease", "azaltmak", "decrease stress", "stresi azaltmak", "Good preparation can decrease stress before the exam.", "İyi bir hazırlık sınavdan önce stresi azaltabilir."],
+                    ["predict", "tahmin etmek", "predict the future", "geleceği tahmin etmek", "It is hard to predict how jobs will change in the future.", "Gelecekte işlerin nasıl değişeceğini tahmin etmek zor."],
+                    ["future", "gelecek", "in the future", "gelecekte", "In the future, I want to study abroad.", "Gelecekte yurt dışında okumak istiyorum."],
+                    ["likely", "muhtemel", "it is likely that", "muhtemeldir ki", "It is likely that technology will become even more important.", "Teknolojinin daha da önemli hale gelmesi muhtemeldir."],
+                    ["possible", "mümkün", "possible change", "olası değişiklik", "One possible change is more online speaking practice.", "Olası bir değişiklik daha fazla çevrimiçi konuşma pratiğidir."],
+                    ["impossible", "imkânsız", "seem impossible", "imkansız görünmek", "At first, IELTS may seem impossible, but progress is possible.", "Başlangıçta IELTS imkansız gibi görünebilir, ancak ilerleme mümkündür."],
+                    ["invest", "yatırım yapmak", "invest time", "zaman yatırımı yapmak", "Students should invest time in daily speaking practice.", "Öğrenciler günlük konuşma pratiğine zaman ayırmalıdır."],
+                    ["valuable", "değerli", "valuable skill", "değerli beceri", "English is a valuable skill for international study.", "İngilizce uluslararası eğitim için değerli bir beceridir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How education may change in the future", wTopicTR: "Eğitimin gelecekte nasıl değişebileceği",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What changes are likely in education in the future?", sTopicTR: "Gelecekte eğitimde ne gibi değişiklikler muhtemeldir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Friday", subtitle: "Weekday Program",
+                words: [
+                    ["sustainable", "sürdürülebilir", "sustainable habit", "sürdürülebilir alışkanlık", "Small daily study is more sustainable than one long session a week.", "Günlük kısa bir çalışma, haftada bir uzun bir oturumdan daha sürdürülebilirdir."],
+                    ["consist", "oluşmak", "consist of", "-den oluşmak", "A good answer should consist of an opinion, a reason, and an example.", "İyi bir cevap fikir, sebep ve örnekten oluşmalıdır."],
+                    ["perform", "performans göstermek", "perform well", "iyi performans göstermek", "He wants to perform well in the IELTS exam.", "IELTS sınavında iyi performans göstermek istiyor."],
+                    ["preparation", "hazırlık", "careful preparation", "dikkatli hazırlık", "Careful preparation leads to better results.", "Dikkatli hazırlık daha iyi sonuçlara yol açar."],
+                    ["adapt", "uyum sağlamak", "adapt to change", "değişime ayak uydurmak", "Students need to adapt to different speaking topics.", "Öğrencilerin farklı konuşma konularına uyum sağlaması gerekir."],
+                    ["involve", "içermek", "involve explanation", "açıklama içermek", "Good IELTS answers involve explanation, not only short ideas.", "İyi IELTS cevapları sadece kısa fikirleri değil açıklamaları da içerir."],
+                    ["specific", "belirli", "specific point", "belirli/özel bir nokta", "Try to give one specific point in each answer.", "Her cevapta belirli bir nokta vermeye çalışın."],
+                    ["clear", "net", "clear structure", "net yapı", "A clear structure helps the listener understand you.", "Net bir yapı dinleyicinin sizi anlamasına yardımcı olur."],
+                    ["organize", "düzenlemek", "organize your answer", "cevabınızı düzenlemek", "Good students organize their answers before speaking.", "İyi öğrenciler konuşmadan önce cevaplarını düzenlerler."],
+                    ["response", "yanıt", "full response", "tam yanıt", "A full response needs a reason and an example.", "Tam bir yanıt için neden ve örnek gerekir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What a good IELTS speaking answer should consist of", wTopicTR: "İyi bir IELTS konuşma cevabının nelerden oluşması gerektiği",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "How can students perform well in IELTS speaking?", sTopicTR: "Öğrenciler IELTS konuşmasında nasıl iyi performans gösterebilir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 2 - Saturday", subtitle: "Weekend Program",
+                words: [
+                    ["achievement", "başarı, elde edilen şey", "great achievement", "büyük başarı", "Getting a good IELTS score is a great achievement.", "İyi bir IELTS puanı almak büyük bir başarıdır."],
+                    ["adapt", "uyum sağlamak", "adapt quickly", "hızlıca uyum sağlamak", "Students need to adapt quickly to new question types.", "Öğrencilerin yeni soru türlerine hızla uyum sağlaması gerekir."],
+                    ["alternative", "alternatif", "alternative solution", "alternatif çözüm", "Recording answers is an alternative to classroom practice.", "Cevapları kaydetmek sınıf pratiğine bir alternatiftir."],
+                    ["circumstance", "durum, koşul", "difficult circumstances", "zor koşullar", "Some students study under difficult circumstances.", "Bazı öğrenciler zor koşullar altında çalışır."],
+                    ["concentrate", "odaklanmak", "concentrate fully", "tamamen odaklanmak", "It is easier to concentrate in a quiet place.", "Sessiz bir yerde konsantre olmak daha kolaydır."],
+                    ["conclude", "sonuç çıkarmak", "conclude that", "sonucuna varmak", "We can conclude that regular practice helps a lot.", "Düzenli pratiğin çok yardımcı olduğu sonucuna varabiliriz."],
+                    ["conflict", "çatışma", "conflict of ideas", "fikir çatışması", "Some topics involve a conflict of ideas or opinions.", "Bazı konular fikir veya görüş çatışması içerir."],
+                    ["contrast", "karşılaştırmak", "contrast with", "ile karşılaştırmak", "It is useful to contrast past and present in IELTS.", "IELTS'te geçmiş ve bugünü karşılaştırmak faydalıdır."],
+                    ["culture", "kültür", "cultural difference", "kültürel fark", "Learning languages helps people understand cultural differences.", "Dil öğrenmek insanların kültürel farklılıkları anlamasına yardımcı olur."],
+                    ["impact", "etki", "have an impact on", "üzerinde etki yaratmak", "Education has a big impact on society.", "Eğitimin toplum üzerinde büyük bir etkisi vardır."],
+                    ["motivate", "motive etmek", "stay motivated", "motive kalmak", "Clear goals help students stay motivated.", "Net hedefler öğrencilerin motive kalmasına yardımcı olur."],
+                    ["communicate", "iletişim kurmak", "communicate ideas", "fikirleri iletmek", "IELTS students need to communicate ideas clearly.", "IELTS öğrencilerinin fikirleri net bir şekilde iletmesi gerekir."],
+                    ["process", "süreç", "learning process", "öğrenme süreci", "Vocabulary learning is a long process.", "Kelime öğrenme uzun bir süreçtir."],
+                    ["require", "gerektirmek", "require effort", "çaba gerektirmek", "Good speaking performance requires daily effort.", "İyi konuşma performansı günlük çaba gerektirir."],
+                    ["issue", "konu, sorun", "social issue", "toplumsal sorun", "Education is a major social issue in many countries.", "Eğitim pek çok ülkede önemli bir sosyal konudur."]
+                ],
+                wIntro: "Write a longer paragraph about:", wIntroTR: "Şu konuda daha uzun bir paragraf yazın:",
+                wTopic: "Why regular effort is important in the learning process", wTopicTR: "Öğrenme sürecinde düzenli çabanın neden önemli olduğu",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What has the biggest impact on successful learning?", sTopicTR: "Başarılı öğrenme üzerinde en büyük etkiye sahip olan şey nedir?",
+                sRule: "Use at least 6 words from today’s list.", sRuleTR: "Bugünün listesinden en az 6 kelime kullanın."
+            },
+
+            // WEEK 3
+            {
+                title: "WEEK 3 - Sunday", subtitle: "Weekend Program",
+                words: [
+                    ["advantage", "avantaj", "one clear advantage", "açık bir avantaj", "One clear advantage of learning English is better communication.", "İngilizce öğrenmenin net bir avantajı daha iyi iletişimdir."],
+                    ["disadvantage", "dezavantaj", "major disadvantage", "büyük dezavantaj", "A major disadvantage of social media is distraction.", "Sosyal medyanın önemli bir dezavantajı dikkat dağınıklığıdır."],
+                    ["develop", "geliştirmek", "develop confidence", "özgüven geliştirmek", "Students need to develop confidence in speaking.", "Öğrencilerin konuşmada özgüven geliştirmesi gerekir."],
+                    ["effective", "etkili", "effective strategy", "etkili strateji", "Repetition is an effective strategy for self-study.", "Tekrar, kendi kendine çalışma için etkili bir stratejidir."],
+                    ["factor", "faktör", "important factor", "önemli faktör", "Confidence is an important factor in success.", "Özgüven başarıda önemli bir faktördür."],
+                    ["identify", "belirlemek", "identify weak points", "zayıf noktaları belirlemek", "Students should identify their weak points early.", "Öğrenciler zayıf noktalarını erkenden belirlemelidir."],
+                    ["maintain", "sürdürmek", "maintain progress", "ilerlemeyi sürdürmek", "Review helps students maintain progress.", "Gözden geçirme öğrencilerin ilerlemeyi sürdürmelerine yardımcı olur."],
+                    ["method", "yöntem", "learning method", "öğrenme yöntemi", "Everyone needs a learning method that suits them.", "Herkesin kendisine uygun bir öğrenme yöntemine ihtiyacı vardır."],
+                    ["progress", "ilerleme", "make progress", "ilerleme kaydetmek", "Daily practice helps students make progress.", "Günlük pratik öğrencilerin ilerleme kaydetmesine yardımcı olur."],
+                    ["solution", "çözüm", "simple solution", "basit çözüm", "A simple solution is to practice with recordings.", "Basit bir çözüm kayıtlarla pratik yapmaktır."],
+                    ["strategy", "strateji", "useful strategy", "faydalı strateji", "This is a useful strategy for IELTS speaking.", "Bu, IELTS konuşması için faydalı bir stratejidir."],
+                    ["support", "destek", "family support", "aile desteği", "Family support can motivate students.", "Aile desteği öğrencileri motive edebilir."],
+                    ["trend", "eğilim", "growing trend", "büyüyen eğilim", "Online education is a growing trend.", "Çevrimiçi eğitim büyüyen bir trenddir."],
+                    ["challenge", "zorluk", "major challenge", "büyük zorluk", "Fluency is a major challenge for many learners.", "Akıcılık birçok öğrenci için büyük bir zorluktur."],
+                    ["resource", "kaynak", "useful resource", "faydalı kaynak", "Podcasts are a useful resource for listening practice.", "Podcast'ler dinleme pratiği için faydalı bir kaynaktır."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What is the best strategy for making fast progress in English?", wTopicTR: "İngilizcede hızlı ilerleme kaydetmek için en iyi strateji nedir?",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What are the biggest challenges in learning English?", sTopicTR: "İngilizce öğrenmedeki en büyük zorluklar nelerdir?",
+                sRule: "Use at least 6 words from today’s list.", sRuleTR: "Bugünün listesinden en az 6 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Monday", subtitle: "Weekday Program",
+                words: [
+                    ["academic", "akademik", "academic goal", "akademik hedef", "Studying abroad is one of my academic goals.", "Yurt dışında okumak benim akademik hedeflerimden biridir."],
+                    ["access", "erişim", "easy access", "kolay erişim", "Students now have easy access to online lessons.", "Öğrencilerin artık çevrimiçi derslere kolay erişimi var."],
+                    ["community", "topluluk", "learning community", "öğrenme topluluğu", "A strong learning community can support students.", "Güçlü bir öğrenme topluluğu öğrencileri destekleyebilir."],
+                    ["digital", "dijital", "digital education", "dijital eğitim", "Digital education is becoming more common.", "Dijital eğitim giderek yaygınlaşıyor."],
+                    ["environment", "ortam", "study environment", "çalışma ortamı", "A quiet study environment helps students focus.", "Sessiz bir çalışma ortamı öğrencilerin odaklanmasına yardımcı olur."],
+                    ["essential", "çok önemli", "essential part", "temel parça", "Grammar is an essential part of speaking clearly.", "Dilbilgisi net konuşmanın temel bir parçasıdır."],
+                    ["global", "küresel", "global world", "küresel dünya", "English is very useful in today’s global world.", "İngilizce günümüzün küresel dünyasında çok kullanışlıdır."],
+                    ["independent", "bağımsız", "independent learner", "bağımsız öğrenen", "A successful student becomes an independent learner.", "Başarılı bir öğrenci bağımsız bir öğrenen olur."],
+                    ["practical", "pratik", "practical experience", "pratik deneyim", "Speaking practice gives students practical experience.", "Konuşma pratiği öğrencilere pratik deneyim kazandırır."],
+                    ["technology", "teknoloji", "use technology", "teknolojiyi kullanmak", "Many learners use technology to improve faster.", "Pek çok öğrenci daha hızlı gelişmek için teknolojiyi kullanır."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "Why English is essential in the modern world", wTopicTR: "İngilizcenin modern dünyada neden gerekli olduğu",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "Why is technology useful in language learning?", sTopicTR: "Teknoloji dil öğreniminde neden faydalıdır?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Tuesday", subtitle: "Weekday Program",
+                words: [
+                    ["compare", "karşılaştırmak", "compare ideas", "fikirleri karşılaştırmak", "Students often compare past and present in IELTS.", "Öğrenciler genellikle IELTS'te geçmişi ve bugünü karşılaştırırlar."],
+                    ["consequence", "sonuç", "negative consequence", "olumsuz sonuç", "One negative consequence of poor preparation is low confidence.", "Zayıf hazırlığın olumsuz bir sonucu düşük özgüvendir."],
+                    ["encourage", "teşvik etmek", "encourage practice", "pratiği teşvik etmek", "Good teachers encourage students to practice every day.", "İyi öğretmenler öğrencileri her gün pratik yapmaya teşvik eder."],
+                    ["evaluate", "değerlendirmek", "evaluate performance", "performansı değerlendirmek", "It is important to evaluate your speaking performance.", "Konuşma performansınızı değerlendirmek önemlidir."],
+                    ["habit", "alışkanlık", "healthy habit", "sağlıklı alışkanlık", "Daily review is a healthy habit.", "Günlük tekrar sağlıklı bir alışkanlıktır."],
+                    ["innovation", "yenilik", "educational innovation", "eğitimsel yenilik", "Educational innovation has changed many classrooms.", "Eğitimde inovasyon birçok sınıfı değiştirdi."],
+                    ["motivate", "motive etmek", "motivate yourself", "kendini motive etmek", "Clear goals help students motivate themselves.", "Net hedefler öğrencilerin kendilerini motive etmelerine yardımcı olur."],
+                    ["personalized", "kişiselleştirilmiş", "personalized learning", "kişiselleştirilmiş öğrenme", "Some apps offer personalized learning.", "Bazı uygulamalar kişiselleştirilmiş öğrenme sunar."],
+                    ["review", "gözden geçirmek", "review vocabulary", "kelimeleri gözden geçirmek", "Students should review vocabulary regularly.", "Öğrenciler kelime bilgisini düzenli olarak gözden geçirmelidir."],
+                    ["routine", "rutin", "daily routine", "günlük rutin", "A strong daily routine can improve results.", "Güçlü bir günlük rutin sonuçları iyileştirebilir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How a daily routine can help language learning", wTopicTR: "Günlük bir rutinin dil öğrenimine nasıl yardımcı olabileceği",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "Why is review important in vocabulary learning?", sTopicTR: "Kelime öğreniminde tekrar neden önemlidir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Wednesday", subtitle: "Weekday Program",
+                words: [
+                    ["affect", "etkilemek", "affect learning", "öğrenmeyi etkilemek", "Stress can affect learning badly.", "Stres öğrenmeyi kötü etkileyebilir."],
+                    ["balance", "denge", "keep a balance", "dengeyi korumak", "Students should keep a balance between study and rest.", "Öğrenciler çalışma ve dinlenme arasında bir denge kurmalıdır."],
+                    ["consume", "tüketmek", "consume time", "zaman tüketmek", "Social media can consume too much time.", "Sosyal medya çok fazla zaman tüketebilir."],
+                    ["efficient", "verimli", "efficient way", "verimli yol", "This is an efficient way to study vocabulary.", "Bu kelime çalışmanın verimli bir yoludur."],
+                    ["feedback", "geri bildirim", "teacher feedback", "öğretmen geri bildirimi", "Teacher feedback helps students improve.", "Öğretmen geri bildirimi öğrencilerin gelişmesine yardımcı olur."],
+                    ["flexible", "esnek", "flexible schedule", "esnek program", "A flexible schedule is useful for self-study.", "Kendi kendine çalışma için esnek bir program faydalıdır."],
+                    ["limit", "sınırlamak", "limit distractions", "dikkat dağıtıcı şeyleri sınırlamak", "Students should limit distractions while studying.", "Öğrenciler ders çalışırken dikkat dağıtıcı unsurları sınırlamalıdır."],
+                    ["pressure", "baskı", "under pressure", "baskı altında", "Some students cannot speak well under pressure.", "Bazı öğrenciler baskı altında iyi konuşamazlar."],
+                    ["stress", "stres", "reduce stress", "stresi azaltmak", "Music and hobbies can reduce stress.", "Müzik ve hobiler stresi azaltabilir."],
+                    ["useful", "faydalı", "useful advice", "faydalı tavsiye", "This is useful advice for IELTS students.", "Bu, IELTS öğrencileri için faydalı bir tavsiyedir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How students can study efficiently without too much stress", wTopicTR: "Öğrencilerin çok fazla stres yaşamadan nasıl verimli çalışabilecekleri",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "How can students reduce stress before an exam?", sTopicTR: "Öğrenciler sınavdan önce stresi nasıl azaltabilir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Thursday", subtitle: "Weekday Program",
+                words: [
+                    ["confident", "kendinden emin", "feel confident", "kendinden emin hissetmek", "Regular practice helps students feel confident.", "Düzenli pratik öğrencilerin kendilerini güvende hissetmelerine yardımcı olur."],
+                    ["discipline", "disiplin", "self-discipline", "öz disiplin", "Self-discipline is very important in self-study.", "Bireysel çalışmada öz disiplin çok önemlidir."],
+                    ["focus", "odaklanmak", "focus on", "odaklanmak", "Try to focus on one main idea.", "Ana bir fikre odaklanmaya çalışın."],
+                    ["improve", "geliştirmek", "improve quickly", "hızlıca gelişmek", "He wants to improve quickly before the exam.", "Sınavdan önce hızlı bir şekilde kendini geliştirmek istiyor."],
+                    ["opportunity", "fırsat", "job opportunity", "iş fırsatı", "English can create new job opportunities.", "İngilizce yeni iş fırsatları yaratabilir."],
+                    ["perform", "performans göstermek", "perform better", "daha iyi performans göstermek", "Practice helps students perform better in speaking.", "Pratik yapmak öğrencilerin konuşmada daha iyi performans göstermesine yardımcı olur."],
+                    ["possible", "mümkün", "possible solution", "olası çözüm", "A possible solution is daily recording practice.", "Olası bir çözüm günlük kayıt pratiğidir."],
+                    ["prepare", "hazırlanmak", "prepare well", "iyi hazırlanmak", "Students should prepare well for IELTS speaking.", "Öğrenciler IELTS konuşması için iyi hazırlanmalıdır."],
+                    ["require", "gerektirmek", "require practice", "pratik gerektirmek", "Good speaking requires regular practice.", "İyi konuşmak düzenli pratik gerektirir."],
+                    ["valuable", "değerli", "valuable opportunity", "değerli fırsat", "Studying abroad is a valuable opportunity.", "Yurt dışında eğitim almak değerli bir fırsattır."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "What students need to do to perform well in IELTS speaking", wTopicTR: "IELTS konuşmasında iyi performans göstermek için öğrencilerin ne yapması gerektiği",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Send a voice note and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "Why is self-discipline important for exam preparation?", sTopicTR: "Sınav hazırlığı için öz disiplin neden önemlidir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Friday", subtitle: "Weekday Program",
+                words: [
+                    ["clear", "net", "clear idea", "net fikir", "A clear idea is easier to explain.", "Net bir fikri açıklamak daha kolaydır."],
+                    ["describe", "anlatmak", "describe clearly", "net bir şekilde anlatmak", "In Part 2, students should describe the topic clearly.", "Bölüm 2'de öğrenciler konuyu net bir şekilde açıklamalıdır."],
+                    ["explain", "açıklamak", "explain your reason", "nedenini açıklamak", "You should explain your reason and give an example.", "Nedeninizi açıklamalı ve bir örnek vermelisiniz."],
+                    ["opinion", "görüş", "express an opinion", "görüş bildirmek", "Part 3 often asks students to express an opinion.", "Bölüm 3 genellikle öğrencilerden fikir belirtmelerini ister."],
+                    ["reason", "neden", "strong reason", "güçlü neden", "Try to give one strong reason in each answer.", "Her cevapta güçlü bir neden sunmaya çalışın."],
+                    ["relevant", "ilgili, uygun", "relevant example", "alakalı örnek", "A relevant example makes the answer stronger.", "İlgili bir örnek cevabı daha güçlü kılar."],
+                    ["response", "yanıt", "complete response", "tam yanıt", "A complete response needs development.", "Eksiksiz bir cevap geliştirilmeye ihtiyaç duyar."],
+                    ["simple", "basit", "simple structure", "basit yapı", "A simple structure can make answers better.", "Basit bir yapı cevapları daha iyi yapabilir."],
+                    ["specific", "belirli", "specific detail", "belirli detay", "Try to add one specific detail.", "Belirli bir detay eklemeye çalışın."],
+                    ["detail", "ayrıntı", "useful detail", "faydalı detay", "A useful detail makes the answer more natural.", "Faydalı bir ayrıntı cevabı daha doğal hale getirir."]
+                ],
+                wIntro: "Write a paragraph about:", wIntroTR: "Şu konuda bir paragraf yazın:",
+                wTopic: "How to give a strong and clear IELTS answer", wTopicTR: "Güçlü ve net bir IELTS cevabı nasıl verilir",
+                wRule: "Use at least 6 words from today’s list.", wRuleTR: "Bugünün listesinden en az 6 kelime kullanın.",
+                sIntro: "Answer this in a voice note:", sIntroTR: "Bunu bir ses kaydıyla cevaplayın:",
+                sTopic: "What makes an IELTS answer strong?", sTopicTR: "Bir IELTS cevabını güçlü yapan şey nedir?",
+                sRule: "Use at least 4 words from today’s list.", sRuleTR: "Bugünün listesinden en az 4 kelime kullanın."
+            },
+            {
+                title: "WEEK 3 - Saturday", subtitle: "Weekend Program",
+                words: [
+                    ["achievement", "başarı", "personal achievement", "kişisel başarı", "Getting a good band score is a personal achievement.", "İyi bir puan almak kişisel bir başarıdır."],
+                    ["benefit", "fayda", "long-term benefit", "uzun vadeli fayda", "Speaking English well has many long-term benefits.", "İyi İngilizce konuşmanın birçok uzun vadeli faydası vardır."],
+                    ["consequence", "sonuç", "positive consequence", "olumlu sonuç", "One positive consequence of practice is confidence.", "Pratik yapmanın olumlu bir sonucu özgüvendir."],
+                    ["effective", "etkili", "highly effective", "son derece etkili", "Daily speaking is highly effective.", "Günlük konuşma son derece etkilidir."],
+                    ["experience", "deneyim", "learning experience", "öğrenme deneyimi", "IELTS preparation is a useful learning experience.", "IELTS hazırlığı faydalı bir öğrenme deneyimidir."],
+                    ["future", "gelecek", "future plan", "gelecek planı", "English is important for my future plans.", "İngilizce gelecek planlarım için önemlidir."],
+                    ["impact", "etki", "positive impact", "olumlu etki", "Good habits have a positive impact on learning.", "İyi alışkanlıkların öğrenme üzerinde olumlu bir etkisi vardır."],
+                    ["likely", "muhtemel", "likely to improve", "gelişmesi muhtemel", "Students are likely to improve with daily practice.", "Öğrencilerin günlük pratikle gelişmesi muhtemeldir."],
+                    ["maintain", "sürdürmek", "maintain a habit", "bir alışkanlığı sürdürmek", "It is important to maintain a strong study habit.", "Güçlü bir çalışma alışkanlığını sürdürmek önemlidir."],
+                    ["potential", "potansiyel", "full potential", "tam potansiyel", "Every student can reach their full potential.", "Her öğrenci tam potansiyeline ulaşabilir."],
+                    ["productivity", "verimlilik", "increase productivity", "verimliliği artırmak", "A good routine can increase productivity.", "İyi bir rutin verimliliği artırabilir."],
+                    ["resource", "kaynak", "free resource", "ücretsiz kaynak", "The internet offers many free resources.", "İnternet birçok ücretsiz kaynak sunar."],
+                    ["sustainable", "sürdürülebilir", "sustainable routine", "sürdürülebilir rutin", "A sustainable routine is better than a very hard routine.", "Sürdürülebilir bir rutin çok zor bir rutinden daha iyidir."],
+                    ["trend", "eğilim", "modern trend", "modern eğilim", "Self-study is a common trend today.", "Bireysel çalışma bugünlerde yaygın bir trenddir."],
+                    ["progress", "ilerleme", "real progress", "gerçek ilerleme", "Weekend review can create real progress.", "Hafta sonu tekrarı gerçek ilerleme yaratabilir."]
+                ],
+                wIntro: "Write a longer paragraph about:", wIntroTR: "Şu konuda daha uzun bir paragraf yazın:",
+                wTopic: "How students can make real progress in three weeks", wTopicTR: "Öğrencilerin üç haftada nasıl gerçek ilerleme kaydedebilecekleri",
+                wRule: "Use at least 8 words from today’s list.", wRuleTR: "Bugünün listesinden en az 8 kelime kullanın.",
+                sIntro: "Send one voice recording and answer:", sIntroTR: "Bir ses kaydı gönderin ve cevaplayın:",
+                sTopic: "What habits are most effective for fast improvement in IELTS speaking?", sTopicTR: "IELTS konuşmasında hızlı gelişim için en etkili alışkanlıklar nelerdir?",
+                sRule: "Use at least 6 words from today’s list.", sRuleTR: "Bugünün listesinden en az 6 kelime kullanın."
+            }
+        ];
+
+        // Speech Synthesis Function
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // stop any current speech
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'en-US'; // Uses US English for clear pronunciation
+                msg.rate = 0.9;     // Slightly slower for clarity
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("Sorry, your browser doesn't support text-to-speech.");
+            }
+        }
+
+        const vocabProgramKey = "ilets:vocab-program:start-date";
+        const vocabDayCompletionPrefix = "ilets:vocab-day:";
+
+        function getLocalMidnight(date) {
+            return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        }
+
+        function formatDateKey(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, "0");
+            const day = String(date.getDate()).padStart(2, "0");
+
+            return year + "-" + month + "-" + day;
+        }
+
+        function parseDateKey(value) {
+            const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+            if (!match) {
+                return null;
+            }
+
+            return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+        }
+
+        function readProgramStartDate() {
+            try {
+                return parseDateKey(localStorage.getItem(vocabProgramKey));
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function writeProgramStartDate(value) {
+            try {
+                localStorage.setItem(vocabProgramKey, formatDateKey(value));
+            } catch (error) {
+                return;
+            }
+        }
+
+        function getCompletionKey(dayNumber) {
+            return vocabDayCompletionPrefix + String(dayNumber) + ":completed";
+        }
+
+        function readDayCompletion(dayNumber) {
+            try {
+                return localStorage.getItem(getCompletionKey(dayNumber)) === "true";
+            } catch (error) {
+                return false;
+            }
+        }
+
+        function writeDayCompletion(dayNumber) {
+            try {
+                localStorage.setItem(getCompletionKey(dayNumber), "true");
+            } catch (error) {
+                return;
+            }
+        }
+
+        function addDays(date, offset) {
+            const result = new Date(date);
+            result.setDate(result.getDate() + offset);
+            return getLocalMidnight(result);
+        }
+
+        function formatDisplayDate(date) {
+            return new Intl.DateTimeFormat("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            }).format(date);
+        }
+
+        function getProgramState(totalDays) {
+            const today = getLocalMidnight(new Date());
+            let startDate = readProgramStartDate();
+
+            if (!startDate || startDate.getTime() > today.getTime()) {
+                startDate = today;
+                writeProgramStartDate(startDate);
+            }
+
+            const dayDifference = Math.floor(
+                (today.getTime() - startDate.getTime()) / 86400000
+            );
+            const activeDayNumber = Math.max(1, Math.min(totalDays, dayDifference + 1));
+
+            return {
+                today: today,
+                startDate: startDate,
+                activeDayNumber: activeDayNumber
+            };
+        }
+
+        function getRequestedDayNumber() {
+            const params = new URLSearchParams(window.location.search);
+            const directDay = Number(params.get('day'));
+
+            if (Number.isFinite(directDay) && directDay >= 1 && directDay <= lessonData.length) {
+                return directDay;
+            }
+
+            const hashDayMatch = window.location.hash.match(/day-(\d+)/i);
+
+            if (hashDayMatch) {
+                const hashDay = Number(hashDayMatch[1]);
+
+                if (Number.isFinite(hashDay) && hashDay >= 1 && hashDay <= lessonData.length) {
+                    return hashDay;
+                }
+            }
+
+            const legacySlideMatch = window.location.hash.match(/slide-(\d+)/i);
+
+            if (legacySlideMatch) {
+                const slideNumber = Number(legacySlideMatch[1]) - 1;
+
+                if (Number.isFinite(slideNumber) && slideNumber >= 1 && slideNumber <= lessonData.length) {
+                    return slideNumber;
+                }
+            }
+
+            return null;
+        }
+
+        function updatePageFrame(titleText, statusMessage, showDownload) {
+            const pageTitle = document.querySelector('header h1');
+            const statusText = document.getElementById('lesson-status');
+            const downloadButton = document.getElementById('download-btn');
+
+            if (pageTitle) {
+                pageTitle.textContent = titleText;
+            }
+
+            if (statusText) {
+                statusText.textContent = statusMessage;
+            }
+
+            if (downloadButton) {
+                downloadButton.classList.toggle('hidden', !showDownload);
+                downloadButton.disabled = !showDownload;
+                downloadButton.setAttribute('aria-hidden', String(!showDownload));
+            }
+        }
+
+        function buildWordTable(dayData) {
+            let tableHTML = `
+                <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white w-full">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead class="sticky top-0 z-20">
+                            <tr class="bg-indigo-50 border-b border-slate-200">
+                                <th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/5">Word</th>
+                                <th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/5">Meaning</th>
+                                <th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/4">Collocation</th>
+                                <th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+            `;
+
+            dayData.words.forEach(wordObj => {
+                const [word, turkish, collocation, colTR, example, exTR] = wordObj;
+                tableHTML += `
+                            <tr class="hover:bg-slate-50 transition-colors group">
+                                <td class="p-3 sm:p-4 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <span class="font-bold text-indigo-700 text-base sm:text-lg">${word}</span>
+                                        <button onclick="playAudio('${word.replace(/'/g, "\\'")}')" class="text-indigo-400 hover:text-indigo-600 bg-indigo-50 hover:bg-indigo-100 w-7 h-7 rounded-full flex items-center justify-center transition-colors focus:outline-none" title="Listen">
+                                            <i class="fas fa-volume-up text-xs"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="p-3 sm:p-4 align-top">
+                                    <span class="text-sm font-bold text-slate-600">${turkish}</span>
+                                </td>
+                                <td class="p-3 sm:p-4 align-top">
+                                    <p class="font-bold text-slate-800 text-sm">${collocation}</p>
+                                    <p class="text-xs text-slate-500 mt-1">${colTR}</p>
+                                </td>
+                                <td class="p-3 sm:p-4 align-top">
+                                    <p class="text-sm font-medium text-slate-800 italic">"${example}"</p>
+                                    <p class="text-xs text-slate-500 mt-1 italic">${exTR}</p>
+                                </td>
+                            </tr>
+                `;
+            });
+
+            tableHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            return tableHTML;
+        }
+
+        function renderSelectedDay(dayData, isCompleted) {
+            const container = document.getElementById('selected-day-container');
+            const tableHTML = buildWordTable(dayData);
+            updatePageFrame(
+                `Vocabulary & Tasks: ${dayData.title}`,
+                isCompleted
+                    ? `${dayData.title} is completed and ready to save again as PDF.`
+                    : `${dayData.title} is ready to save as PDF.`,
+                true
+            );
+
+            document.title = `Vocabulary & Tasks - ${dayData.title}`;
+
+            container.innerHTML = `
+                <div class="slide active flex-col w-full max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 z-10 mb-8 mt-2">
+                    <div class="flex flex-col gap-4 border-b-2 border-slate-100 pb-4 sm:flex-row sm:items-end sm:justify-between">
+                        <div>
+                            <p class="text-xs sm:text-sm font-bold text-indigo-500 uppercase tracking-widest mb-1">${dayData.subtitle}</p>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">${dayData.title}</h2>
+                        </div>
+                        <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
+                            <i class="fas fa-language"></i>
+                            Daily Vocabulary
+                        </div>
+                    </div>
+
+                    <div class="mt-6 w-full relative">
+                        ${tableHTML}
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-1 gap-4 border-t border-slate-200 pt-4 md:grid-cols-2">
+                        <div class="bg-blue-50 p-4 sm:p-5 rounded-xl border border-blue-200 shadow-sm relative overflow-hidden flex flex-col">
+                            <div class="absolute -right-4 -top-4 text-blue-200 text-6xl opacity-30"><i class="fas fa-pen-nib"></i></div>
+                            <h3 class="font-bold text-blue-800 mb-2 flex items-center uppercase tracking-wide text-xs relative z-10"><i class="fas fa-pen-square mr-2"></i>Writing Task</h3>
+                            <p class="text-sm text-slate-600 font-medium relative z-10">${dayData.wIntro} <br><span class="text-xs text-slate-500">${dayData.wIntroTR}</span></p>
+                            <p class="text-base sm:text-lg font-bold text-blue-900 mt-2 mb-1 relative z-10 leading-snug">${dayData.wTopic}</p>
+                            <p class="text-sm text-blue-700/80 font-medium mb-3 relative z-10 leading-snug">${dayData.wTopicTR}</p>
+                            <div class="mt-auto">
+                                <p class="text-xs font-bold text-blue-600 bg-white inline-block px-2 py-1 rounded shadow-sm relative z-10">${dayData.wRule} <span class="block text-[10px] text-blue-400 font-normal mt-0.5">${dayData.wRuleTR}</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-emerald-50 p-4 sm:p-5 rounded-xl border border-emerald-200 shadow-sm relative overflow-hidden flex flex-col">
+                            <div class="absolute -right-4 -top-4 text-emerald-200 text-6xl opacity-30"><i class="fas fa-microphone"></i></div>
+                            <h3 class="font-bold text-emerald-800 mb-2 flex items-center uppercase tracking-wide text-xs relative z-10"><i class="fas fa-microphone-alt mr-2"></i>Speaking Task</h3>
+                            <p class="text-sm text-slate-600 font-medium relative z-10">${dayData.sIntro} <br><span class="text-xs text-slate-500">${dayData.sIntroTR}</span></p>
+                            <p class="text-base sm:text-lg font-bold text-emerald-900 mt-2 mb-1 relative z-10 leading-snug">${dayData.sTopic}</p>
+                            <p class="text-sm text-emerald-700/80 font-medium mb-3 relative z-10 leading-snug">${dayData.sTopicTR}</p>
+                            <div class="mt-auto">
+                                <p class="text-xs font-bold text-emerald-600 bg-white inline-block px-2 py-1 rounded shadow-sm relative z-10">${dayData.sRule} <span class="block text-[10px] text-emerald-400 font-normal mt-0.5">${dayData.sRuleTR}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderLockedDay(requestedDayNumber, programState) {
+            const container = document.getElementById('selected-day-container');
+            const requestedDayData = lessonData[requestedDayNumber - 1];
+            const activeDayData = lessonData[programState.activeDayNumber - 1];
+            const isFutureDay = requestedDayNumber > programState.activeDayNumber;
+            const unlockDate = addDays(programState.startDate, requestedDayNumber - 1);
+            const lockedMessage = isFutureDay
+                ? `This day will open on ${formatDisplayDate(unlockDate)}.`
+                : `Only today's study day is open right now.`;
+
+            updatePageFrame(
+                `Vocabulary & Tasks: ${requestedDayData.title}`,
+                `${requestedDayData.title} is locked today.`,
+                false
+            );
+
+            document.title = `Vocabulary & Tasks - ${requestedDayData.title}`;
+
+            container.innerHTML = `
+                <div class="slide active flex-col w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-5 sm:p-8 z-10 mb-8 mt-2">
+                    <div class="rounded-3xl border border-indigo-100 bg-indigo-50/70 p-6 text-center sm:p-8">
+                        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl text-indigo-600 shadow-sm">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <p class="mt-4 text-xs font-bold uppercase tracking-[0.28em] text-indigo-500">Locked Day</p>
+                        <h2 class="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">${requestedDayData.title}</h2>
+                        <p class="mt-4 text-base leading-8 text-slate-600">${lockedMessage}</p>
+                        <p class="mt-2 text-sm font-semibold text-slate-500">
+                            Today's open day is <span class="text-indigo-700">${activeDayData.title}</span>.
+                        </p>
+                        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+                            <a href="Vocabulary & Tasks.html?day=${programState.activeDayNumber}" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700">
+                                <i class="fas fa-unlock"></i>
+                                Open Today's Day
+                            </a>
+                            <a href="index.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-50">
+                                <i class="fas fa-arrow-left"></i>
+                                Course Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        const programState = getProgramState(lessonData.length);
+        const requestedDayNumber = getRequestedDayNumber();
+        const selectedDayNumber = requestedDayNumber || programState.activeDayNumber;
+        let activeRenderableDayNumber = null;
+
+        if (selectedDayNumber === programState.activeDayNumber) {
+            activeRenderableDayNumber = selectedDayNumber;
+            renderSelectedDay(
+                lessonData[selectedDayNumber - 1],
+                readDayCompletion(selectedDayNumber)
+            );
+        } else {
+            renderLockedDay(selectedDayNumber, programState);
+        }
+
+        window.addEventListener('afterprint', function () {
+            if (activeRenderableDayNumber === null) {
+                return;
+            }
+
+            writeDayCompletion(activeRenderableDayNumber);
+            renderSelectedDay(
+                lessonData[activeRenderableDayNumber - 1],
+                true
+            );
+        });
+
+        document.getElementById('download-btn').addEventListener('click', function () {
+            if (this.disabled) {
+                return;
+            }
+
+            window.print();
+        });
+    </script>
+</div>
+</body>
+</html>
