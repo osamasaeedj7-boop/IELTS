@@ -94,4 +94,151 @@
     if (progressBar) {
         progressBar.style.width = String((completedLessons / totalLessons) * 100) + "%";
     }
+
+    const vocabDayLinks = Array.from(document.querySelectorAll(".vocab-day-link"));
+
+    if (!vocabDayLinks.length) {
+        return;
+    }
+
+    const vocabProgramKey = "ilets:vocab-program:start-date";
+    const vocabDayCompletionPrefix = "ilets:vocab-day:";
+
+    function getLocalMidnight(date) {
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
+
+    function formatDateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+
+        return year + "-" + month + "-" + day;
+    }
+
+    function parseDateKey(value) {
+        const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+        if (!match) {
+            return null;
+        }
+
+        return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+    }
+
+    function readProgramStartDate() {
+        try {
+            return parseDateKey(localStorage.getItem(vocabProgramKey));
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function readDayCompletion(dayNumber) {
+        try {
+            return localStorage.getItem(
+                vocabDayCompletionPrefix + String(dayNumber) + ":completed"
+            ) === "true";
+        } catch (error) {
+            return false;
+        }
+    }
+
+    function writeProgramStartDate(value) {
+        try {
+            localStorage.setItem(vocabProgramKey, formatDateKey(value));
+        } catch (error) {
+            return;
+        }
+    }
+
+    function addDays(date, offset) {
+        const result = new Date(date);
+        result.setDate(result.getDate() + offset);
+        return getLocalMidnight(result);
+    }
+
+    function formatDisplayDate(date) {
+        return new Intl.DateTimeFormat("en-US", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+        }).format(date);
+    }
+
+    function getProgramState(totalDays) {
+        const today = getLocalMidnight(new Date());
+        let startDate = readProgramStartDate();
+
+        if (!startDate || startDate.getTime() > today.getTime()) {
+            startDate = today;
+            writeProgramStartDate(startDate);
+        }
+
+        const dayDifference = Math.floor(
+            (today.getTime() - startDate.getTime()) / 86400000
+        );
+        const activeDayNumber = Math.max(
+            1,
+            Math.min(totalDays, dayDifference + 1)
+        );
+
+        return {
+            startDate: startDate,
+            activeDayNumber: activeDayNumber
+        };
+    }
+
+    const programState = getProgramState(vocabDayLinks.length);
+
+    vocabDayLinks.forEach(function (link) {
+        const url = new URL(link.href, window.location.href);
+        const dayNumber = Number(url.searchParams.get("day"));
+        const isComplete = readDayCompletion(dayNumber);
+        const isCurrentDay =
+            Number.isFinite(dayNumber) && dayNumber === programState.activeDayNumber;
+        const unlockDate = addDays(programState.startDate, Math.max(0, dayNumber - 1));
+
+        if (isComplete) {
+            link.classList.add("is-complete");
+
+            if (isCurrentDay) {
+                link.classList.add("is-open");
+                link.classList.add("is-current");
+                link.title = "Completed today";
+                return;
+            }
+
+            link.setAttribute("aria-disabled", "true");
+            link.setAttribute("tabindex", "-1");
+            link.title = "Completed";
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+            });
+            return;
+        }
+
+        if (isCurrentDay) {
+            link.classList.add("is-open");
+            link.classList.add("is-current");
+            link.title = "Open today";
+
+            return;
+        }
+
+        link.classList.add("is-locked");
+        link.setAttribute("aria-disabled", "true");
+        link.setAttribute("tabindex", "-1");
+
+        if (dayNumber > programState.activeDayNumber) {
+            link.title = "Locked until " + formatDisplayDate(unlockDate);
+        } else {
+            link.title = "Only today's study day is open";
+        }
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+        });
+    });
 })();
