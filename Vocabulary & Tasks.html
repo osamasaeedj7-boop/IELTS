@@ -825,11 +825,8 @@
             const container = document.getElementById('selected-day-container');
             const requestedDayData = lessonData[requestedDayNumber - 1];
             const activeDayData = lessonData[programState.activeDayNumber - 1];
-            const isFutureDay = requestedDayNumber > programState.activeDayNumber;
             const unlockDate = addDays(programState.startDate, requestedDayNumber - 1);
-            const lockedMessage = isFutureDay
-                ? `This day will open on ${formatDisplayDate(unlockDate)}.`
-                : `Only today's study day is open right now.`;
+            const lockedMessage = `This day will open on ${formatDisplayDate(unlockDate)}.`;
 
             updatePageFrame(
                 `Vocabulary & Tasks: ${requestedDayData.title}`,
@@ -871,7 +868,7 @@
         const selectedDayNumber = requestedDayNumber || programState.activeDayNumber;
         let activeRenderableDayNumber = null;
 
-        if (selectedDayNumber === programState.activeDayNumber) {
+        if (selectedDayNumber <= programState.activeDayNumber) {
             activeRenderableDayNumber = selectedDayNumber;
             renderSelectedDay(
                 lessonData[selectedDayNumber - 1],
