@@ -196,33 +196,35 @@
         const url = new URL(link.href, window.location.href);
         const dayNumber = Number(url.searchParams.get("day"));
         const isComplete = readDayCompletion(dayNumber);
+        const isUnlocked =
+            Number.isFinite(dayNumber) && dayNumber <= programState.activeDayNumber;
         const isCurrentDay =
             Number.isFinite(dayNumber) && dayNumber === programState.activeDayNumber;
         const unlockDate = addDays(programState.startDate, Math.max(0, dayNumber - 1));
 
         if (isComplete) {
             link.classList.add("is-complete");
+            link.classList.add("is-open");
 
             if (isCurrentDay) {
-                link.classList.add("is-open");
                 link.classList.add("is-current");
                 link.title = "Completed today";
                 return;
             }
 
-            link.setAttribute("aria-disabled", "true");
-            link.setAttribute("tabindex", "-1");
             link.title = "Completed";
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-            });
             return;
         }
 
-        if (isCurrentDay) {
+        if (isUnlocked) {
             link.classList.add("is-open");
-            link.classList.add("is-current");
-            link.title = "Open today";
+
+            if (isCurrentDay) {
+                link.classList.add("is-current");
+                link.title = "Open today";
+            } else {
+                link.title = "Open";
+            }
 
             return;
         }
@@ -230,12 +232,7 @@
         link.classList.add("is-locked");
         link.setAttribute("aria-disabled", "true");
         link.setAttribute("tabindex", "-1");
-
-        if (dayNumber > programState.activeDayNumber) {
-            link.title = "Locked until " + formatDisplayDate(unlockDate);
-        } else {
-            link.title = "Only today's study day is open";
-        }
+        link.title = "Locked until " + formatDisplayDate(unlockDate);
 
         link.addEventListener("click", function (event) {
             event.preventDefault();
