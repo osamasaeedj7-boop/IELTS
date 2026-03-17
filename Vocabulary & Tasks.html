@@ -16,7 +16,7 @@
         .lesson-vocab-main::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     </style>
 </head>
-<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-title="Vocabulary & Tasks">
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-title="Vocabulary & Tasks" data-vocab-start-date="2026-03-15">
 
     <div class="lesson-watermark">
         <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
@@ -590,6 +590,10 @@
             return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
         }
 
+        function getConfiguredStartDate() {
+            return parseDateKey(document.body.dataset.vocabStartDate);
+        }
+
         function readProgramStartDate() {
             try {
                 return parseDateKey(localStorage.getItem(vocabProgramKey));
@@ -643,11 +647,15 @@
 
         function getProgramState(totalDays) {
             const today = getLocalMidnight(new Date());
-            let startDate = readProgramStartDate();
+            const configuredStartDate = getConfiguredStartDate();
+            let startDate = configuredStartDate || readProgramStartDate();
 
             if (!startDate || startDate.getTime() > today.getTime()) {
-                startDate = today;
-                writeProgramStartDate(startDate);
+                startDate = configuredStartDate || today;
+
+                if (!configuredStartDate) {
+                    writeProgramStartDate(startDate);
+                }
             }
 
             const dayDifference = Math.floor(
