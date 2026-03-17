@@ -126,6 +126,10 @@
         return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
     }
 
+    function getConfiguredStartDate() {
+        return parseDateKey(document.body.dataset.vocabStartDate);
+    }
+
     function readProgramStartDate() {
         try {
             return parseDateKey(localStorage.getItem(vocabProgramKey));
@@ -169,11 +173,15 @@
 
     function getProgramState(totalDays) {
         const today = getLocalMidnight(new Date());
-        let startDate = readProgramStartDate();
+        const configuredStartDate = getConfiguredStartDate();
+        let startDate = configuredStartDate || readProgramStartDate();
 
         if (!startDate || startDate.getTime() > today.getTime()) {
-            startDate = today;
-            writeProgramStartDate(startDate);
+            startDate = configuredStartDate || today;
+
+            if (!configuredStartDate) {
+                writeProgramStartDate(startDate);
+            }
         }
 
         const dayDifference = Math.floor(
