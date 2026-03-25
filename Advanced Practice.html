@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Vocab: Advanced Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hidden-screen { display: none !important; }
+        
+        /* Animations */
+        .shake { animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-2px, 0, 0); }
+            20%, 80% { transform: translate3d(3px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-5px, 0, 0); }
+            40%, 60% { transform: translate3d(5px, 0, 0); }
+        }
+        
+        .pop-in { animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .course-home-link {
+            border: 1px solid rgba(199, 210, 254, 0.24);
+            background:
+                radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.12), transparent 28%),
+                linear-gradient(135deg, #5954ec 0%, #524ce7 42%, #4b45e0 74%, #463fda 100%);
+            color: #ffffff !important;
+            box-shadow:
+                0 18px 34px -22px rgba(76, 70, 229, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.16);
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .course-home-link:hover {
+            transform: translateY(-1px);
+            background:
+                radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.14), transparent 28%),
+                linear-gradient(135deg, #6863f3 0%, #5f58ee 42%, #5550e7 74%, #4c47e0 100%);
+            color: #ffffff !important;
+            box-shadow:
+                0 20px 38px -22px rgba(76, 70, 229, 0.56),
+                inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        }
+
+        .course-home-link i {
+            color: #ffffff;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen flex flex-col overflow-hidden relative" data-vocab-start-date="2026-03-15">
+
+    <!-- Watermark -->
+    <div class="fixed inset-0 pointer-events-none flex items-center justify-center z-0 overflow-hidden">
+        <div class="text-slate-900/[0.03] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
+            T. Osama Saeed
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-4 flex justify-between items-center z-10 relative shrink-0">
+        <h1 class="font-bold text-lg text-indigo-600 cursor-pointer flex items-center" onclick="goHome()">
+            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mr-2">
+                <i class="fas fa-rocket"></i>
+            </div>
+            Advanced Practice
+        </h1>
+        <div class="flex items-center gap-3">
+            <div id="header-subtitle" class="hidden text-sm font-bold text-slate-500 uppercase tracking-wider sm:block">Select a Day</div>
+            <a href="index.html" class="course-home-link inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold">
+                <i class="fas fa-arrow-left text-xs"></i>
+                <span>Course Home</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 relative overflow-y-auto p-4 sm:p-8 z-10" id="main-area">
+        
+        <!-- SCREEN 1: Home / Day Selector -->
+        <div id="screen-home" class="max-w-5xl mx-auto w-full">
+            <div id="days-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-8">
+                <!-- Days injected via JS -->
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Day Menu -->
+        <div id="screen-day-menu" class="hidden-screen max-w-5xl mx-auto w-full text-center mt-4 sm:mt-8 pb-10">
+            <h2 id="menu-day-title" class="text-3xl sm:text-4xl font-extrabold text-slate-800 mb-2">Day Title</h2>
+            <p class="text-slate-500 mb-10 text-lg">Select an advanced training method.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Game 1: Active Recall -->
+                <div onclick="startGame('recall')" class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border-b-4 border-amber-500 cursor-pointer hover:-translate-y-2 hover:shadow-lg transition-all group relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-amber-50 w-32 h-32 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
+                    <div class="relative z-10">
+                        <div class="bg-amber-100 text-amber-600 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm"><i class="fas fa-keyboard"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-800 mb-2">1. Active Recall</h3>
+                        <p class="text-slate-500 font-medium text-sm">Type the missing English word using only the Turkish meaning and context clues.</p>
+                    </div>
+                </div>
+                
+                <!-- Game 2: Sentence Builder -->
+                <div onclick="startGame('builder')" class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border-b-4 border-rose-500 cursor-pointer hover:-translate-y-2 hover:shadow-lg transition-all group relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-rose-50 w-32 h-32 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
+                    <div class="relative z-10">
+                        <div class="bg-rose-100 text-rose-600 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-800 mb-2">2. Sentence Builder</h3>
+                        <p class="text-slate-500 font-medium text-sm">Reconstruct the official IELTS example sentences by tapping the scrambled words.</p>
+                    </div>
+                </div>
+
+                <!-- Game 3: Listen & Spell -->
+                <div onclick="startGame('listen')" class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border-b-4 border-teal-500 cursor-pointer hover:-translate-y-2 hover:shadow-lg transition-all group relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-teal-50 w-32 h-32 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
+                    <div class="relative z-10">
+                        <div class="bg-teal-100 text-teal-600 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm"><i class="fas fa-headphones-alt"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-800 mb-2">3. Listen & Spell</h3>
+                        <p class="text-slate-500 font-medium text-sm">Listen to the pronunciation and type the word correctly. Builds audio comprehension.</p>
+                    </div>
+                </div>
+
+                <!-- Game 4: Collocation Master -->
+                <div onclick="startGame('collocation')" class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border-b-4 border-violet-500 cursor-pointer hover:-translate-y-2 hover:shadow-lg transition-all group relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-violet-50 w-32 h-32 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
+                    <div class="relative z-10">
+                        <div class="bg-violet-100 text-violet-600 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm"><i class="fas fa-object-group"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-800 mb-2">4. Collocation Master</h3>
+                        <p class="text-slate-500 font-medium text-sm">Match the Turkish phrase to the correct English IELTS collocation chunk.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Active Recall Game -->
+        <div id="screen-recall" class="hidden-screen max-w-2xl mx-auto w-full mt-4 sm:mt-8 pb-10">
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="goDayMenu()" class="text-slate-500 hover:text-amber-600 font-bold bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-times mr-2"></i>Exit</button>
+                <div class="text-sm font-bold text-amber-600 bg-amber-50 px-4 py-1.5 rounded-full border border-amber-200">Word <span id="rec-current">1</span> of <span id="rec-total">10</span></div>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2 rounded-full mb-8 overflow-hidden">
+                <div id="rec-progress" class="bg-amber-500 h-full transition-all duration-300 w-0"></div>
+            </div>
+
+            <div id="rec-box" class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border-t-8 border-amber-500 text-center relative transition-colors duration-300">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Target Meaning:</p>
+                <h2 id="rec-turkish" class="text-3xl sm:text-4xl font-extrabold text-slate-800 mb-6">Turkish</h2>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-8">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1"><i class="fas fa-link mr-1"></i>Collocation Clue</p>
+                    <p id="rec-clue" class="text-lg font-medium text-slate-600 italic">a major _______</p>
+                </div>
+
+                <div class="relative max-w-sm mx-auto">
+                    <input type="text" id="rec-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type English word..." class="w-full bg-slate-100 border-2 border-slate-200 text-center text-2xl font-bold text-amber-700 rounded-xl py-4 px-4 focus:outline-none focus:border-amber-500 transition-colors placeholder:text-slate-300 placeholder:text-lg">
+                    <button onclick="showHint('rec')" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-amber-500" title="Get a hint"><i class="fas fa-lightbulb"></i></button>
+                </div>
+
+                <div id="rec-feedback" class="mt-6 text-lg font-bold min-h-[2rem]"></div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button id="rec-submit-btn" onclick="checkRecall()" class="bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xl py-4 px-12 rounded-2xl shadow-lg transition-transform hover:scale-105 w-full sm:w-auto">Check Answer</button>
+                <button id="rec-next-btn" onclick="nextRecall()" class="hidden bg-slate-800 hover:bg-slate-900 text-white font-extrabold text-xl py-4 px-12 rounded-2xl shadow-lg transition-transform hover:scale-105 w-full sm:w-auto">Next Word <i class="fas fa-arrow-right ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: Sentence Builder Game -->
+        <div id="screen-builder" class="hidden-screen max-w-4xl mx-auto w-full mt-4 sm:mt-8 pb-10">
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="goDayMenu()" class="text-slate-500 hover:text-rose-600 font-bold bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-times mr-2"></i>Exit</button>
+                <div class="text-sm font-bold text-rose-600 bg-rose-50 px-4 py-1.5 rounded-full border border-rose-200">Sentence <span id="bld-current">1</span> of <span id="bld-total">10</span></div>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2 rounded-full mb-8 overflow-hidden">
+                <div id="bld-progress" class="bg-rose-500 h-full transition-all duration-300 w-0"></div>
+            </div>
+
+            <div id="bld-box" class="bg-white p-6 sm:p-10 rounded-3xl shadow-xl border-t-8 border-rose-500 mb-8 transition-colors duration-300">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2 text-center">Translate this sentence:</p>
+                <h2 id="bld-turkish" class="text-xl sm:text-2xl font-bold text-slate-800 mb-8 text-center border-b border-slate-100 pb-6">Turkish Sentence</h2>
+
+                <div id="bld-target" class="min-h-[80px] bg-slate-50 border-2 border-dashed border-slate-300 rounded-2xl p-4 flex flex-wrap content-start gap-2 mb-8 cursor-pointer transition-colors">
+                    <!-- Built words injected here -->
+                </div>
+
+                <div id="bld-source" class="flex flex-wrap justify-center gap-3">
+                    <!-- Scrambled words injected here -->
+                </div>
+
+                <div id="bld-feedback" class="mt-6 text-center text-lg font-bold min-h-[2rem]"></div>
+            </div>
+
+            <div class="text-center mt-8 h-16">
+                <button id="bld-next-btn" onclick="nextBuilder()" class="hidden inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-extrabold text-xl py-4 px-12 rounded-2xl shadow-lg transition-transform hover:scale-105">Next Sentence <i class="fas fa-arrow-right ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Listen & Spell Game -->
+        <div id="screen-listen" class="hidden-screen max-w-2xl mx-auto w-full mt-4 sm:mt-8 pb-10">
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="goDayMenu()" class="text-slate-500 hover:text-teal-600 font-bold bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-times mr-2"></i>Exit</button>
+                <div class="text-sm font-bold text-teal-600 bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">Audio <span id="lst-current">1</span> of <span id="lst-total">10</span></div>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2 rounded-full mb-8 overflow-hidden">
+                <div id="lst-progress" class="bg-teal-500 h-full transition-all duration-300 w-0"></div>
+            </div>
+
+            <div id="lst-box" class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border-t-8 border-teal-500 text-center relative transition-colors duration-300">
+                
+                <button onclick="playListenAudio()" class="bg-teal-50 border-2 border-teal-200 text-teal-600 w-24 h-24 rounded-full flex items-center justify-center hover:bg-teal-100 hover:scale-110 transition-all shadow-md focus:outline-none text-4xl mx-auto mb-8" title="Play Audio">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Tap to hear, then type the word</p>
+
+                <div class="relative max-w-sm mx-auto mb-6">
+                    <input type="text" id="lst-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type what you hear..." class="w-full bg-slate-100 border-2 border-slate-200 text-center text-2xl font-bold text-teal-700 rounded-xl py-4 px-4 focus:outline-none focus:border-teal-500 transition-colors placeholder:text-slate-300 placeholder:text-lg">
+                    <button onclick="showHint('lst')" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-teal-500" title="Get a hint"><i class="fas fa-lightbulb"></i></button>
+                </div>
+
+                <div id="lst-hint-area" class="hidden bg-slate-50 p-3 rounded-lg border border-slate-200 inline-block">
+                    <span class="text-xs font-bold text-slate-400 uppercase mr-2">Turkish Meaning:</span>
+                    <span id="lst-turkish" class="font-bold text-slate-700">Meaning</span>
+                </div>
+
+                <div id="lst-feedback" class="mt-6 text-lg font-bold min-h-[2rem]"></div>
+            </div>
+
+            <div class="mt-8 text-center flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button id="lst-reveal-btn" onclick="revealListenHint()" class="bg-white border-2 border-slate-200 text-slate-500 hover:bg-slate-50 hover:text-slate-700 font-bold py-4 px-8 rounded-2xl transition-colors w-full sm:w-auto"><i class="fas fa-eye mr-2"></i>Show Translation</button>
+                <button id="lst-submit-btn" onclick="checkListen()" class="bg-teal-500 hover:bg-teal-600 text-white font-extrabold text-xl py-4 px-12 rounded-2xl shadow-lg transition-transform hover:scale-105 w-full sm:w-auto">Check Spelling</button>
+                <button id="lst-next-btn" onclick="nextListen()" class="hidden bg-slate-800 hover:bg-slate-900 text-white font-extrabold text-xl py-4 px-12 rounded-2xl shadow-lg transition-transform hover:scale-105 w-full sm:w-auto">Next Audio <i class="fas fa-arrow-right ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- SCREEN 6: Collocation Master Game -->
+        <div id="screen-collocation" class="hidden-screen max-w-3xl mx-auto w-full mt-4 sm:mt-8 pb-10">
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="goDayMenu()" class="text-slate-500 hover:text-violet-600 font-bold bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-times mr-2"></i>Exit</button>
+                <div class="text-sm font-bold text-violet-600 bg-violet-50 px-4 py-1.5 rounded-full border border-violet-200">Phrase <span id="col-current">1</span> of <span id="col-total">10</span></div>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2 rounded-full mb-8 overflow-hidden">
+                <div id="col-progress" class="bg-violet-500 h-full transition-all duration-300 w-0"></div>
+            </div>
+
+            <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-lg border-b-4 border-violet-500 text-center mb-8 relative">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Find the correct IELTS Collocation for:</p>
+                <h2 id="col-turkish" class="text-3xl sm:text-4xl font-extrabold text-slate-800 mb-2">Turkish Collocation</h2>
+            </div>
+
+            <div id="col-options" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Options injected via JS -->
+            </div>
+
+            <div id="col-feedback" class="hidden mt-6 p-4 rounded-xl text-center text-lg font-bold"></div>
+            
+            <div class="text-center mt-6 h-14">
+                <button id="col-next-btn" onclick="nextCollocation()" class="hidden bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-xl shadow-md transition-transform hover:scale-105">Next Phrase <i class="fas fa-arrow-right ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- SHARED: Completion Screen -->
+        <div id="screen-complete" class="hidden-screen max-w-2xl mx-auto w-full mt-10 text-center bg-white p-10 sm:p-16 rounded-3xl shadow-2xl border-4 border-indigo-500">
+            <div class="w-32 h-32 bg-indigo-100 text-indigo-500 rounded-full flex items-center justify-center text-6xl mx-auto mb-6"><i class="fas fa-award"></i></div>
+            <h3 class="text-4xl font-extrabold text-slate-800 mb-4">Training Complete!</h3>
+            <p class="text-xl text-slate-600 mb-10">You have successfully mastered today's advanced material.</p>
+            <button onclick="goDayMenu()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xl py-4 px-10 rounded-2xl transition-colors shadow-lg w-full sm:w-auto">Return to Menu</button>
+        </div>
+
+    </main>
+
+    <!-- Script / Logic -->
+    <script>
+        // DATA: Full 3 Week Program [Word, TR, Collocation, ColTR, Example, ExTR]
+        const lessonData = [
+            // WEEK 1
+            { title: "Week 1 - Sun", subtitle: "Weekend", words: [ ["benefit", "fayda", "a major benefit", "büyük bir fayda", "One major benefit of learning English is better job opportunities.", "İngilizce öğrenmenin önemli bir faydası daha iyi iş fırsatlarıdır."], ["improve", "geliştirmek", "improve your speaking", "konuşmanı geliştirmek", "I want to improve my speaking before the IELTS exam.", "IELTS sınavından önce konuşmamı geliştirmek istiyorum."], ["influence", "etkilemek", "have an influence on", "üzerinde etkiye sahip olmak", "Teachers can have a strong influence on students’ lives.", "Öğretmenler öğrencilerin hayatları üzerinde güçlü bir etkiye sahip olabilir."], ["goal", "hedef", "main goal", "ana hedef", "My main goal is to get a good IELTS band score.", "Ana hedefim iyi bir IELTS puanı almak."], ["opportunity", "fırsat", "great opportunity", "harika fırsat", "Studying abroad is a great opportunity for my future.", "Yurt dışında okumak geleceğim için harika bir fırsat."], ["challenge", "zorluk", "face a challenge", "bir zorlukla karşılaşmak", "Speaking confidently is a big challenge for many students.", "Kendinden emin konuşmak birçok öğrenci için büyük bir zorluktur."], ["focus", "odaklanmak", "focus on", "odaklanmak", "In the speaking test, I need to focus on one main idea.", "Konuşma sınavında tek bir ana fikre odaklanmam gerekiyor."], ["advantage", "avantaj", "one advantage", "bir avantaj", "One advantage of learning English is better communication.", "İngilizce öğrenmenin bir avantajı daha iyi iletişim kurmaktır."], ["disadvantage", "dezavantaj", "one disadvantage", "bir dezavantaj", "One disadvantage of social media is wasting too much time.", "Sosyal medyanın bir dezavantajı çok fazla zaman harcatmasıdır."], ["confident", "kendinden emin", "feel confident", "kendinden emin hissetmek", "I want to feel more confident when I speak English.", "İngilizce konuşurken kendimi daha güvende hissetmek istiyorum."], ["practice", "pratik yapmak", "regular practice", "düzenli pratik", "Regular practice can improve speaking ability.", "Düzenli pratik konuşma yeteneğini geliştirebilir."], ["affect", "etkilemek", "affect people", "insanları etkilemek", "Social media can affect the way people think and dress.", "Sosyal medya insanların düşünme ve giyinme tarzını etkileyebilir."], ["similar", "benzer", "similar to", "-e benzer", "People with similar interests can influence each other.", "Benzer ilgi alanlarına sahip insanlar birbirlerini etkileyebilir."], ["reason", "neden", "main reason", "ana neden", "One main reason is that English is important for university study.", "Ana nedenlerden biri İngilizcenin üniversite eğitimi için önemli olmasıdır."], ["opinion", "görüş", "in my opinion", "bence", "In my opinion, students should practice speaking every day.", "Bence öğrenciler her gün konuşma pratiği yapmalı."] ] },
+            { title: "Week 1 - Mon", subtitle: "Weekday", words: [ ["environment", "ortam", "learning environment", "öğrenme ortamı", "A good learning environment can help students improve faster.", "İyi bir öğrenme ortamı öğrencilerin daha hızlı gelişmesine yardımcı olabilir."], ["develop", "geliştirmek", "develop skills", "becerileri geliştirmek", "I want to develop my speaking skills this month.", "Bu ay konuşma becerilerimi geliştirmek istiyorum."], ["solution", "çözüm", "practical solution", "pratik çözüm", "A practical solution is to practice speaking every day.", "Pratik bir çözüm her gün konuşma pratiği yapmaktır."], ["compare", "karşılaştırmak", "compared to", "-e kıyasla", "Compared to the past, students now use more technology.", "Geçmişe kıyasla, öğrenciler artık daha fazla teknoloji kullanıyor."], ["different", "farklı", "different from", "-den farklı", "Learning online is different from learning in a classroom.", "Çevrimiçi öğrenmek sınıfta öğrenmekten farklıdır."], ["explain", "açıklamak", "explain clearly", "net bir şekilde açıklamak", "In IELTS, you need to explain your ideas clearly.", "IELTS'te fikirlerinizi net bir şekilde açıklamanız gerekir."], ["describe", "tanımlamak", "describe a person", "bir kişiyi anlatmak", "In Part 2, you may need to describe a person or a place.", "Bölüm 2'de bir kişiyi veya yeri anlatmanız gerekebilir."], ["require", "gerektirmek", "require a score", "bir puan gerektirmek", "This university may require an IELTS certificate.", "Bu üniversite bir IELTS sertifikası gerektirebilir."], ["communicate", "iletişim kurmak", "communicate clearly", "net iletişim kurmak", "English helps people communicate with others from different countries.", "İngilizce, insanların farklı ülkelerden insanlarla iletişim kurmasına yardımcı olur."], ["prepare", "hazırlanmak", "prepare for the exam", "sınava hazırlanmak", "I am preparing for the IELTS speaking test.", "IELTS konuşma sınavına hazırlanıyorum."] ] },
+            { title: "Week 1 - Tue", subtitle: "Weekday", words: [ ["regular", "düzenli", "regular practice", "düzenli pratik", "Regular practice is more effective than last-minute study.", "Düzenli pratik, son dakika çalışmasından daha etkilidir."], ["effective", "etkili", "effective way", "etkili yol", "Watching and repeating model answers is an effective way to learn.", "Model cevapları izlemek ve tekrarlamak öğrenmenin etkili bir yoludur."], ["result", "sonuç", "good result", "iyi sonuç", "Hard work usually leads to a better result.", "Sıkı çalışma genellikle daha iyi bir sonuca yol açar."], ["progress", "ilerleme", "make progress", "ilerleme kaydetmek", "I want to make clear progress in the next three weeks.", "Önümüzdeki üç hafta içinde belirgin bir ilerleme kaydetmek istiyorum."], ["skill", "beceri", "language skill", "dil becerisi", "Speaking is an important skill for IELTS.", "Konuşma IELTS için önemli bir beceridir."], ["achieve", "başarmak", "achieve a goal", "bir hedefe ulaşmak", "I hope to achieve my target band this month.", "Bu ay hedef puanıma ulaşmayı umuyorum."], ["motivate", "motive etmek", "feel motivated", "motive hissetmek", "My future plans motivate me to study harder.", "Gelecek planlarım beni daha sıkı çalışmaya motive ediyor."], ["clear", "net", "clear answer", "net cevap", "A clear answer is better than a long but confusing answer.", "Net bir cevap, uzun ama kafa karıştırıcı bir cevaptan daha iyidir."], ["organize", "düzenlemek", "organize ideas", "fikirleri düzenlemek", "In Part 2, you should organize your ideas clearly.", "Bölüm 2'de fikirlerinizi net bir şekilde düzenlemelisiniz."], ["detail", "detay", "give details", "detay vermek", "Good speakers give details and examples.", "İyi konuşmacılar detaylar ve örnekler verir."] ] },
+            { title: "Week 1 - Wed", subtitle: "Weekday", words: [ ["connect", "bağlamak", "connect ideas", "fikirleri bağlamak", "You should connect your ideas with linking words.", "Fikirlerinizi bağlayıcı kelimelerle birleştirmelisiniz."], ["calm", "sakin", "stay calm", "sakin kalmak", "It is important to stay calm during the speaking test.", "Konuşma sınavı sırasında sakin kalmak önemlidir."], ["positive", "olumlu", "positive effect", "olumlu etki", "Good teachers can have a positive effect on students.", "İyi öğretmenlerin öğrenciler üzerinde olumlu bir etkisi olabilir."], ["negative", "olumsuz", "negative effect", "olumsuz etki", "Too much stress can have a negative effect on learning.", "Çok fazla stresin öğrenme üzerinde olumsuz bir etkisi olabilir."], ["encourage", "teşvik etmek", "encourage students", "öğrencileri teşvik etmek", "Teachers should encourage students to speak more.", "Öğretmenler öğrencileri daha fazla konuşmaya teşvik etmelidir."], ["responsible", "sorumlu", "be responsible for", "sorumlu olmak", "Students should be responsible for their own learning.", "Öğrenciler kendi öğrenmelerinden sorumlu olmalıdır."], ["independent", "bağımsız", "become independent", "bağımsız olmak", "Studying abroad can help young people become more independent.", "Yurt dışında okumak gençlerin daha bağımsız olmasına yardımcı olabilir."], ["useful", "faydalı", "useful skill", "faydalı beceri", "English is a very useful skill for university life.", "İngilizce üniversite hayatı için çok faydalı bir beceridir."], ["common", "yaygın", "common mistake", "yaygın hata", "Repetition is a common mistake in IELTS speaking.", "Tekrar, IELTS konuşmasında yaygın bir hatadır."], ["response", "yanıt", "give a response", "yanıt vermek", "A short response is not enough in the IELTS test.", "IELTS sınavında kısa bir yanıt yeterli değildir."] ] },
+            { title: "Week 1 - Thu", subtitle: "Weekday", words: [ ["review", "gözden geçirmek", "review words", "kelimeleri gözden geçirmek", "You should review new words every weekend.", "Yeni kelimeleri her hafta sonu gözden geçirmelisin."], ["weak", "zayıf", "weak point", "zayıf nokta", "Part 3 is still his weakest part.", "Bölüm 3 hala onun en zayıf kısmı."], ["method", "yöntem", "useful method", "faydalı yöntem", "Repeating model answers is a useful method for IELTS speaking.", "Model cevapları tekrarlamak IELTS konuşması için faydalı bir yöntemdir."], ["issue", "sorun", "important issue", "önemli konu", "Education is an important issue in many countries.", "Eğitim birçok ülkede önemli bir konudur."], ["factor", "faktör", "key factor", "kilit faktör", "Motivation is a key factor in language learning.", "Motivasyon dil öğreniminde kilit bir faktördür."], ["involve", "içermek", "involve practice", "pratik içermek", "Good speaking practice should involve real communication.", "İyi bir konuşma pratiği gerçek iletişim içermelidir."], ["identify", "belirlemek", "identify a problem", "bir problemi belirlemek", "Students should identify their common mistakes.", "Öğrenciler yaygın hatalarını belirlemelidir."], ["manage", "yönetmek", "manage stress", "stresi yönetmek", "It is important to manage stress before the exam.", "Sınavdan önce stresi yönetmek önemlidir."], ["respond", "cevap vermek", "respond clearly", "net bir şekilde cevap vermek", "In IELTS, students should respond clearly and directly.", "IELTS'te öğrenciler net ve doğrudan cevap vermelidir."], ["specific", "belirli", "specific example", "belirli örnek", "A specific example makes your answer stronger.", "Spesifik bir örnek cevabınızı daha güçlü yapar."] ] },
+            { title: "Week 1 - Fri", subtitle: "Weekday", words: [ ["essential", "temel, önemli", "essential skill", "temel beceri", "Vocabulary is an essential part of speaking.", "Kelime bilgisi konuşmanın temel bir parçasıdır."], ["consider", "düşünmek", "consider carefully", "dikkatlice düşünmek", "Students should carefully consider the question before answering.", "Öğrenciler cevaplamadan önce soruyu dikkatlice düşünmelidir."], ["community", "topluluk", "online community", "çevrimiçi topluluk", "Social media can connect people with an online community.", "Sosyal medya insanları çevrimiçi bir topluluğa bağlayabilir."], ["culture", "kültür", "different cultures", "farklı kültürler", "Learning English helps people understand different cultures.", "İngilizce öğrenmek insanların farklı kültürleri anlamasına yardımcı olur."], ["global", "küresel", "global communication", "küresel iletişim", "English is important for global communication.", "İngilizce küresel iletişim için önemlidir."], ["local", "yerel", "local culture", "yerel kültür", "Tourists can learn more about local culture by speaking English.", "Turistler İngilizce konuşarak yerel kültür hakkında daha fazla şey öğrenebilir."], ["access", "erişim", "access to information", "bilgiye erişim", "Technology gives students easy access to information.", "Teknoloji öğrencilere bilgiye kolay erişim sağlar."], ["resource", "kaynak", "learning resource", "öğrenme kaynağı", "YouTube can be a useful learning resource.", "YouTube faydalı bir öğrenme kaynağı olabilir."], ["digital", "dijital", "digital tools", "dijital araçlar", "Many students now use digital tools to learn English.", "Pek çok öğrenci artık İngilizce öğrenmek için dijital araçlar kullanıyor."], ["technology", "teknoloji", "modern technology", "modern teknoloji", "Modern technology has changed the way students learn.", "Modern teknoloji öğrencilerin öğrenme şeklini değiştirdi."] ] },
+            { title: "Week 1 - Sat", subtitle: "Weekend", words: [ ["practical", "pratik", "practical skill", "pratik beceri", "Communication is a practical skill for daily life.", "İletişim günlük yaşam için pratik bir beceridir."], ["academic", "akademik", "academic vocabulary", "akademik kelime", "Academic vocabulary is useful for IELTS preparation.", "Akademik kelime bilgisi IELTS hazırlığı için faydalıdır."], ["concentrate", "odaklanmak", "concentrate on", "odaklanmak", "It is easier to concentrate in a quiet place.", "Sessiz bir yerde konsantre olmak daha kolaydır."], ["routine", "rutin", "study routine", "çalışma rutini", "A strong study routine can improve results.", "Güçlü bir çalışma rutini sonuçları iyileştirebilir."], ["adapt", "uyum sağlamak", "adapt quickly", "hızlıca uyum sağlamak", "Students need to adapt to new learning methods.", "Öğrencilerin yeni öğrenme yöntemlerine uyum sağlaması gerekir."], ["alternative", "alternatif", "alternative method", "alternatif yöntem", "Online learning is a good alternative for busy students.", "Çevrimiçi öğrenme meşgul öğrenciler için iyi bir alternatiftir."], ["complex", "karmaşık", "complex idea", "karmaşık fikir", "Some IELTS questions are complex, so students need time to think.", "Bazı IELTS soruları karmaşıktır, bu nedenle öğrencilerin düşünmek için zamana ihtiyacı vardır."], ["simple", "basit", "simple answer", "basit cevap", "A simple but clear answer is better than a confusing one.", "Basit ama net bir cevap, kafa karıştırıcı bir cevaptan daha iyidir."], ["relevant", "ilgili", "relevant example", "alakalı örnek", "You should give a relevant example in your answer.", "Cevabınızda alakalı bir örnek vermelisiniz."], ["evidence", "kanıt", "clear evidence", "açık kanıt", "Real examples are like evidence in speaking.", "Gerçek örnekler konuşmada kanıt gibidir."] ] },
+            
+            // WEEK 2
+            { title: "Week 2 - Sun", subtitle: "Weekend", words: [ ["approach", "yaklaşım", "different approach", "farklı yaklaşım", "Every student needs a different approach to learning.", "Her öğrencinin öğrenmeye farklı bir yaklaşıma ihtiyacı vardır."], ["establish", "kurmak", "establish a routine", "rutin oluşturmak", "It is useful to establish a daily speaking habit.", "Günlük bir konuşma alışkanlığı oluşturmak faydalıdır."], ["maintain", "sürdürmek", "maintain progress", "ilerlemeyi sürdürmek", "Students need to maintain regular practice.", "Öğrencilerin düzenli pratiği sürdürmesi gerekir."], ["limit", "sınırlamak", "limit screen time", "ekran süresini sınırlamak", "Limited vocabulary can make answers weaker.", "Sınırlı kelime bilgisi cevapları zayıflatabilir."], ["pressure", "baskı", "feel pressure", "baskı hissetmek", "Many students feel pressure before the IELTS exam.", "Pek çok öğrenci IELTS sınavından önce baskı hisseder."], ["balance", "denge", "keep a balance", "dengeyi korumak", "Students should keep a balance between study and rest.", "Öğrenciler çalışma ve dinlenme arasında bir denge kurmalıdır."], ["commit", "kendini adamak", "commit to learning", "öğrenmeye adamak", "You need to commit to daily practice if you want fast improvement.", "Hızlı gelişim istiyorsanız günlük pratiğe kendinizi adamanız gerekir."], ["private", "özel", "private lesson", "özel ders", "Some students improve faster with private lessons.", "Bazı öğrenciler özel derslerle daha hızlı gelişir."], ["promote", "teşvik etmek", "promote learning", "öğrenmeyi teşvik etmek", "Schools should promote reading and communication skills.", "Okullar okuma ve iletişim becerilerini teşvik etmelidir."], ["strategy", "strateji", "learning strategy", "öğrenme stratejisi", "Repetition and recording are a good learning strategy.", "Tekrar ve kayıt iyi bir öğrenme stratejisidir."] ] },
+            { title: "Week 2 - Mon", subtitle: "Weekday", words: [ ["efficient", "verimli", "efficient method", "verimli yöntem", "Short daily practice can be more efficient than long weekly study.", "Kısa günlük pratik, uzun haftalık çalışmadan daha verimli olabilir."], ["experience", "deneyim", "valuable experience", "değerli deneyim", "Studying abroad can be a valuable experience.", "Yurt dışında okumak değerli bir deneyim olabilir."], ["significant", "önemli", "significant role", "önemli rol", "Technology has played a significant role in education.", "Teknoloji eğitimde önemli bir rol oynamıştır."], ["consequence", "sonuç", "possible consequence", "olası sonuç", "One possible consequence of poor English is fewer opportunities.", "Zayıf İngilizcenin olası bir sonucu daha az fırsattır."], ["discourage", "cesaret kırmak", "feel discouraged", "cesareti kırılmış hissetmek", "Too much criticism can discourage students.", "Çok fazla eleştiri öğrencilerin cesaretini kırabilir."], ["habit", "alışkanlık", "daily habit", "günlük alışkanlık", "Daily speaking practice is a good habit.", "Günlük konuşma pratiği iyi bir alışkanlıktır."], ["discipline", "disiplin", "self-discipline", "öz disiplin", "Self-discipline helps students improve faster.", "Öz disiplin öğrencilerin daha hızlı gelişmesine yardımcı olur."], ["responsibility", "sorumluluk", "take responsibility", "sorumluluk almak", "Students should take responsibility for their own learning.", "Öğrenciler kendi öğrenmelerinin sorumluluğunu almalıdır."], ["potential", "potansiyel", "full potential", "tam potansiyel", "Every student has the potential to improve.", "Her öğrencinin gelişme potansiyeli vardır."], ["evaluate", "değerlendirmek", "evaluate progress", "ilerlemeyi değerlendirmek", "Teachers should evaluate speaking regularly.", "Öğretmenler konuşmayı düzenli olarak değerlendirmelidir."] ] },
+            { title: "Week 2 - Tue", subtitle: "Weekday", words: [ ["innovation", "yenilik", "innovation in education", "eğitimde yenilik", "Innovation in education has made learning more flexible.", "Eğitimdeki yenilikler öğrenmeyi daha esnek hale getirdi."], ["traditional", "geleneksel", "traditional method", "geleneksel yöntem", "Traditional education is still important in many countries.", "Geleneksel eğitim birçok ülkede hala önemlidir."], ["modern", "modern", "modern life", "modern hayat", "English is very useful in modern life.", "İngilizce modern hayatta çok kullanışlıdır."], ["flexible", "esnek", "flexible learning", "esnek öğrenme", "Online courses offer more flexible learning.", "Çevrimiçi kurslar daha esnek öğrenme sunar."], ["online", "çevrim içi", "online learning", "çevrimiçi öğrenme", "Online learning can help busy students save time.", "Çevrimiçi öğrenme meşgul öğrencilerin zaman kazanmasına yardımcı olabilir."], ["device", "cihaz", "mobile device", "mobil cihaz", "Many students use a mobile device to study vocabulary.", "Birçok öğrenci kelime çalışmak için mobil cihaz kullanıyor."], ["platform", "platform", "learning platform", "öğrenme platformu", "YouTube is a popular learning platform.", "YouTube popüler bir öğrenme platformudur."], ["system", "sistem", "education system", "eğitim sistemi", "Every country has a different education system.", "Her ülkenin farklı bir eğitim sistemi vardır."] ] },
+            { title: "Week 2 - Wed", subtitle: "Weekday", words: [ ["stress", "stres", "reduce stress", "stresi azaltmak", "Hobbies can reduce stress after a long day.", "Hobiler uzun bir günden sonra stresi azaltabilir."], ["relax", "rahatlamak", "help people relax", "rahatlamaya yardım etmek", "Music can help people relax.", "Müzik insanların rahatlamasına yardımcı olabilir."], ["productivity", "verimlilik", "improve productivity", "verimliliği artırmak", "A good study plan can improve productivity.", "İyi bir çalışma planı verimliliği artırabilir."], ["success", "başarı", "future success", "gelecekteki başarı", "English may be important for future success.", "İngilizce gelecekteki başarı için önemli olabilir."], ["failure", "başarısızlık", "fear of failure", "başarısızlık korkusu", "Fear of failure can stop students from speaking.", "Başarısızlık korkusu öğrencilerin konuşmasını engelleyebilir."], ["overcome", "üstesinden gelmek", "overcome fear", "korkuyu yenmek", "Practice helps students overcome fear.", "Pratik yapmak öğrencilerin korkularını yenmelerine yardımcı olur."], ["mistake", "hata", "common mistake", "yaygın hata", "Repetition is a common mistake in speaking.", "Tekrarlama, konuşmada yaygın bir hatadır."], ["correct", "düzeltmek", "correct mistakes", "hataları düzeltmek", "Students should correct their mistakes regularly.", "Öğrenciler hatalarını düzenli olarak düzeltmelidir."], ["feedback", "geri bildirim", "useful feedback", "faydalı geri bildirim", "Teacher feedback helps students see their weak points.", "Öğretmen geri bildirimi öğrencilerin zayıf noktalarını görmelerine yardımcı olur."], ["compare", "karşılaştırmak", "compare with", "ile karşılaştırmak", "Compared to the past, education is more digital today.", "Geçmişle karşılaştırıldığında eğitim bugün daha dijitaldir."] ] },
+            { title: "Week 2 - Thu", subtitle: "Weekday", words: [ ["contrast", "zıtlık", "in contrast", "aksine", "In contrast to the past, students now use apps and videos more often.", "Geçmişin aksine, öğrenciler artık uygulamaları ve videoları daha sık kullanıyor."], ["increase", "artırmak", "increase confidence", "özgüveni artırmak", "Daily speaking can increase confidence.", "Günlük konuşma özgüveni artırabilir."], ["decrease", "azaltmak", "decrease stress", "stresi azaltmak", "Good preparation can decrease stress before the exam.", "İyi bir hazırlık sınavdan önce stresi azaltabilir."], ["predict", "tahmin etmek", "predict the future", "geleceği tahmin etmek", "It is hard to predict how jobs will change in the future.", "Gelecekte işlerin nasıl değişeceğini tahmin etmek zor."], ["future", "gelecek", "in the future", "gelecekte", "In the future, I want to study abroad.", "Gelecekte yurt dışında okumak istiyorum."], ["likely", "muhtemel", "it is likely that", "muhtemeldir ki", "It is likely that technology will become even more important.", "Teknolojinin daha da önemli hale gelmesi muhtemeldir."], ["possible", "mümkün", "possible change", "olası değişiklik", "One possible change is more online speaking practice.", "Olası bir değişiklik daha fazla çevrimiçi konuşma pratiğidir."], ["invest", "yatırım yapmak", "invest time", "zaman yatırımı", "Students should invest time in daily speaking practice.", "Öğrenciler günlük konuşma pratiğine zaman ayırmalıdır."], ["valuable", "değerli", "valuable skill", "değerli beceri", "English is a valuable skill for international study.", "İngilizce uluslararası eğitim için değerli bir beceridir."] ] },
+            { title: "Week 2 - Fri", subtitle: "Weekday", words: [ ["sustainable", "sürdürülebilir", "sustainable habit", "sürdürülebilir alışkanlık", "Small daily study is more sustainable than one long session a week.", "Günlük kısa bir çalışma, haftada bir uzun bir oturumdan daha sürdürülebilirdir."], ["consist", "oluşmak", "consist of", "-den oluşmak", "A good answer should consist of an opinion, a reason, and an example.", "İyi bir cevap fikir, sebep ve örnekten oluşmalıdır."], ["perform", "performans göstermek", "perform well", "iyi performans göstermek", "He wants to perform well in the IELTS exam.", "IELTS sınavında iyi performans göstermek istiyor."], ["preparation", "hazırlık", "careful preparation", "dikkatli hazırlık", "Careful preparation leads to better results.", "Dikkatli hazırlık daha iyi sonuçlara yol açar."], ["adapt", "uyum sağlamak", "adapt to change", "değişime uyum", "Students need to adapt to different speaking topics.", "Öğrencilerin farklı konuşma konularına uyum sağlaması gerekir."], ["involve", "içermek", "involve explanation", "açıklama içermek", "Good IELTS answers involve explanation, not only short ideas.", "İyi IELTS cevapları sadece kısa fikirleri değil açıklamaları da içerir."], ["specific", "belirli", "specific point", "belirli nokta", "Try to give one specific point in each answer.", "Her cevapta belirli bir nokta vermeye çalışın."], ["clear", "net", "clear structure", "net yapı", "A clear structure helps the listener understand you.", "Net bir yapı dinleyicinin sizi anlamasına yardımcı olur."], ["organize", "düzenlemek", "organize your answer", "cevabını düzenlemek", "Good students organize their answers before speaking.", "İyi öğrenciler konuşmadan önce cevaplarını düzenlerler."], ["response", "yanıt", "full response", "tam yanıt", "A full response needs a reason and an example.", "Tam bir yanıt için neden ve örnek gerekir."] ] },
+            { title: "Week 2 - Sat", subtitle: "Weekend", words: [ ["achievement", "başarı", "great achievement", "büyük başarı", "Getting a good IELTS score is a great achievement.", "İyi bir IELTS puanı almak büyük bir başarıdır."], ["alternative", "alternatif", "alternative solution", "alternatif çözüm", "Recording answers is an alternative to classroom practice.", "Cevapları kaydetmek sınıf pratiğine bir alternatiftir."], ["circumstance", "durum", "difficult circumstances", "zor koşullar", "Some students study under difficult circumstances.", "Bazı öğrenciler zor koşullar altında çalışır."], ["concentrate", "odaklanmak", "concentrate fully", "tam odaklanmak", "It is easier to concentrate in a quiet place.", "Sessiz bir yerde konsantre olmak daha kolaydır."], ["conclude", "sonuç çıkarmak", "conclude that", "sonucuna varmak", "We can conclude that regular practice helps a lot.", "Düzenli pratiğin çok yardımcı olduğu sonucuna varabiliriz."], ["conflict", "çatışma", "conflict of ideas", "fikir çatışması", "Some topics involve a conflict of ideas or opinions.", "Bazı konular fikir veya görüş çatışması içerir."], ["impact", "etki", "have an impact on", "etkisi olmak", "Education has a big impact on society.", "Eğitimin toplum üzerinde büyük bir etkisi vardır."], ["process", "süreç", "learning process", "öğrenme süreci", "Vocabulary learning is a long process.", "Kelime öğrenme uzun bir süreçtir."], ["require", "gerektirmek", "require effort", "çaba gerektirmek", "Good speaking performance requires daily effort.", "İyi konuşma performansı günlük çaba gerektirir."] ] },
+            
+            // WEEK 3
+            { title: "Week 3 - Sun", subtitle: "Weekend", words: [ ["advantage", "avantaj", "one clear advantage", "açık avantaj", "One clear advantage of learning English is better communication.", "İngilizce öğrenmenin net bir avantajı daha iyi iletişimdir."], ["disadvantage", "dezavantaj", "major disadvantage", "büyük dezavantaj", "A major disadvantage of social media is distraction.", "Sosyal medyanın önemli bir dezavantajı dikkat dağınıklığıdır."], ["strategy", "strateji", "effective strategy", "etkili strateji", "Repetition is an effective strategy for self-study.", "Tekrar, kendi kendine çalışma için etkili bir stratejidir."], ["factor", "faktör", "important factor", "önemli faktör", "Confidence is an important factor in success.", "Özgüven başarıda önemli bir faktördür."], ["identify", "belirlemek", "identify weak points", "zayıf noktaları belirlemek", "Students should identify their weak points early.", "Öğrenciler zayıf noktalarını erkenden belirlemelidir."], ["maintain", "sürdürmek", "maintain progress", "ilerlemeyi sürdürmek", "Review helps students maintain progress.", "Gözden geçirme öğrencilerin ilerlemeyi sürdürmelerine yardımcı olur."], ["method", "yöntem", "learning method", "öğrenme yöntemi", "Everyone needs a learning method that suits them.", "Herkesin kendisine uygun bir öğrenme yöntemine ihtiyacı vardır."], ["solution", "çözüm", "simple solution", "basit çözüm", "A simple solution is to practice with recordings.", "Basit bir çözüm kayıtlarla pratik yapmaktır."], ["support", "destek", "family support", "aile desteği", "Family support can motivate students.", "Aile desteği öğrencileri motive edebilir."], ["trend", "eğilim", "growing trend", "büyüyen eğilim", "Online education is a growing trend.", "Çevrimiçi eğitim büyüyen bir trenddir."] ] },
+            { title: "Week 3 - Mon", subtitle: "Weekday", words: [ ["academic", "akademik", "academic goal", "akademik hedef", "Studying abroad is one of my academic goals.", "Yurt dışında okumak benim akademik hedeflerimden biridir."], ["access", "erişim", "easy access", "kolay erişim", "Students now have easy access to online lessons.", "Öğrencilerin artık çevrimiçi derslere kolay erişimi var."], ["community", "topluluk", "learning community", "öğrenme topluluğu", "A strong learning community can support students.", "Güçlü bir öğrenme topluluğu öğrencileri destekleyebilir."], ["digital", "dijital", "digital education", "dijital eğitim", "Digital education is becoming more common.", "Dijital eğitim giderek yaygınlaşıyor."], ["environment", "ortam", "study environment", "çalışma ortamı", "A quiet study environment helps students focus.", "Sessiz bir çalışma ortamı öğrencilerin odaklanmasına yardımcı olur."], ["essential", "önemli", "essential part", "temel parça", "Grammar is an essential part of speaking clearly.", "Dilbilgisi net konuşmanın temel bir parçasıdır."], ["global", "küresel", "global world", "küresel dünya", "English is very useful in today’s global world.", "İngilizce günümüzün küresel dünyasında çok kullanışlıdır."], ["independent", "bağımsız", "independent learner", "bağımsız öğrenen", "A successful student becomes an independent learner.", "Başarılı bir öğrenci bağımsız bir öğrenen olur."], ["technology", "teknoloji", "use technology", "teknoloji kullanmak", "Many learners use technology to improve faster.", "Pek çok öğrenci daha hızlı gelişmek için teknolojiyi kullanır."] ] },
+            { title: "Week 3 - Tue", subtitle: "Weekday", words: [ ["compare", "karşılaştırmak", "compare ideas", "fikirleri karşılaştırmak", "Students often compare past and present in IELTS.", "Öğrenciler genellikle IELTS'te geçmişi ve bugünü karşılaştırırlar."], ["consequence", "sonuç", "negative consequence", "olumsuz sonuç", "One negative consequence of poor preparation is low confidence.", "Zayıf hazırlığın olumsuz bir sonucu düşük özgüvendir."], ["encourage", "teşvik etmek", "encourage practice", "pratiği teşvik", "Good teachers encourage students to practice every day.", "İyi öğretmenler öğrencileri her gün pratik yapmaya teşvik eder."], ["evaluate", "değerlendirmek", "evaluate performance", "performans değerlendirmek", "It is important to evaluate your speaking performance.", "Konuşma performansınızı değerlendirmek önemlidir."], ["habit", "alışkanlık", "healthy habit", "sağlıklı alışkanlık", "Daily review is a healthy habit.", "Günlük tekrar sağlıklı bir alışkanlıktır."], ["innovation", "yenilik", "educational innovation", "eğitimsel yenilik", "Educational innovation has changed many classrooms.", "Eğitimde inovasyon birçok sınıfı değiştirdi."], ["motivate", "motive etmek", "motivate yourself", "kendini motive etmek", "Clear goals help students motivate themselves.", "Net hedefler öğrencilerin kendilerini motive etmelerine yardımcı olur."], ["personalized", "kişiselleştirilmiş", "personalized learning", "kişiselleştirilmiş öğrenme", "Some apps offer personalized learning.", "Bazı uygulamalar kişiselleştirilmiş öğrenme sunar."], ["review", "gözden geçirmek", "review vocabulary", "kelime tekrarı", "Students should review vocabulary regularly.", "Öğrenciler kelime bilgisini düzenli olarak gözden geçirmelidir."], ["routine", "rutin", "daily routine", "günlük rutin", "A strong daily routine can improve results.", "Güçlü bir günlük rutin sonuçları iyileştirebilir."] ] },
+            { title: "Week 3 - Wed", subtitle: "Weekday", words: [ ["affect", "etkilemek", "affect learning", "öğrenmeyi etkilemek", "Stress can affect learning badly.", "Stres öğrenmeyi kötü etkileyebilir."], ["balance", "denge", "keep a balance", "dengeyi korumak", "Students should keep a balance between study and rest.", "Öğrenciler çalışma ve dinlenme arasında bir denge kurmalıdır."], ["consume", "tüketmek", "consume time", "zaman tüketmek", "Social media can consume too much time.", "Sosyal medya çok fazla zaman tüketebilir."], ["efficient", "verimli", "efficient way", "verimli yol", "This is an efficient way to study vocabulary.", "Bu kelime çalışmanın verimli bir yoludur."], ["feedback", "geri bildirim", "teacher feedback", "öğretmen geri bildirimi", "Teacher feedback helps students improve.", "Öğretmen geri bildirimi öğrencilerin gelişmesine yardımcı olur."], ["flexible", "esnek", "flexible schedule", "esnek program", "A flexible schedule is useful for self-study.", "Kendi kendine çalışma için esnek bir program faydalıdır."], ["limit", "sınırlamak", "limit distractions", "dikkat dağıtıcıları sınırlamak", "Students should limit distractions while studying.", "Öğrenciler ders çalışırken dikkat dağıtıcı unsurları sınırlamalıdır."], ["pressure", "baskı", "under pressure", "baskı altında", "Some students cannot speak well under pressure.", "Bazı öğrenciler baskı altında iyi konuşamazlar."], ["stress", "stres", "reduce stress", "stresi azaltmak", "Music and hobbies can reduce stress.", "Müzik ve hobiler stresi azaltabilir."] ] },
+            { title: "Week 3 - Thu", subtitle: "Weekday", words: [ ["confident", "kendinden emin", "feel confident", "kendinden emin hissetmek", "Regular practice helps students feel confident.", "Düzenli pratik öğrencilerin kendilerini güvende hissetmelerine yardımcı olur."], ["discipline", "disiplin", "self-discipline", "öz disiplin", "Self-discipline is very important in self-study.", "Bireysel çalışmada öz disiplin çok önemlidir."], ["focus", "odaklanmak", "focus on", "odaklanmak", "Try to focus on one main idea.", "Ana bir fikre odaklanmaya çalışın."], ["improve", "geliştirmek", "improve quickly", "hızlı gelişmek", "He wants to improve quickly before the exam.", "Sınavdan önce hızlı bir şekilde kendini geliştirmek istiyor."], ["opportunity", "fırsat", "job opportunity", "iş fırsatı", "English can create new job opportunities.", "İngilizce yeni iş fırsatları yaratabilir."], ["perform", "performans göstermek", "perform better", "iyi performans", "Practice helps students perform better in speaking.", "Pratik yapmak öğrencilerin konuşmada daha iyi performans göstermesine yardımcı olur."], ["possible", "mümkün", "possible solution", "olası çözüm", "A possible solution is daily recording practice.", "Olası bir çözüm günlük kayıt pratiğidir."], ["prepare", "hazırlanmak", "prepare well", "iyi hazırlanmak", "Students should prepare well for IELTS speaking.", "Öğrenciler IELTS konuşması için iyi hazırlanmalıdır."], ["valuable", "değerli", "valuable opportunity", "değerli fırsat", "Studying abroad is a valuable opportunity.", "Yurt dışında eğitim almak değerli bir fırsattır."] ] },
+            { title: "Week 3 - Fri", subtitle: "Weekday", words: [ ["clear", "net", "clear idea", "net fikir", "A clear idea is easier to explain.", "Net bir fikri açıklamak daha kolaydır."], ["describe", "anlatmak", "describe clearly", "net anlatmak", "In Part 2, students should describe the topic clearly.", "Bölüm 2'de öğrenciler konuyu net bir şekilde açıklamalıdır."], ["explain", "açıklamak", "explain your reason", "nedenini açıklamak", "You should explain your reason and give an example.", "Nedeninizi açıklamalı ve bir örnek vermelisiniz."], ["opinion", "görüş", "express an opinion", "görüş belirtmek", "Part 3 often asks students to express an opinion.", "Bölüm 3 genellikle öğrencilerden fikir belirtmelerini ister."], ["reason", "neden", "strong reason", "güçlü neden", "Try to give one strong reason in each answer.", "Her cevapta güçlü bir neden sunmaya çalışın."], ["relevant", "ilgili", "relevant example", "alakalı örnek", "A relevant example makes the answer stronger.", "İlgili bir örnek cevabı daha güçlü kılar."], ["response", "yanıt", "complete response", "tam yanıt", "A complete response needs development.", "Eksiksiz bir cevap geliştirilmeye ihtiyaç duyar."], ["simple", "basit", "simple structure", "basit yapı", "A simple structure can make answers better.", "Basit bir yapı cevapları daha iyi yapabilir."], ["specific", "belirli", "specific detail", "belirli detay", "Try to add one specific detail.", "Belirli bir detay eklemeye çalışın."] ] },
+            { title: "Week 3 - Sat", subtitle: "Weekend", words: [ ["achievement", "başarı", "personal achievement", "kişisel başarı", "Getting a good band score is a personal achievement.", "İyi bir puan almak kişisel bir başarıdır."], ["benefit", "fayda", "long-term benefit", "uzun vadeli fayda", "Speaking English well has many long-term benefits.", "İyi İngilizce konuşmanın birçok uzun vadeli faydası vardır."], ["effective", "etkili", "highly effective", "son derece etkili", "Daily speaking is highly effective.", "Günlük konuşma son derece etkilidir."], ["experience", "deneyim", "learning experience", "öğrenme deneyimi", "IELTS preparation is a useful learning experience.", "IELTS hazırlığı faydalı bir öğrenme deneyimidir."], ["future", "gelecek", "future plan", "gelecek planı", "English is important for my future plans.", "İngilizce gelecek planlarım için önemlidir."], ["impact", "etki", "positive impact", "olumlu etki", "Good habits have a positive impact on learning.", "İyi alışkanlıkların öğrenme üzerinde olumlu bir etkisi vardır."], ["likely", "muhtemel", "likely to improve", "gelişmesi muhtemel", "Students are likely to improve with daily practice.", "Öğrencilerin günlük pratikle gelişmesi muhtemeldir."], ["maintain", "sürdürmek", "maintain a habit", "alışkanlık sürdürmek", "It is important to maintain a strong study habit.", "Güçlü bir çalışma alışkanlığını sürdürmek önemlidir."], ["productivity", "verimlilik", "increase productivity", "verimliliği artırmak", "A good routine can increase productivity.", "İyi bir rutin verimliliği artırabilir."], ["sustainable", "sürdürülebilir", "sustainable routine", "sürdürülebilir rutin", "A sustainable routine is better than a very hard routine.", "Sürdürülebilir bir rutin çok zor bir rutinden daha iyidir."], ["progress", "ilerleme", "real progress", "gerçek ilerleme", "Weekend review can create real progress.", "Hafta sonu tekrarı gerçek ilerleme yaratabilir."] ] }
+        ];
+
+        // Global State
+        let currentDayIndex = 0;
+        let dayWords = [];
+        
+        // Utils
+        function shuffle(array) { return array.sort(() => Math.random() - 0.5); }
+
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'en-US';
+                window.speechSynthesis.speak(msg);
+            }
+        }
+
+        const vocabProgramKey = "ilets:vocab-program:start-date";
+
+        function getLocalMidnight(date) {
+            return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        }
+
+        function formatDateKey(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+
+            return year + "-" + month + "-" + day;
+        }
+
+        function parseDateKey(value) {
+            const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+            if (!match) {
+                return null;
+            }
+
+            return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+        }
+
+        function getConfiguredStartDate() {
+            return parseDateKey(document.body.dataset.vocabStartDate);
+        }
+
+        function readProgramStartDate() {
+            try {
+                return parseDateKey(localStorage.getItem(vocabProgramKey));
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function writeProgramStartDate(value) {
+            try {
+                localStorage.setItem(vocabProgramKey, formatDateKey(value));
+            } catch (error) {
+                return;
+            }
+        }
+
+        function addDays(date, offset) {
+            const result = new Date(date);
+            result.setDate(result.getDate() + offset);
+            return getLocalMidnight(result);
+        }
+
+        function formatDisplayDate(date) {
+            return new Intl.DateTimeFormat("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            }).format(date);
+        }
+
+        function getProgramState(totalDays) {
+            const today = getLocalMidnight(new Date());
+            const configuredStartDate = getConfiguredStartDate();
+            let startDate = configuredStartDate || readProgramStartDate();
+
+            if (!startDate || startDate.getTime() > today.getTime()) {
+                startDate = configuredStartDate || today;
+
+                if (!configuredStartDate) {
+                    writeProgramStartDate(startDate);
+                }
+            }
+
+            const dayDifference = Math.floor(
+                (today.getTime() - startDate.getTime()) / 86400000
+            );
+            const activeDayNumber = Math.max(
+                1,
+                Math.min(totalDays, dayDifference + 1)
+            );
+
+            return {
+                startDate: startDate,
+                activeDayNumber: activeDayNumber
+            };
+        }
+
+        // Navigation
+        const screens = {
+            home: document.getElementById('screen-home'),
+            dayMenu: document.getElementById('screen-day-menu'),
+            recall: document.getElementById('screen-recall'),
+            builder: document.getElementById('screen-builder'),
+            listen: document.getElementById('screen-listen'),
+            collocation: document.getElementById('screen-collocation'),
+            complete: document.getElementById('screen-complete')
+        };
+        const headerSubtitle = document.getElementById('header-subtitle');
+
+        function switchScreen(screenId) {
+            Object.values(screens).forEach(s => s.classList.add('hidden-screen'));
+            screens[screenId].classList.remove('hidden-screen');
+            document.getElementById('main-area').scrollTop = 0;
+        }
+
+        function goHome() {
+            headerSubtitle.innerText = 'Select a Day';
+            switchScreen('home');
+        }
+
+        function goDayMenu() {
+            headerSubtitle.innerText = lessonData[currentDayIndex].title;
+            switchScreen('dayMenu');
+        }
+
+        // Init Home
+        function initHome() {
+            const grid = document.getElementById('days-grid');
+            const programState = getProgramState(lessonData.length);
+
+            lessonData.forEach((day, index) => {
+                const btn = document.createElement('button');
+                const dayNumber = index + 1;
+                const isUnlocked = dayNumber <= programState.activeDayNumber;
+                const unlockDate = addDays(programState.startDate, index);
+
+                btn.className = isUnlocked
+                    ? "bg-white p-5 rounded-2xl shadow-sm border border-slate-200 font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-400 hover:-translate-y-1 transition-all text-left flex flex-col justify-between"
+                    : "bg-slate-50 p-5 rounded-2xl shadow-sm border border-slate-200 font-bold text-slate-400 text-left flex flex-col justify-between cursor-not-allowed";
+
+                btn.innerHTML = isUnlocked
+                    ? `
+                        <span class="text-xs text-indigo-400 uppercase tracking-widest mb-1">${day.subtitle}</span>
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-lg">${day.title}</span> 
+                            <i class="fas fa-chevron-right text-indigo-300"></i>
+                        </div>
+                    `
+                    : `
+                        <span class="text-xs text-slate-400 uppercase tracking-widest mb-1">${day.subtitle}</span>
+                        <div class="flex justify-between items-center w-full gap-3">
+                            <span class="text-lg">${day.title}</span>
+                            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-400">
+                                <i class="fas fa-lock text-xs"></i>
+                            </span>
+                        </div>
+                    `;
+
+                if (!isUnlocked) {
+                    btn.disabled = true;
+                    btn.title = `Locked until ${formatDisplayDate(unlockDate)}`;
+                    grid.appendChild(btn);
+                    return;
+                }
+
+                btn.onclick = () => {
+                    currentDayIndex = index;
+                    dayWords = lessonData[index].words;
+                    document.getElementById('menu-day-title').innerText = day.title;
+                    goDayMenu();
+                };
+                grid.appendChild(btn);
+            });
+        }
+
+        function openDayFromQuery() {
+            const params = new URLSearchParams(window.location.search);
+            const dayNumber = Number(params.get('day'));
+            const programState = getProgramState(lessonData.length);
+
+            if (!Number.isFinite(dayNumber) || dayNumber < 1 || dayNumber > lessonData.length) {
+                return;
+            }
+
+            if (dayNumber > programState.activeDayNumber) {
+                return;
+            }
+
+            currentDayIndex = dayNumber - 1;
+            dayWords = lessonData[currentDayIndex].words;
+            document.getElementById('menu-day-title').innerText = lessonData[currentDayIndex].title;
+            goDayMenu();
+        }
+
+        function startGame(mode) {
+            if (mode === 'recall') initRecall();
+            if (mode === 'builder') initBuilder();
+            if (mode === 'listen') initListen();
+            if (mode === 'collocation') initCollocation();
+        }
+
+        // ==========================================
+        // GAME 1: ACTIVE RECALL (TYPING)
+        // ==========================================
+        let recIndex = 0;
+        let recQuestions = [];
+
+        function initRecall() {
+            recQuestions = shuffle([...dayWords]);
+            recIndex = 0;
+            document.getElementById('rec-total').innerText = recQuestions.length;
+            showRecall();
+            switchScreen('recall');
+        }
+
+        function showRecall() {
+            const q = recQuestions[recIndex];
+            document.getElementById('rec-current').innerText = recIndex + 1;
+            document.getElementById('rec-progress').style.width = `${(recIndex / recQuestions.length) * 100}%`;
+            document.getElementById('rec-turkish').innerText = q[1];
+            
+            const regex = new RegExp(`\\b${q[0]}\\b`, "gi");
+            let blankCollocation = q[2].replace(regex, "_________");
+            if (blankCollocation === q[2]) blankCollocation = q[2].replace(q[0], "_________"); 
+            document.getElementById('rec-clue').innerText = blankCollocation;
+            
+            const input = document.getElementById('rec-input');
+            input.value = '';
+            input.disabled = false;
+            input.focus();
+            
+            const box = document.getElementById('rec-box');
+            box.className = "bg-white p-8 sm:p-12 rounded-3xl shadow-xl border-t-8 border-amber-500 text-center relative transition-colors duration-300";
+            
+            document.getElementById('rec-feedback').innerHTML = '';
+            document.getElementById('rec-submit-btn').classList.remove('hidden');
+            document.getElementById('rec-next-btn').classList.add('hidden');
+        }
+
+        function showHint(gameType) {
+            if (gameType === 'rec') {
+                const answer = recQuestions[recIndex][0];
+                const input = document.getElementById('rec-input');
+                if(input.value.length < answer.length) {
+                    input.value = answer.substring(0, input.value.length + 1);
+                }
+                input.focus();
+            } else if (gameType === 'lst') {
+                const answer = listenQuestions[listenIndex][0];
+                const input = document.getElementById('lst-input');
+                if(input.value.length < answer.length) {
+                    input.value = answer.substring(0, input.value.length + 1);
+                }
+                input.focus();
+            }
+        }
+
+        function checkRecall() {
+            const input = document.getElementById('rec-input');
+            const box = document.getElementById('rec-box');
+            const feedback = document.getElementById('rec-feedback');
+            const answer = recQuestions[recIndex][0];
+
+            if (input.value.trim().toLowerCase() === answer.toLowerCase()) {
+                playAudio(answer);
+                input.disabled = true;
+                box.classList.replace('border-amber-500', 'border-emerald-500');
+                box.classList.add('bg-emerald-50');
+                document.getElementById('rec-clue').innerHTML = recQuestions[recIndex][2].replace(new RegExp(`\\b${answer}\\b`, "gi"), `<span class="text-emerald-600 font-bold">${answer}</span>`);
+                feedback.innerHTML = '<span class="text-emerald-600"><i class="fas fa-check-circle mr-2"></i> Perfect!</span>';
+                document.getElementById('rec-submit-btn').classList.add('hidden');
+                document.getElementById('rec-next-btn').classList.remove('hidden');
+            } else {
+                box.classList.remove('shake');
+                void box.offsetWidth; 
+                box.classList.add('shake');
+                input.value = '';
+                input.focus();
+                feedback.innerHTML = '<span class="text-red-500"><i class="fas fa-times-circle mr-2"></i> Try again or use a hint!</span>';
+            }
+        }
+
+        document.getElementById('rec-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                if (!document.getElementById('rec-submit-btn').classList.contains('hidden')) checkRecall();
+                else nextRecall();
+            }
+        });
+
+        function nextRecall() {
+            if (recIndex < recQuestions.length - 1) { recIndex++; showRecall(); } 
+            else { switchScreen('complete'); }
+        }
+
+        // ==========================================
+        // GAME 2: SENTENCE BUILDER
+        // ==========================================
+        let bldIndex = 0;
+        let bldQuestions = [];
+        let availableChunks = [];
+        let builtChunks = [];
+
+        function initBuilder() {
+            bldQuestions = shuffle([...dayWords]);
+            bldIndex = 0;
+            document.getElementById('bld-total').innerText = bldQuestions.length;
+            showBuilder();
+            switchScreen('builder');
+        }
+
+        function showBuilder() {
+            const q = bldQuestions[bldIndex];
+            document.getElementById('bld-current').innerText = bldIndex + 1;
+            document.getElementById('bld-progress').style.width = `${(bldIndex / bldQuestions.length) * 100}%`;
+            document.getElementById('bld-turkish').innerText = q[5] || q[1]; 
+            
+            let chunks = q[4].split(' ').filter(c => c.length > 0);
+            availableChunks = shuffle(chunks.map((text, id) => ({id, text})));
+            builtChunks = [];
+            
+            document.getElementById('bld-box').className = "bg-white p-6 sm:p-10 rounded-3xl shadow-xl border-t-8 border-rose-500 mb-8 transition-colors duration-300";
+            document.getElementById('bld-feedback').innerHTML = '';
+            document.getElementById('bld-next-btn').classList.add('hidden');
+            
+            renderBuilder();
+        }
+
+        function renderBuilder() {
+            const sourceDiv = document.getElementById('bld-source');
+            const targetDiv = document.getElementById('bld-target');
+            sourceDiv.innerHTML = '';
+            targetDiv.innerHTML = '';
+            
+            availableChunks.forEach(chunk => {
+                const btn = document.createElement('button');
+                btn.className = "bg-white border-2 border-rose-200 text-rose-700 font-bold py-2 px-4 rounded-xl shadow-sm hover:bg-rose-50 hover:-translate-y-1 transition-all text-lg pop-in";
+                btn.innerText = chunk.text;
+                btn.onclick = () => moveChunkToTarget(chunk);
+                sourceDiv.appendChild(btn);
+            });
+            
+            builtChunks.forEach(chunk => {
+                const btn = document.createElement('button');
+                btn.className = "bg-rose-600 text-white font-bold py-2 px-4 rounded-xl shadow-md hover:bg-rose-700 hover:-translate-y-1 transition-all text-lg pop-in";
+                btn.innerText = chunk.text;
+                btn.onclick = () => moveChunkToSource(chunk);
+                targetDiv.appendChild(btn);
+            });
+
+            if (availableChunks.length === 0) checkBuilder();
+        }
+
+        function moveChunkToTarget(chunk) {
+            availableChunks = availableChunks.filter(c => c.id !== chunk.id);
+            builtChunks.push(chunk);
+            renderBuilder();
+        }
+
+        function moveChunkToSource(chunk) {
+            builtChunks = builtChunks.filter(c => c.id !== chunk.id);
+            availableChunks.push(chunk);
+            renderBuilder();
+        }
+
+        function checkBuilder() {
+            const currentSentence = builtChunks.map(c => c.text).join(' ');
+            const targetSentence = bldQuestions[bldIndex][4];
+            const box = document.getElementById('bld-box');
+            const feedback = document.getElementById('bld-feedback');
+
+            if (currentSentence === targetSentence) {
+                playAudio(targetSentence);
+                box.classList.replace('border-rose-500', 'border-emerald-500');
+                box.classList.add('bg-emerald-50');
+                document.getElementById('bld-target').style.pointerEvents = 'none';
+                feedback.innerHTML = '<span class="text-emerald-600"><i class="fas fa-check-circle mr-2"></i> Excellent!</span>';
+                document.getElementById('bld-next-btn').classList.remove('hidden');
+            } else {
+                box.classList.remove('shake');
+                void box.offsetWidth;
+                box.classList.add('shake');
+                feedback.innerHTML = '<span class="text-red-500"><i class="fas fa-times-circle mr-2"></i> Not quite right. Tap words to remove them.</span>';
+            }
+        }
+
+        function nextBuilder() {
+            document.getElementById('bld-target').style.pointerEvents = 'auto';
+            if (bldIndex < bldQuestions.length - 1) { bldIndex++; showBuilder(); } 
+            else { switchScreen('complete'); }
+        }
+
+        // ==========================================
+        // GAME 3: LISTEN & SPELL
+        // ==========================================
+        let listenIndex = 0;
+        let listenQuestions = [];
+
+        function initListen() {
+            listenQuestions = shuffle([...dayWords]);
+            listenIndex = 0;
+            document.getElementById('lst-total').innerText = listenQuestions.length;
+            showListen();
+            switchScreen('listen');
+        }
+
+        function showListen() {
+            const q = listenQuestions[listenIndex];
+            document.getElementById('lst-current').innerText = listenIndex + 1;
+            document.getElementById('lst-progress').style.width = `${(listenIndex / listenQuestions.length) * 100}%`;
+            
+            document.getElementById('lst-turkish').innerText = q[1];
+            document.getElementById('lst-hint-area').classList.add('hidden');
+            document.getElementById('lst-reveal-btn').classList.remove('hidden');
+            
+            const input = document.getElementById('lst-input');
+            input.value = '';
+            input.disabled = false;
+            input.focus();
+            
+            const box = document.getElementById('lst-box');
+            box.className = "bg-white p-8 sm:p-12 rounded-3xl shadow-xl border-t-8 border-teal-500 text-center relative transition-colors duration-300";
+            
+            document.getElementById('lst-feedback').innerHTML = '';
+            document.getElementById('lst-submit-btn').classList.remove('hidden');
+            document.getElementById('lst-next-btn').classList.add('hidden');
+        }
+
+        function playListenAudio() {
+            playAudio(listenQuestions[listenIndex][0]);
+            document.getElementById('lst-input').focus();
+        }
+
+        function revealListenHint() {
+            document.getElementById('lst-hint-area').classList.remove('hidden');
+            document.getElementById('lst-reveal-btn').classList.add('hidden');
+            document.getElementById('lst-input').focus();
+        }
+
+        function checkListen() {
+            const input = document.getElementById('lst-input');
+            const box = document.getElementById('lst-box');
+            const feedback = document.getElementById('lst-feedback');
+            const answer = listenQuestions[listenIndex][0];
+
+            if (input.value.trim().toLowerCase() === answer.toLowerCase()) {
+                playAudio(answer);
+                input.disabled = true;
+                box.classList.replace('border-teal-500', 'border-emerald-500');
+                box.classList.add('bg-emerald-50');
+                
+                feedback.innerHTML = `<span class="text-emerald-600"><i class="fas fa-check-circle mr-2"></i> Perfect spelling! It is <strong>${answer}</strong>.</span>`;
+                document.getElementById('lst-submit-btn').classList.add('hidden');
+                document.getElementById('lst-reveal-btn').classList.add('hidden');
+                document.getElementById('lst-next-btn').classList.remove('hidden');
+            } else {
+                box.classList.remove('shake');
+                void box.offsetWidth; 
+                box.classList.add('shake');
+                input.value = '';
+                input.focus();
+                feedback.innerHTML = '<span class="text-red-500"><i class="fas fa-times-circle mr-2"></i> Incorrect spelling. Try again!</span>';
+            }
+        }
+
+        document.getElementById('lst-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                if (!document.getElementById('lst-submit-btn').classList.contains('hidden')) checkListen();
+                else nextListen();
+            }
+        });
+
+        function nextListen() {
+            if (listenIndex < listenQuestions.length - 1) { listenIndex++; showListen(); } 
+            else { switchScreen('complete'); }
+        }
+
+        // ==========================================
+        // GAME 4: COLLOCATION MASTER
+        // ==========================================
+        let colIndex = 0;
+        let colQuestions = [];
+
+        function initCollocation() {
+            colQuestions = [];
+            dayWords.forEach(w => {
+                // Get 3 wrong collocations from other words in the same day
+                let otherCols = dayWords.filter(x => x[0] !== w[0]).map(x => x[2]);
+                otherCols = shuffle(otherCols).slice(0, 3);
+                let options = shuffle([w[2], ...otherCols]);
+                
+                colQuestions.push({
+                    targetWord: w[0],
+                    trPhrase: w[3] || w[1] + " (collocation)",
+                    enPhrase: w[2],
+                    options: options
+                });
+            });
+            
+            colQuestions = shuffle(colQuestions);
+            colIndex = 0;
+            document.getElementById('col-total').innerText = colQuestions.length;
+            showCollocation();
+            switchScreen('collocation');
+        }
+
+        function showCollocation() {
+            const q = colQuestions[colIndex];
+            document.getElementById('col-current').innerText = colIndex + 1;
+            document.getElementById('col-progress').style.width = `${(colIndex / colQuestions.length) * 100}%`;
+            
+            document.getElementById('col-turkish').innerText = q.trPhrase;
+            
+            const optsContainer = document.getElementById('col-options');
+            optsContainer.innerHTML = '';
+            document.getElementById('col-feedback').classList.add('hidden');
+            document.getElementById('col-next-btn').classList.add('hidden');
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "col-opt-btn bg-white border-2 border-violet-100 text-slate-700 font-bold py-5 px-6 rounded-2xl shadow-sm hover:bg-violet-50 hover:border-violet-300 transition-colors text-lg sm:text-xl";
+                btn.innerText = opt;
+                btn.onclick = () => handleColAnswer(opt, btn);
+                optsContainer.appendChild(btn);
+            });
+        }
+
+        function handleColAnswer(selectedOpt, btn) {
+            const allBtns = document.querySelectorAll('.col-opt-btn');
+            allBtns.forEach(b => b.disabled = true);
+
+            const q = colQuestions[colIndex];
+            const feedback = document.getElementById('col-feedback');
+            
+            if (selectedOpt === q.enPhrase) {
+                btn.classList.replace('bg-white', 'bg-emerald-500');
+                btn.classList.replace('text-slate-700', 'text-white');
+                btn.classList.replace('border-violet-100', 'border-emerald-600');
+                
+                feedback.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Correct Match!';
+                feedback.className = "mt-6 p-4 rounded-xl text-center text-lg font-bold bg-emerald-100 text-emerald-700 block pop-in";
+                playAudio(q.enPhrase);
+                
+            } else {
+                btn.classList.replace('bg-white', 'bg-red-500');
+                btn.classList.replace('text-slate-700', 'text-white');
+                btn.classList.replace('border-violet-100', 'border-red-600');
+                
+                allBtns.forEach(b => {
+                    if(b.innerText === q.enPhrase) {
+                        b.classList.replace('bg-white', 'bg-emerald-100');
+                        b.classList.replace('border-violet-100', 'border-emerald-500');
+                        b.classList.add('text-emerald-800');
+                    }
+                });
+
+                feedback.innerHTML = '<i class="fas fa-times-circle mr-2"></i> Incorrect!';
+                feedback.className = "mt-6 p-4 rounded-xl text-center text-lg font-bold bg-red-100 text-red-700 block shake";
+            }
+
+            document.getElementById('col-next-btn').classList.remove('hidden');
+        }
+
+        function nextCollocation() {
+            if (colIndex < colQuestions.length - 1) { colIndex++; showCollocation(); } 
+            else { switchScreen('complete'); }
+        }
+
+        // Run
+        initHome();
+        openDayFromQuery();
+    </script>
+</body>
+</html>
