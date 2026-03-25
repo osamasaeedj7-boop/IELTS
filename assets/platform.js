@@ -96,8 +96,11 @@
     }
 
     const vocabDayLinks = Array.from(document.querySelectorAll(".vocab-day-link"));
+    const advancedDayLinks = Array.from(
+        document.querySelectorAll(".practice-day-link-inline")
+    );
 
-    if (!vocabDayLinks.length) {
+    if (!vocabDayLinks.length && !advancedDayLinks.length) {
         return;
     }
 
@@ -198,11 +201,24 @@
         };
     }
 
-    const programState = getProgramState(vocabDayLinks.length);
+    function getDayNumberFromLink(link) {
+        try {
+            const url = new URL(link.href, window.location.href);
+            return Number(url.searchParams.get("day"));
+        } catch (error) {
+            return NaN;
+        }
+    }
 
-    vocabDayLinks.forEach(function (link) {
-        const url = new URL(link.href, window.location.href);
-        const dayNumber = Number(url.searchParams.get("day"));
+    const totalProgramDays = Math.max(
+        0,
+        ...vocabDayLinks.map(getDayNumberFromLink).filter(Number.isFinite),
+        ...advancedDayLinks.map(getDayNumberFromLink).filter(Number.isFinite)
+    );
+    const programState = getProgramState(totalProgramDays);
+
+    function applyProgramDayState(link, options) {
+        const dayNumber = getDayNumberFromLink(link);
         const isComplete = readDayCompletion(dayNumber);
         const isUnlocked =
             Number.isFinite(dayNumber) && dayNumber <= programState.activeDayNumber;
@@ -210,17 +226,20 @@
             Number.isFinite(dayNumber) && dayNumber === programState.activeDayNumber;
         const unlockDate = addDays(programState.startDate, Math.max(0, dayNumber - 1));
 
-        if (isComplete) {
-            link.classList.add("is-complete");
-            link.classList.add("is-open");
+        link.classList.remove("is-open", "is-current", "is-complete", "is-locked");
+        link.removeAttribute("aria-disabled");
+        link.removeAttribute("tabindex");
+
+        if (options.trackCompletion && isComplete) {
+            link.classList.add("is-complete", "is-open");
 
             if (isCurrentDay) {
                 link.classList.add("is-current");
                 link.title = "Completed today";
-                return;
+            } else {
+                link.title = "Completed";
             }
 
-            link.title = "Completed";
             return;
         }
 
@@ -229,9 +248,9 @@
 
             if (isCurrentDay) {
                 link.classList.add("is-current");
-                link.title = "Open today";
+                link.title = options.currentTitle;
             } else {
-                link.title = "Open";
+                link.title = options.openTitle;
             }
 
             return;
@@ -244,6 +263,22 @@
 
         link.addEventListener("click", function (event) {
             event.preventDefault();
+        });
+    }
+
+    vocabDayLinks.forEach(function (link) {
+        applyProgramDayState(link, {
+            trackCompletion: true,
+            currentTitle: "Open today",
+            openTitle: "Open"
+        });
+    });
+
+    advancedDayLinks.forEach(function (link) {
+        applyProgramDayState(link, {
+            trackCompletion: false,
+            currentTitle: "Advanced practice is open today",
+            openTitle: "Advanced practice is open"
         });
     });
 })();
