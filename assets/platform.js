@@ -275,10 +275,15 @@
     });
 
     advancedDayLinks.forEach(function (link) {
+        const label = link.querySelector("span");
+        if (label) {
+            label.textContent = "Practice";
+        }
+
         applyProgramDayState(link, {
             trackCompletion: false,
-            currentTitle: "Advanced practice is open today",
-            openTitle: "Advanced practice is open"
+            currentTitle: "Practice is open today",
+            openTitle: "Practice is open"
         });
     });
 })();
