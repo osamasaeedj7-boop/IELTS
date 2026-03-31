@@ -6,6 +6,8 @@
     <title>IELTS Speaking Lesson 8</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+    <link rel="stylesheet" href="assets/lesson.css?v=20260325">
     <style>
         .slide { display: none; }
         .slide.active { display: flex; animation: fadeIn 0.4s ease-out forwards; }
@@ -15,30 +17,45 @@
         }
         .bad-answer { border-left: 4px solid #ef4444; background: #fef2f2; padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1rem; }
         .good-answer { border-left: 4px solid #22c55e; background: #f0fdf4; padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1rem; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 font-sans h-screen flex flex-col overflow-hidden relative">
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-id="lesson-8" data-lesson-title="Lesson 8: Part 3 Advanced Speaking and Smart Idea Development">
 
-    <!-- Watermark Overlay -->
-    <div class="fixed inset-0 pointer-events-none flex items-center justify-center z-50 overflow-hidden">
+    <div class="lesson-watermark">
         <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
             T. Osama Saeed
         </div>
     </div>
 
-    <!-- Header / Progress Bar -->
-    <header class="bg-white shadow-sm p-4 flex justify-between items-center z-10 relative">
-        <h1 class="font-bold text-lg text-indigo-600 hidden sm:block"><i class="fas fa-graduation-cap mr-2"></i>IELTS Prep</h1>
-        <div class="flex-1 max-w-xl mx-auto flex items-center gap-4">
-            <span class="text-sm font-medium text-slate-500 w-12 text-right" id="slide-counter">1 / X</span>
-            <div class="flex-1 bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div id="progress-bar" class="bg-indigo-600 h-full transition-all duration-300 w-0"></div>
+    <div class="lesson-shell">
+
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="index.html" class="course-home-link screen-only inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200">
+                    <i class="fas fa-arrow-left"></i>
+                    Course Home
+                </a>
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">IELTS Speaking</p>
+                    <h1 class="text-xl font-black text-slate-900 sm:text-2xl">Lesson 8: Part 3 Advanced Speaking and Smart Idea Development</h1>
+                </div>
+            </div>
+            <div class="flex w-full max-w-xl items-center gap-4 lg:ml-auto">
+                <span class="w-14 text-right text-sm font-semibold text-slate-500" id="slide-counter">1 / X</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200">
+                    <div id="progress-bar" class="h-full w-0 bg-indigo-600"></div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 relative overflow-y-auto overflow-x-hidden flex justify-center items-center p-4 sm:p-8" id="touch-area">
+    <main class="lesson-main print-ready-main print-compact-main relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8" id="touch-area">
         
         <!-- Slide 1: Cover -->
         <div class="slide active flex-col w-full max-w-3xl bg-indigo-600 text-white rounded-2xl shadow-xl p-8 sm:p-12 text-center z-10">
@@ -50,25 +67,25 @@
             <p class="text-2xl text-indigo-100 font-medium leading-snug">Part 3 Advanced Speaking<br>& Smart Idea Development</p>
         </div>
 
-        <!-- Slide 2: Lesson Aims -->
+        <!-- Slide 2: Main Goals -->
         <div class="slide flex-col w-full max-w-3xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-3xl font-bold text-indigo-600 mb-6 text-center"><i class="fas fa-bullseye mr-3"></i>Main Goals</h2>
             <p class="text-xl mb-8 text-center text-slate-600">Today we will focus on how to:</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="bg-indigo-50 p-6 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
+                <div class="bg-indigo-50 p-5 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
                     <span class="text-lg font-medium text-slate-800">Speak longer in Part 3</span>
                 </div>
-                <div class="bg-indigo-50 p-6 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
+                <div class="bg-indigo-50 p-5 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
                     <span class="text-lg font-medium text-slate-800">Answer abstract questions more clearly</span>
                 </div>
-                <div class="bg-indigo-50 p-6 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
+                <div class="bg-indigo-50 p-5 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
                     <span class="text-lg font-medium text-slate-800">Build ideas step by step (reduce confusion)</span>
                 </div>
-                <div class="bg-indigo-50 p-6 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm">
+                <div class="bg-indigo-50 p-5 rounded-xl flex items-center gap-4 border border-indigo-100 shadow-sm sm:col-span-2">
                     <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">4</div>
                     <span class="text-lg font-medium text-slate-800">Improve Opinion + Reason + Example + Result pattern</span>
                 </div>
@@ -110,7 +127,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[40vh] sm:h-auto overflow-y-auto pr-2" style="scrollbar-width: thin;">
                 <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm">
                     <p class="font-bold text-slate-700 mb-2 text-indigo-600"><i class="fas fa-comment-dots mr-2"></i>Opinion</p>
                     <ul class="text-sm font-medium text-slate-600 space-y-1">
@@ -215,14 +232,14 @@
             <p class="text-lg text-slate-600 mb-6 font-medium">Use these safe, general subjects for your Part 3 examples instead of "I" or "my friend":</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">students</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">young people</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">families</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">social media users</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">workers</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">teachers</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">society</span>
-                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm">daily life</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">students</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">young people</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">families</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">social media users</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">workers</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">teachers</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">society</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full font-bold shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-colors">daily life</span>
             </div>
 
             <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl shadow-sm relative">
@@ -243,7 +260,7 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[60vh] overflow-y-auto pr-2" style="scrollbar-width: thin;">
                 
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm hover:-translate-y-1 transition-transform">
                     <p class="text-sm font-bold text-indigo-500 uppercase tracking-widest mb-3">Opinion</p>
                     <ul class="space-y-2 text-slate-700 font-medium">
                         <li>• I think...</li>
@@ -253,7 +270,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm hover:-translate-y-1 transition-transform">
                     <p class="text-sm font-bold text-emerald-500 uppercase tracking-widest mb-3">Reason</p>
                     <ul class="space-y-2 text-slate-700 font-medium">
                         <li>• One reason is that...</li>
@@ -263,7 +280,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm hover:-translate-y-1 transition-transform">
                     <p class="text-sm font-bold text-amber-500 uppercase tracking-widest mb-3">Example</p>
                     <ul class="space-y-2 text-slate-700 font-medium">
                         <li>• For example...</li>
@@ -273,7 +290,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm hover:-translate-y-1 transition-transform">
                     <p class="text-sm font-bold text-rose-500 uppercase tracking-widest mb-3">Result</p>
                     <ul class="space-y-2 text-slate-700 font-medium">
                         <li>• So overall...</li>
@@ -283,7 +300,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm sm:col-span-2">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm sm:col-span-2 hover:-translate-y-1 transition-transform">
                     <p class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-3">Balancing</p>
                     <div class="flex flex-wrap gap-4 text-slate-700 font-medium">
                         <span>• However...</span>
@@ -301,10 +318,10 @@
             <p class="text-center text-slate-600 font-medium mb-8">We will build the answer together, step by step.</p>
             
             <div class="bg-slate-800 text-white p-4 rounded-t-xl text-center shadow-sm">
-                <p class="font-bold">Question: Why do people use social media so much?</p>
+                <p class="font-bold text-lg">Question: Why do people use social media so much?</p>
             </div>
             
-            <div class="bg-slate-50 p-6 sm:p-8 rounded-b-xl border border-t-0 border-slate-200 shadow-inner space-y-6">
+            <div class="bg-slate-50 p-6 sm:p-8 rounded-b-xl border border-t-0 border-slate-200 shadow-inner space-y-6 h-[50vh] overflow-y-auto" style="scrollbar-width: thin;">
                 
                 <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div class="w-24 shrink-0 text-sm font-bold text-indigo-500 uppercase tracking-widest text-right">Teacher:</div>
@@ -353,46 +370,39 @@
         <div class="slide flex-col w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-2xl font-bold text-indigo-600 mb-6 text-center"><i class="fas fa-list-ol mr-2"></i>Guided Practice Questions</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-[50vh] overflow-y-auto pr-2" style="scrollbar-width: thin;">
-                
-                <div class="space-y-4">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
-                        <p class="font-medium text-slate-700">Why do some people learn skills faster than others?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
-                        <p class="font-medium text-slate-700">Do teachers influence students’ lives a lot?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
-                        <p class="font-medium text-slate-700">Is social media more helpful or more harmful?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</span>
-                        <p class="font-medium text-slate-700">Why do many young people want to study abroad?</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-[50vh] overflow-y-auto pr-2" style="scrollbar-width: thin;">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Why do some people learn skills faster than others?</p>
                 </div>
-
-                <div class="space-y-4">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">5</span>
-                        <p class="font-medium text-slate-700">Are practical skills more important than theoretical knowledge?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">6</span>
-                        <p class="font-medium text-slate-700">Why do some people find public speaking difficult?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">7</span>
-                        <p class="font-medium text-slate-700">Do people communicate better now than in the past?</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                        <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">8</span>
-                        <p class="font-medium text-slate-700">Should schools teach more life skills?</p>
-                    </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Do teachers influence students’ lives a lot?</p>
                 </div>
-
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Is social media more helpful or more harmful?</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Why do many young people want to study abroad?</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">5</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Are practical skills more important than theoretical knowledge?</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">6</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Why do some people find public speaking difficult?</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">7</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Do people communicate better now than in the past?</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-indigo-300 transition-colors">
+                    <span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm shrink-0">8</span>
+                    <p class="font-medium text-slate-700 mt-0.5">Should schools teach more life skills?</p>
+                </div>
             </div>
 
             <div class="mt-6 bg-amber-50 border border-amber-200 p-4 rounded-xl shadow-sm">
@@ -402,11 +412,29 @@
                     <span class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-1"></i> One main reason?</span>
                     <span class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-1"></i> Has an example?</span>
                     <span class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-1"></i> Finished properly?</span>
+                    <span class="flex items-center"><i class="fas fa-ban text-red-400 mr-1"></i> Avoid jumping ideas?</span>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 12: High-Value Models -->
+        <!-- Slide 12: Short Structure Drill -->
+        <div class="slide flex-col w-full max-w-3xl bg-indigo-600 text-white rounded-2xl shadow-xl p-8 sm:p-12 z-10 text-center relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-white/10 text-[12rem]"><i class="fas fa-sync"></i></div>
+            
+            <h2 class="text-3xl font-black mb-8 relative z-10">Short Structure Drill</h2>
+            <p class="text-xl text-indigo-200 mb-10 relative z-10">Repeat this structure 3 times to build muscle memory:</p>
+            
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 max-w-md mx-auto space-y-4 text-left relative z-10">
+                <p class="text-2xl font-bold"><span class="text-indigo-300 mr-3">1</span> I think...</p>
+                <p class="text-2xl font-bold"><span class="text-indigo-300 mr-3">2</span> One reason is that...</p>
+                <p class="text-2xl font-bold"><span class="text-indigo-300 mr-3">3</span> For example...</p>
+                <p class="text-2xl font-bold"><span class="text-indigo-300 mr-3">4</span> So overall...</p>
+            </div>
+
+            <p class="mt-10 font-medium text-indigo-100 text-lg relative z-10">Now, use this exact structure to answer 3 different questions.</p>
+        </div>
+
+        <!-- Slide 13: High-Value Models -->
         <div class="slide flex-col w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-2xl font-bold text-indigo-600 mb-6 text-center"><i class="fas fa-star mr-2"></i>High-Value Model Answers</h2>
             
@@ -442,7 +470,7 @@
             </div>
         </div>
 
-        <!-- Slide 13: Free Practice Stage -->
+        <!-- Slide 14: Free Practice Stage -->
         <div class="slide flex-col w-full max-w-3xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-3xl font-bold text-indigo-600 mb-6 text-center"><i class="fas fa-microphone-alt mr-3"></i>Free Practice Stage</h2>
             <p class="text-xl mb-8 text-center text-slate-600">Answer 3 random Part 3 questions fully alone.</p>
@@ -454,7 +482,7 @@
             </div>
 
             <div class="bg-indigo-600 text-white p-6 rounded-xl text-center shadow-md">
-                <p class="font-bold uppercase tracking-widest text-indigo-200 text-xs mb-3">Self-Check Questions:</p>
+                <p class="font-bold uppercase tracking-widest text-indigo-200 text-xs mb-3">Self-Check Prompts:</p>
                 <ul class="text-lg sm:text-xl font-bold space-y-2">
                     <li><i class="fas fa-question-circle text-indigo-300 mr-2"></i> Can you give me one reason?</li>
                     <li><i class="fas fa-question-circle text-indigo-300 mr-2"></i> Can you give me an example?</li>
@@ -463,7 +491,7 @@
             </div>
         </div>
 
-        <!-- Slide 14: Vocabulary -->
+        <!-- Slide 15: Vocabulary -->
         <div class="slide flex-col w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-2xl font-bold text-indigo-600 mb-6 text-center"><i class="fas fa-book-open mr-2"></i>Optional Vocabulary</h2>
             
@@ -471,83 +499,68 @@
                 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">influence</span> = <span class="font-semibold text-slate-600">etki / etkilemek</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Teachers have a strong influence on students.</p>
                 </div>
                 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">practical</span> = <span class="font-semibold text-slate-600">pratik</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: We need more practical skills for daily life.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">theoretical</span> = <span class="font-semibold text-slate-600">teorik</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Theoretical knowledge is not always enough.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">opportunity</span> = <span class="font-semibold text-slate-600">fırsat</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Studying abroad is a great opportunity.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">confidence</span> = <span class="font-semibold text-slate-600">özgüven</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Practice builds confidence in speaking.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">communication</span> = <span class="font-semibold text-slate-600">iletişim</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Good communication is important at work.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">motivation</span> = <span class="font-semibold text-slate-600">motivasyon</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: A good teacher can increase student motivation.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">improve</span> = <span class="font-semibold text-slate-600">geliştirmek</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: I want to improve my English skills.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">result</span> = <span class="font-semibold text-slate-600">sonuç</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Hard work leads to a good result.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">skill</span> = <span class="font-semibold text-slate-600">beceri</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Time management is an important skill.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">useful</span> = <span class="font-semibold text-slate-600">faydalı</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: Social media can be very useful.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">depend on</span> = <span class="font-semibold text-slate-600">bağlı olmak</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: It depends on the situation.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">develop</span> = <span class="font-semibold text-slate-600">geliştirmek</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: People need to develop their ideas clearly.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">independent</span> = <span class="font-semibold text-slate-600">bağımsız</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: University students become more independent.</p>
                 </div>
 
                 <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors sm:col-span-2">
                     <p class="text-lg mb-1"><span class="font-bold text-indigo-700">clearly</span> = <span class="font-semibold text-slate-600">açık bir şekilde</span></p>
-                    <p class="text-sm text-slate-500 italic">Ex: It is important to speak clearly in the exam.</p>
                 </div>
 
             </div>
         </div>
 
-        <!-- Slide 15: Review & Homework -->
+        <!-- Slide 16: Review & Homework -->
         <div class="slide flex-col w-full max-w-3xl bg-white rounded-2xl shadow-xl p-6 sm:p-10 z-10">
             <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Review + Homework</h2>
             
@@ -586,105 +599,56 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-xl text-center shadow-sm">
-                <p class="font-bold text-emerald-800 text-lg mb-1">In Part 3, your answer does not need to be complicated.</p>
-                <p class="text-emerald-900 font-medium">It needs to be clear. This will make your speaking stronger and more confident!</p>
+        <!-- Slide 17: Ending Message -->
+        <div class="slide flex-col w-full max-w-3xl bg-indigo-600 text-white rounded-2xl shadow-2xl p-8 sm:p-14 z-10 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 text-[12rem] transform translate-x-10 -translate-y-10"><i class="fas fa-lightbulb"></i></div>
+            
+            <h2 class="text-4xl sm:text-5xl font-black mb-8 relative z-10 leading-tight">Keep It Clear.</h2>
+            
+            <div class="text-lg sm:text-xl font-medium text-indigo-100 space-y-4 mb-10 relative z-10 text-left max-w-lg mx-auto">
+                <p>In Part 3, your answer does not need to be complicated.</p>
+                <p>It needs to be <strong class="text-white">clear.</strong></p>
+                
+                <ul class="space-y-3 mt-6 border-l-4 border-indigo-400 pl-4 py-2">
+                    <li><i class="fas fa-check-circle text-indigo-300 mr-2"></i>First say your opinion.</li>
+                    <li><i class="fas fa-check-circle text-indigo-300 mr-2"></i>Then give one reason.</li>
+                    <li><i class="fas fa-check-circle text-indigo-300 mr-2"></i>Then give one example.</li>
+                    <li><i class="fas fa-check-circle text-indigo-300 mr-2"></i>Then finish clearly.</li>
+                </ul>
             </div>
+            
+            <p class="text-xl font-bold text-emerald-300 relative z-10">This will make your speaking stronger and more confident!</p>
         </div>
 
     </main>
 
-    <!-- Footer Controls -->
-    <footer class="bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-4 flex justify-between items-center z-10 relative">
-        <button id="prev-btn" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-            <i class="fas fa-arrow-left"></i> Previous
-        </button>
-        <p class="text-sm font-semibold text-slate-500 hidden sm:block">T. Osama Saeed</p>
-        <button id="next-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-            Next <i class="fas fa-arrow-right"></i>
-        </button>
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-3">
+                <span class="font-semibold text-slate-700">Lesson 8</span>
+                <span class="hidden h-4 w-px bg-slate-300 sm:inline-block"></span>
+                <p id="lesson-status">Finish the lesson to unlock PDF export.</p>
+                <span class="hidden h-4 w-px bg-slate-300 lg:inline-block"></span>
+                <p class="font-semibold text-slate-500">T. Osama Saeed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button id="prev-btn" class="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 font-semibold text-slate-700 transition-colors hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-50">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="download-btn" hidden class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-emerald-600">
+                    <i class="fas fa-file-pdf"></i> Save as PDF
+                </button>
+                <button id="next-btn" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
     </footer>
 
-    <!-- Logic -->
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const counter = document.getElementById('slide-counter');
-        const progressBar = document.getElementById('progress-bar');
-        
-        let currentSlide = 0;
+    </div>
 
-        function updateUI() {
-            // Update slides visibility
-            slides.forEach((slide, index) => {
-                if(index === currentSlide) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-
-            // Update buttons state
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide === slides.length - 1;
-
-            // Update counter & progress bar
-            counter.innerText = `${currentSlide + 1} / ${slides.length}`;
-            progressBar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
-        }
-
-        function nextSlide() {
-            if (currentSlide < slides.length - 1) {
-                currentSlide++;
-                updateUI();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateUI();
-            }
-        }
-
-        // Button clicks
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
-
-        // Touch Swipe Navigation
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const touchArea = document.getElementById('touch-area');
-
-        touchArea.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, {passive: true});
-
-        touchArea.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, {passive: true});
-
-        function handleSwipe() {
-            const threshold = 50;
-            if (touchStartX - touchEndX > threshold) {
-                nextSlide(); // Swiped left -> Next
-            }
-            if (touchEndX - touchStartX > threshold) {
-                prevSlide(); // Swiped right -> Prev
-            }
-        }
-
-        // Init
-        updateUI();
-    </script>
+    <script src="assets/lesson.js?v=20260325" defer></script>
 </body>
 </html>
