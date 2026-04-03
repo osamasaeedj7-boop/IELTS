@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+      <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#5954ec">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="stylesheet" href="assets/platform.css?v=20260325">
   <script src="assets/platform.js?v=20260331" defer></script>
 </head>
@@ -46,7 +50,7 @@
           <p class="text-lg font-bold text-slate-900">Your progress</p>
           <p class="mt-1 text-sm text-slate-500">Your progress is saved on this device.</p>
         </div>
-        <p id="course-progress-label" class="text-sm font-semibold text-slate-600">0 of 10 lessons completed</p>
+        <p id="course-progress-label" class="text-sm font-semibold text-slate-600">0 of 12 lessons completed</p>
       </div>
       <div class="mt-4 h-3 rounded-full bg-slate-200">
         <div id="course-progress-bar" class="h-full w-0 rounded-full bg-indigo-600"></div>
@@ -114,7 +118,7 @@
             <p class="text-sm font-semibold text-slate-600">Done</p>
             <span class="status-pill" data-state="done">Done</span>
           </div>
-          <p class="mt-3 text-3xl font-black text-slate-900">15</p>
+          <p class="mt-3 text-3xl font-black text-slate-900">17</p>
         </article>
         <article class="summary-card rounded-3xl p-5">
           <div class="flex items-center justify-between gap-3">
@@ -128,7 +132,7 @@
             <p class="text-sm font-semibold text-slate-600">Undone</p>
             <span class="status-pill" data-state="undone">Undone</span>
           </div>
-          <p class="mt-3 text-3xl font-black text-slate-900">5</p>
+          <p class="mt-3 text-3xl font-black text-slate-900">3</p>
         </article>
         <article class="summary-card rounded-3xl p-5">
           <div class="flex items-center justify-between gap-3">
@@ -205,9 +209,11 @@
             </div>
 
             <div class="study-day-list">
-              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="undone" title="Wed 1 Apr 2026, 11:30 A.M.">1</span></span>
-              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="undone" title="Thu 2 Apr 2026, 11:30 A.M.">2</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 1 Apr 2026, 11:30 A.M.">1</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="done" title="Thu 2 Apr 2026, 11:30 A.M.">2</span></span>
               <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="undone" title="Fri 3 Apr 2026, 11:30 A.M.">3</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 4 Apr 2026, no class">4</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 5 Apr 2026, no class">5</span></span>
               <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="undone" title="Mon 6 Apr 2026, 11:30 A.M.">6</span></span>
               <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="undone" title="Tue 7 Apr 2026, 11:30 A.M.">7</span></span>
             </div>
@@ -218,7 +224,7 @@
       <section class="upcoming-card mt-3 glass-card rounded-3xl border border-white/80 px-4 py-3 shadow-sm sm:px-5">
         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p class="upcoming-copy text-sm font-semibold text-slate-700">
-            Next class: <span class="upcoming-time font-black text-slate-900">Wed 1 Apr 2026 at 11:30 A.M.</span>
+            Next class: <span class="upcoming-time font-black text-slate-900">Fri 3 Apr 2026 at 11:30 A.M.</span>
           </p>
           <div class="flex items-center gap-2">
             <span class="status-pill upcoming-pill" data-state="undone">Undone</span>
@@ -407,9 +413,43 @@
           </div>
         </article>
 
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-11">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">11</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Full Speaking Mock</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Train with a full speaking mock and recovery strategies to stay calm and in control under pressure.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson 11.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-12">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">12</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Full Mock Test</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practise a full speaking mock test, check final gaps, and focus only on the biggest improvements.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 12.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
         <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md opacity-95">
           <div class="flex items-start justify-between gap-3">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-200 text-xl font-black text-slate-600">11</div>
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-200 text-xl font-black text-slate-600">13</div>
             <span class="status-pill" data-state="soon">Coming Soon</span>
           </div>
           <h3 class="mt-5 text-2xl font-bold text-slate-900">Next Lesson</h3>
@@ -528,6 +568,7 @@
     </footer>
 
   </main>
+  <script src="assets/pwa.js?v=20260403" defer></script>
 </body>
 </html>
 

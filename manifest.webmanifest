@@ -1,0 +1,36 @@
+{
+  "name": "IELTS Speaking Mastery",
+  "short_name": "IELTS Mastery",
+  "description": "Interactive IELTS speaking lessons, vocabulary practice, spin prompts, and classroom tools by T. Osama Saeed.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef2ff",
+  "theme_color": "#5954ec",
+  "icons": [
+    {
+      "src": "./assets/site-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Lessons",
+      "short_name": "Lessons",
+      "url": "./index.html#lessons"
+    },
+    {
+      "name": "Spin Practice",
+      "short_name": "Spin",
+      "url": "./spin.html"
+    },
+    {
+      "name": "Vocabulary & Tasks",
+      "short_name": "Vocabulary",
+      "url": "./Vocabulary%20%26%20Tasks.html?day=1"
+    }
+  ]
+}
