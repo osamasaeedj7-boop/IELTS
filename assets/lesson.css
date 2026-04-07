@@ -93,6 +93,10 @@ body.lesson-page {
     animation: lesson-fade-in 0.35s ease-out forwards;
 }
 
+.lesson-hover-translate {
+    cursor: pointer;
+}
+
 @keyframes lesson-fade-in {
     from {
         opacity: 0;
