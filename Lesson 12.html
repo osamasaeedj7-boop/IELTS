@@ -6,6 +6,14 @@
     <title>IELTS Speaking Lesson 12</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#5954ec">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="IELTS Speaking Mastery">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/lesson.css?v=20260325">
     <style>
         .slide { display: none; }
         .slide.active { display: flex; animation: fadeIn 0.4s ease-out forwards; }
@@ -22,28 +30,38 @@
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 font-sans h-screen flex flex-col overflow-hidden relative">
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-id="lesson-12" data-lesson-title="Lesson 12: High-Frequency Topics and Personal Answer Bank">
 
-    <!-- Watermark Overlay -->
-    <div class="fixed inset-0 pointer-events-none flex items-center justify-center z-50 overflow-hidden">
+    <div class="lesson-watermark">
         <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
             T. Osama Saeed
         </div>
     </div>
 
-    <!-- Header / Progress Bar -->
-    <header class="bg-white shadow-sm p-4 flex justify-between items-center z-10 relative shrink-0">
-        <h1 class="font-bold text-lg text-indigo-600 hidden sm:block"><i class="fas fa-graduation-cap mr-2"></i>IELTS Prep</h1>
-        <div class="flex-1 max-w-xl mx-auto flex items-center gap-4">
-            <span class="text-sm font-medium text-slate-500 w-12 text-right" id="slide-counter">1 / X</span>
-            <div class="flex-1 bg-slate-200 h-2 rounded-full overflow-hidden">
-                <div id="progress-bar" class="bg-indigo-600 h-full transition-all duration-300 w-0"></div>
+    <div class="lesson-shell">
+
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="index.html" class="course-home-link screen-only inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200">
+                    <i class="fas fa-arrow-left"></i>
+                    Course Home
+                </a>
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">IELTS Speaking</p>
+                    <h1 class="text-xl font-black text-slate-900 sm:text-2xl">Lesson 12: High-Frequency Topics and Personal Answer Bank</h1>
+                </div>
+            </div>
+            <div class="flex w-full max-w-xl items-center gap-4 lg:ml-auto">
+                <span class="w-14 text-right text-sm font-semibold text-slate-500" id="slide-counter">1 / X</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200">
+                    <div id="progress-bar" class="h-full w-0 bg-indigo-600"></div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 relative overflow-y-auto overflow-x-hidden flex justify-center items-center p-4 sm:p-8" id="touch-area">
+    <main class="lesson-main print-ready-main print-compact-main relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8" id="touch-area">
         
         <!-- Slide 1: Cover -->
         <div class="slide active flex-col w-full max-w-3xl bg-indigo-600 text-white rounded-2xl shadow-xl p-8 sm:p-12 text-center z-10">
@@ -623,96 +641,32 @@
 
     </main>
 
-    <!-- Footer Controls -->
-    <footer class="bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-4 flex justify-between items-center z-10 relative shrink-0">
-        <button id="prev-btn" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-            <i class="fas fa-arrow-left"></i> Previous
-        </button>
-        <p class="text-sm font-semibold text-slate-500 hidden sm:block">T. Osama Saeed</p>
-        <button id="next-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-            Next <i class="fas fa-arrow-right"></i>
-        </button>
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-3">
+                <span class="font-semibold text-slate-700">Lesson 12</span>
+                <span class="hidden h-4 w-px bg-slate-300 sm:inline-block"></span>
+                <p id="lesson-status">Finish the lesson to unlock PDF export.</p>
+                <span class="hidden h-4 w-px bg-slate-300 lg:inline-block"></span>
+                <p class="font-semibold text-slate-500">T. Osama Saeed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button id="prev-btn" class="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 font-semibold text-slate-700 transition-colors hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-50">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="download-btn" hidden class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-emerald-600">
+                    <i class="fas fa-file-pdf"></i> Save as PDF
+                </button>
+                <button id="next-btn" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
     </footer>
 
-    <!-- Logic -->
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const counter = document.getElementById('slide-counter');
-        const progressBar = document.getElementById('progress-bar');
-        
-        let currentSlide = 0;
+    </div>
 
-        function updateUI() {
-            // Update slides visibility
-            slides.forEach((slide, index) => {
-                if(index === currentSlide) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-
-            // Update buttons state
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide === slides.length - 1;
-
-            // Update counter & progress bar
-            counter.innerText = `${currentSlide + 1} / ${slides.length}`;
-            progressBar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
-        }
-
-        function nextSlide() {
-            if (currentSlide < slides.length - 1) {
-                currentSlide++;
-                updateUI();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateUI();
-            }
-        }
-
-        // Button clicks
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
-
-        // Touch Swipe Navigation
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const touchArea = document.getElementById('touch-area');
-
-        touchArea.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, {passive: true});
-
-        touchArea.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, {passive: true});
-
-        function handleSwipe() {
-            const threshold = 50;
-            if (touchStartX - touchEndX > threshold) {
-                nextSlide(); // Swiped left -> Next
-            }
-            if (touchEndX - touchStartX > threshold) {
-                prevSlide(); // Swiped right -> Prev
-            }
-        }
-
-        // Init
-        updateUI();
-    </script>
+    <script src="assets/lesson.js?v=20260325" defer></script>
+    <script src="assets/pwa.js?v=20260403" defer></script>
 </body>
 </html>

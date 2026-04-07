@@ -1,4 +1,4 @@
-const CACHE_NAME = "ilets-pwa-v20260403";
+const CACHE_NAME = "ilets-pwa-v20260407";
 const CORE_ASSETS = [
     "./",
     "./index.html",

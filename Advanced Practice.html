@@ -26,6 +26,13 @@
         }
 
         .course-home-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            min-width: 10.5rem;
+            padding: 0.9rem 1.2rem !important;
+            line-height: 1.05;
             border: 1px solid rgba(199, 210, 254, 0.24);
             background:
                 radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.12), transparent 28%),
@@ -55,6 +62,76 @@
 
         .course-home-link i {
             color: #ffffff;
+            font-size: 0.82rem;
+            flex-shrink: 0;
+        }
+
+        .course-home-text {
+            display: block;
+            width: 4.4rem;
+            text-align: left;
+            white-space: normal;
+        }
+
+        .page-lesson-header {
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+        }
+
+        .page-lesson-header-shell {
+            max-width: 72rem;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .page-lesson-header-main {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .page-lesson-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .page-lesson-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(224, 231, 255, 0.95);
+            color: #5954ec;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            flex-shrink: 0;
+        }
+
+        .page-lesson-kicker {
+            color: #5954ec;
+        }
+
+        .page-lesson-subtitle {
+            color: #64748b;
+        }
+
+        @media (min-width: 1024px) {
+            .page-lesson-header-shell {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .page-lesson-header-main {
+                flex-direction: row;
+                align-items: center;
+            }
         }
 
         /* Custom Scrollbar */
@@ -78,19 +155,24 @@
     </div>
 
     <!-- Header -->
-    <header class="bg-white shadow-sm p-4 flex justify-between items-center z-10 relative shrink-0">
-        <h1 class="font-bold text-lg text-indigo-600 cursor-pointer flex items-center" onclick="goHome()">
-            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mr-2">
-                <i class="fas fa-rocket"></i>
+    <header class="page-lesson-header z-10 relative shrink-0 px-4 py-4">
+        <div class="page-lesson-header-shell">
+            <div class="page-lesson-header-main">
+                <a href="index.html" class="course-home-link inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="course-home-text">Course Home</span>
+                </a>
+                <div class="page-lesson-title-row">
+                    <div class="page-lesson-icon text-lg">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <p class="page-lesson-kicker text-xs font-bold uppercase tracking-[0.35em]">Practice</p>
+                        <h1 class="text-xl font-black text-slate-900 sm:text-2xl cursor-pointer" onclick="goHome()">Practice</h1>
+                    </div>
+                </div>
             </div>
-            Practice
-        </h1>
-        <div class="flex items-center gap-3">
-            <div id="header-subtitle" class="hidden text-sm font-bold text-slate-500 uppercase tracking-wider sm:block">Select a Day</div>
-            <a href="index.html" class="course-home-link inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold">
-                <i class="fas fa-arrow-left text-xs"></i>
-                <span>Course Home</span>
-            </a>
+            <div id="header-subtitle" class="text-sm font-semibold uppercase tracking-[0.22em] page-lesson-subtitle">Select a Day</div>
         </div>
     </header>
 
