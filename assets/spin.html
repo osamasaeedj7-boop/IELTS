@@ -1,0 +1,2952 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS Speaking Spin Practice</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ["Merriweather", "serif"],
+            mono: [
+              "ui-monospace",
+              "SFMono-Regular",
+              "Menlo",
+              "Monaco",
+              "Consolas",
+              "Liberation Mono",
+              "Courier New",
+              "monospace",
+            ],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(99, 102, 241, 0.35) transparent;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    body::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.28);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    body.dark::-webkit-scrollbar-thumb,
+    .dark body::-webkit-scrollbar-thumb {
+      background: rgba(165, 180, 252, 0.28);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .spin-blur {
+      opacity: 0.3;
+      filter: blur(2px);
+      transform: scale(0.95);
+    }
+
+    .group:hover .group-hover\:hidden {
+      display: none;
+    }
+    .group:hover .group-hover\:block {
+      display: block;
+    }
+    .group:hover .group-hover\:flex {
+      display: flex;
+    }
+
+    .group.translate-active .group-hover\:hidden {
+      display: none;
+    }
+    .group.translate-active .group-hover\:block {
+      display: block;
+    }
+    .group.translate-active .group-hover\:flex {
+      display: flex;
+    }
+
+    .translation-group {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .course-home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      min-width: 10.5rem;
+      padding: 0.9rem 1.2rem !important;
+      line-height: 1.05;
+      border: 1px solid rgba(199, 210, 254, 0.24);
+      background:
+        radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.12), transparent 28%),
+        linear-gradient(135deg, #5954ec 0%, #524ce7 42%, #4b45e0 74%, #463fda 100%);
+      color: #ffffff !important;
+      box-shadow:
+        0 18px 34px -22px rgba(76, 70, 229, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .course-home-link:hover {
+      transform: translateY(-1px);
+      background:
+        radial-gradient(circle at 20% 22%, rgba(255, 255, 255, 0.14), transparent 28%),
+        linear-gradient(135deg, #6863f3 0%, #5f58ee 42%, #5550e7 74%, #4c47e0 100%);
+      color: #ffffff !important;
+      box-shadow:
+        0 20px 38px -22px rgba(76, 70, 229, 0.56),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .course-home-link i {
+      color: #ffffff;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+
+    .course-home-text {
+      display: block;
+      width: 4.4rem;
+      text-align: left;
+      white-space: normal;
+    }
+
+    .page-lesson-header {
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    }
+
+    .page-lesson-header-shell {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .page-lesson-header-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .page-lesson-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .page-lesson-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(224, 231, 255, 0.95);
+      color: #5954ec;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      flex-shrink: 0;
+    }
+
+    .page-lesson-kicker {
+      color: #5954ec;
+    }
+
+    .page-lesson-subtitle {
+      color: #64748b;
+    }
+
+    @media (min-width: 1024px) {
+      .page-lesson-header-shell {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .page-lesson-header-main {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  </style>
+    <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#5954ec">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="IELTS Speaking Mastery">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"></head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans min-h-screen flex flex-col transition-colors duration-300">
+  <header class="page-lesson-header shrink-0 z-40 transition-colors px-4 py-4">
+    <div class="page-lesson-header-shell">
+      <div class="page-lesson-header-main">
+        <a
+          href="index.html"
+          class="course-home-link inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200"
+        >
+          <i class="fas fa-arrow-left"></i>
+          <span class="course-home-text">Course Home</span>
+        </a>
+        <div class="page-lesson-title-row">
+          <div class="page-lesson-icon text-lg">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <div>
+            <p class="page-lesson-kicker text-xs font-bold uppercase tracking-[0.35em]">IELTS Speaking</p>
+            <h1 class="font-black text-xl text-slate-900 tracking-tight leading-none sm:text-2xl">IELTSSpin</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 overflow-y-auto w-full flex flex-col items-center">
+    <div class="w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm py-3 px-4 z-20">
+      <div class="max-w-6xl mx-auto overflow-x-auto no-scrollbar">
+        <div class="flex md:flex-wrap md:justify-center gap-3 pb-1 min-w-max md:min-w-0 snap-x snap-mandatory">
+
+          <div class="relative group shrink-0 snap-start">
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+              <i class="fas fa-dice text-sm"></i>
+            </div>
+            <select id="partMode" class="appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pl-9 pr-8 py-2 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-700 shadow-sm cursor-pointer outline-none transition-colors">
+              <option value="all">Mix All Parts</option>
+              <option value="part1">Part 1 Only</option>
+              <option value="part2">Part 2 Only</option>
+              <option value="part3">Part 3 Only</option>
+            </select>
+          </div>
+
+          <div class="relative group shrink-0 snap-start">
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+              <i class="fas fa-bullseye text-sm"></i>
+            </div>
+            <select id="filterTheme" class="appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pl-9 pr-8 py-2 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-700 shadow-sm cursor-pointer outline-none transition-colors capitalize max-w-[220px] truncate">
+            </select>
+          </div>
+
+          <div class="relative group shrink-0 snap-start">
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+              <i class="fas fa-filter text-sm"></i>
+            </div>
+            <select id="filterDifficulty" class="appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pl-9 pr-8 py-2 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-700 shadow-sm cursor-pointer outline-none transition-colors">
+              <option value="all">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div class="relative group shrink-0 snap-start">
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+              <i class="fas fa-fire text-sm"></i>
+            </div>
+            <select id="filterFrequency" class="appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pl-9 pr-8 py-2 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-700 shadow-sm cursor-pointer outline-none transition-colors">
+              <option value="all">Any Frequency</option>
+              <option value="very_common">Very Common</option>
+              <option value="common">Common</option>
+              <option value="less_common">Less Common</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex-1 flex flex-col items-center justify-center p-4 sm:p-8">
+      <div class="w-full max-w-4xl mx-auto flex flex-col min-h-[38vh] sm:min-h-[42vh] relative bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+
+        <div class="py-6 px-8 bg-slate-50 dark:bg-slate-800/30 border-b border-slate-100 dark:border-slate-800 opacity-60 flex items-center justify-center">
+          <h3 id="prevItemText" class="font-serif text-lg sm:text-xl text-slate-400 dark:text-slate-500 font-medium text-center line-clamp-1 select-none whitespace-pre-wrap">Loading...</h3>
+        </div>
+
+        <div id="currentArea" class="transition-all duration-75 py-8 sm:py-10 px-6 sm:px-14 flex flex-col items-center justify-start w-full relative z-10">
+          <span id="currentLabel" class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 px-4 py-1 mb-4 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">Part</span>
+
+          <h2 class="group translation-group cursor-pointer font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-center leading-tight break-words max-w-3xl">
+            <span id="currentText" class="block group-hover:hidden text-slate-800 dark:text-slate-100">No questions found.</span>
+            <span id="currentTextTr" class="hidden group-hover:block text-emerald-600 dark:text-emerald-400">Soru bulunamadı.</span>
+          </h2>
+
+          <div id="cueCardArea" class="hidden mt-4 bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 rounded-3xl p-6 sm:p-8 w-full max-w-2xl mx-auto shadow-sm">
+            <p class="text-sm font-bold text-indigo-600 dark:text-indigo-400 mb-4 uppercase tracking-widest text-left flex items-center justify-start">
+              <i class="fas fa-list text-sm mr-2"></i> You should say:
+            </p>
+            <ul id="cueCardBullets" class="space-y-3 font-medium text-lg text-indigo-700 dark:text-indigo-300 flex flex-col items-start text-left"></ul>
+            <p class="text-[10px] text-left text-indigo-400/80 uppercase tracking-widest mt-6 font-bold">Hover or tap bullets for translation</p>
+          </div>
+
+          <div id="supportDrawer" class="w-full mt-6 max-w-4xl mx-auto flex flex-col items-center hidden">
+            <div id="supportToggles" class="flex flex-wrap justify-center gap-2 mb-3"></div>
+            <div id="supportContent" class="w-full text-left"></div>
+          </div>
+        </div>
+
+        <div class="py-6 px-8 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800 opacity-60 flex items-center justify-center">
+          <h3 id="nextItemText" class="font-serif text-lg sm:text-xl text-slate-400 dark:text-slate-500 font-medium text-center line-clamp-1 select-none whitespace-pre-wrap">Loading...</h3>
+        </div>
+      </div>
+
+      <div class="w-full max-w-5xl mx-auto mt-10">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-10">
+          <button id="spinBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded-[2rem] px-12 sm:px-16 py-5 sm:py-6 font-black text-xl sm:text-2xl shadow-xl shadow-indigo-200 dark:shadow-none transform transition hover:-translate-y-1 active:scale-95 disabled:opacity-50 disabled:hover:translate-y-0 flex items-center justify-center w-full md:w-auto h-auto md:h-[152px]">
+            <i id="spinIcon" class="fas fa-sync-alt mr-3 sm:mr-4 text-xl sm:text-3xl"></i> SPIN PROMPT
+          </button>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2rem] p-4 sm:p-5 shadow-sm h-full w-full md:w-auto">
+            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center bg-slate-50 dark:bg-slate-950 rounded-full shadow-inner border border-slate-100 dark:border-slate-800 shrink-0">
+              <svg class="absolute inset-0 w-full h-full -rotate-90 drop-shadow-sm" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" class="stroke-slate-200 dark:stroke-slate-800" stroke-width="4"></circle>
+                <circle id="timerRing" cx="50" cy="50" r="46" fill="none" class="stroke-indigo-500 dark:stroke-indigo-400 transition-all duration-1000 ease-linear" stroke-width="6" stroke-linecap="round"></circle>
+              </svg>
+
+              <div class="relative z-10 flex flex-col items-center justify-center mt-1">
+                <span id="timerText" class="font-mono text-2xl sm:text-3xl font-black tracking-tighter text-slate-800 dark:text-white">00:00</span>
+                <div class="flex gap-3 mt-1">
+                  <button id="timerPlayBtn" class="text-slate-400 hover:text-indigo-500 transition-colors disabled:opacity-50" disabled>
+                    <i id="timerPlayIcon" class="fas fa-play text-sm"></i>
+                  </button>
+                  <button id="timerResetBtn" class="text-slate-400 hover:text-rose-500 transition-colors disabled:opacity-50" disabled>
+                    <i class="fas fa-sync-alt text-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-row sm:flex-col gap-2">
+              <button class="timer-preset-btn px-4 sm:px-4 py-2 sm:py-2 rounded-full text-xs font-bold transition-all border shadow-sm active:scale-95 bg-white text-slate-600 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700 dark:hover:bg-slate-700" data-time="30">30s</button>
+              <button class="timer-preset-btn px-4 sm:px-4 py-2 sm:py-2 rounded-full text-xs font-bold transition-all border shadow-sm active:scale-95 bg-white text-slate-600 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700 dark:hover:bg-slate-700" data-time="60">1m</button>
+              <button class="timer-preset-btn px-4 sm:px-4 py-2 sm:py-2 rounded-full text-xs font-bold transition-all border shadow-sm active:scale-95 bg-white text-slate-600 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700 dark:hover:bg-slate-700" data-time="120">2m</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ========================================================================
+    // 1) DATABASE
+    // IMPORTANT:
+    // Replace EVERYTHING inside bankRaw with your FULL V7 database text.
+    // I already added automatic database fixing below, so broken examples
+    // like "helped I" / "I were" / "excites I" will be corrected by code.
+    // ========================================================================
+    const bankRaw = String.raw`IELTS SPEAKING CURATED CORE BANK - CAN FINAL MASTER BANK V4
+Version: 4.0.0
+Focus: fluency, confidence, safer production, better development
+Format support wanted in parser/UI:
+- Safe answer:
+- Better answer:
+
+PHRASE BANK
+[PART1]
+  direct_answer_starters:
+    - Yes, definitely.
+    - Most of the time, yes.
+    - Not really, to be honest.
+    - It depends, but generally yes.
+    - I’d say yes.
+    - Usually, yes.
+    - In most cases, yes.
+  adding_detail:
+    - The main reason is that...
+    - One reason is that...
+    - For me, ...
+    - In my case, ...
+    - What I like about it is...
+    - A good example is...
+    - For instance, ...
+    - Another point is that...
+  comparing_past_and_present:
+    - Compared to the past, ...
+    - I used to think differently, but now ...
+    - Over time, my opinion has changed a little.
+    - When I was younger, ...
+    - These days, ...
+  wrapping_up_briefly:
+    - So that is the main reason for me.
+    - So overall, I feel quite positive about it.
+    - That is why it matters to me.
+    - So that would be my short answer.
+    - So that is how I see it.
+
+[PART2]
+  opening_a_long_turn:
+    - I’d like to talk about...
+    - A good example that comes to mind is...
+    - The person / place / experience I want to describe is...
+    - One thing I remember clearly is...
+    - I have a good example for this topic.
+  organising_the_answer:
+    - First of all, ...
+    - To begin with, ...
+    - What happened was ...
+    - After that, ...
+    - Another thing worth mentioning is ...
+    - The part I remember most clearly is ...
+  adding_reflection:
+    - What made it important was ...
+    - The reason it mattered to me was ...
+    - Looking back, I realised that ...
+    - What I learned from it was ...
+    - It also taught me that ...
+  ending_naturally:
+    - So that is why I still remember it clearly.
+    - Overall, it was more meaningful than I expected.
+    - That is why it stayed in my mind.
+    - For that reason, it still feels important to me.
+    - So overall, it was a very valuable experience.
+
+[PART3]
+  giving_an_opinion:
+    - In my opinion, ...
+    - I think ...
+    - Personally, I think ...
+    - I would say ...
+    - As far as I can see, ...
+  developing_an_answer:
+    - One reason is that ...
+    - Another reason is that ...
+    - For example, ...
+    - This is especially true when ...
+    - A good example of this would be ...
+  balancing_or_qualifying:
+    - However, ...
+    - At the same time, ...
+    - Of course, it depends on the situation.
+    - On the other hand, ...
+    - That said, ...
+  ending_with_a_clear_position:
+    - So overall, I think that is the main point.
+    - That is why I think it is important.
+    - So in general, I would say yes.
+    - For that reason, I think it matters in the long term.
+    - So that would be my overall view.
+
+PART 1
+[TOPIC] Work
+Theme: work_and_business | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. What kind of work do you do?
+   Safe answer: I work in civil engineering and architecture. I like this field because it combines practical work with creativity. For example, I enjoy design and planning.
+   Better answer: I work in civil engineering and architecture, and this field is very meaningful to me. I like it because it combines technical thinking with creativity, which makes the job more interesting. For example, I enjoy design, planning, and thinking about how a place can be improved in a practical way. I also feel satisfied when I can connect ideas with real results.
+2. Why did you choose this job?
+   Safe answer: I chose this job because I have liked architecture for a long time. It is interesting for me, and it also matches my future goals.
+   Better answer: I chose this field because I have been interested in architecture and design for a long time. I like the idea of creating something useful, not only something that looks good. It also suits my personality because I enjoy both practical thinking and creative work. So overall, it felt like the right path for me.
+3. What do you like most about your job?
+   Safe answer: What I like most is the creative side. I enjoy thinking about design and improving places in a practical way.
+   Better answer: What I like most about my job is the creative side of it. I enjoy thinking about design, structure, and how a place can be improved in a useful way. For me, it is satisfying when a project is both practical and visually strong. That balance between function and creativity is probably the best part.
+4. Would you like to continue this job in the future?
+   Safe answer: Yes, definitely. I want to continue because this job is meaningful to me and it fits my future plans.
+   Better answer: Yes, definitely. I would like to continue in this field because it is strongly connected to both my interests and my long-term goals. I feel that there is always something new to learn in this kind of work, which keeps it interesting. It is also a field where I can grow professionally over time.
+5. What skills are important in your job?
+   Safe answer: I think planning, creativity, and communication are very important. A person also needs patience and attention to detail.
+   Better answer: I think planning, creativity, and communication are very important in my job. A person also needs patience and attention to detail, because even a small mistake can affect the final result. For example, it is not enough to have a good design idea if you cannot explain it clearly to other people. So I would say technical ability and communication are both essential.
+
+[TOPIC] Study
+Theme: education_and_skills | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Are you studying anything at the moment?
+   Safe answer: Yes. At the moment, I am mainly focused on improving my English speaking. That is because I need IELTS for my future studies.
+   Better answer: Yes, at the moment I am mainly focused on improving my English, especially speaking. The reason is that I need IELTS for my future studies, and speaking is one of the most important areas for me right now. I am trying to practise regularly so I can express my ideas more clearly and naturally. So in my case, English study is my main priority at the moment.
+2. Why is English important for you?
+   Safe answer: English is important for me because I want to study in Italy. It is also necessary for communication and future opportunities.
+   Better answer: English is very important for me because I want to study in Italy and continue with a master’s degree. Without English, it would be much harder to reach that goal. It is also useful beyond university, because it can help with communication, professional opportunities, and confidence in international situations. So overall, it is directly connected to my future.
+3. Do you prefer studying alone or with other people?
+   Safe answer: I usually prefer studying alone because I can focus better. However, studying with a teacher is helpful when I need correction.
+   Better answer: I usually prefer studying alone because I can focus better and work at my own pace. When I study alone, I can repeat things as much as I need without pressure. However, studying with a teacher is also very helpful, especially when I need correction and feedback. So I would say both are useful, but for daily study I prefer being alone.
+4. What skill would you like to improve?
+   Safe answer: I would like to improve my speaking fluency. Sometimes I know the idea, but I need more practice to say it clearly.
+   Better answer: The skill I would most like to improve is my speaking fluency. Sometimes I already know the idea in my mind, but I still need more practice to express it smoothly and naturally. This is especially important for IELTS speaking, because I want to sound clearer and more confident. So for me, speaking is the most important skill to improve now.
+5. What helps you learn well?
+   Safe answer: Clear explanation and regular practice help me most. For example, when I repeat answers aloud, I remember them better.
+   Better answer: Clear explanation and regular practice help me learn best. I think I understand things more easily when the explanation is simple and practical. For example, when I repeat an answer aloud and then get feedback, I can notice my mistakes more clearly. So in my case, active practice works much better than only reading rules.
+
+[TOPIC] Hometown
+Theme: places_and_identity | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. What kind of place is your hometown?
+   Safe answer: My hometown is not very big, but it feels familiar and comfortable. Daily life there is usually easier and calmer than in a huge city.
+   Better answer: My hometown is not extremely big, but it feels familiar and comfortable to me. Daily life there is usually calmer and simpler than in a huge city, which I appreciate. It is the kind of place where people often feel more connected to their surroundings. So overall, I would describe it as familiar, practical, and emotionally important.
+2. What do you like most about your hometown?
+   Safe answer: What I like most is the feeling of familiarity. I know the place well, so it feels comfortable to me.
+   Better answer: What I like most about my hometown is the feeling of familiarity. I know the streets, the atmosphere, and the general rhythm of life there, so it feels comfortable and less stressful. I think that kind of emotional connection matters a lot. So for me, the best thing is not only the place itself, but the feeling it gives me.
+3. Has your hometown changed much in recent years?
+   Safe answer: Yes, I think it has changed quite a lot. It has become busier and more developed than before.
+   Better answer: Yes, I think my hometown has changed quite a lot in recent years. It has become busier and more developed, especially in terms of services and daily facilities. Compared to the past, it feels more active now. In some ways that is positive, although it can also make life feel a little more crowded.
+4. Is it a good place for young people?
+   Safe answer: I would say yes in some ways. It is comfortable and familiar, but some young people may want more opportunities.
+   Better answer: I would say it is a good place in some ways, but not in every way. It can feel comfortable, safe, and familiar, which is important for many young people. However, some may want more educational or career opportunities, especially if they have ambitious future goals. So I think it depends on the person.
+5. Do you think you will live there in the future?
+   Safe answer: I am not completely sure. My future plans may take me somewhere else, but my hometown will always be important to me.
+   Better answer: I am not completely sure whether I will live there in the future, because my study and career plans may take me somewhere else. However, I think my hometown will always remain emotionally important to me. Even if I move away for study or work, I will still feel connected to it. So overall, I may not stay there permanently, but it will always matter to me.
+
+[TOPIC] Home and accommodation
+Theme: home_and_daily_life | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Do you live in a house or an apartment?
+   Safe answer: I live in an apartment. It is practical and comfortable enough for daily life.
+   Better answer: I live in an apartment, and for me it is practical enough for daily life. It is comfortable, and I am used to this kind of environment. I think convenience matters a lot in everyday living. So overall, I am quite comfortable with it.
+2. What do you like most about your home?
+   Safe answer: What I like most is the comfort and privacy. After a busy day, I like being in a quiet place.
+   Better answer: What I like most about my home is the comfort and privacy it gives me. After a busy or stressful day, it feels good to return to a quiet place and relax. I think a peaceful atmosphere matters more than luxury. So for me, that sense of calm is the most important thing.
+3. Is there anything you want to change about your home?
+   Safe answer: Yes, I would like a brighter room and a better study space. That would help me focus more.
+   Better answer: Yes, there are a few things I would like to change. For example, I would like a brighter room and a better study space because that would help me concentrate more easily. Small changes like lighting and organisation can make a big difference in daily life. So I think improving those things would make the home more comfortable and useful.
+4. What makes a home comfortable?
+   Safe answer: For me, a home is comfortable when it is quiet, clean, and organised. A peaceful atmosphere is very important.
+   Better answer: For me, a home becomes comfortable when it is quiet, clean, and well organised. I also think natural light and a peaceful atmosphere make a big difference. It does not need to be luxurious or very large, but it should feel calm and practical. So overall, comfort is more about atmosphere than appearance.
+5. Do you prefer living in a busy area or a quiet one?
+   Safe answer: I generally prefer a quieter area because it helps me feel more relaxed. Busy areas can be convenient, but they can also feel stressful.
+   Better answer: I generally prefer living in a quieter area because it helps me feel more relaxed. Busy areas can be convenient, especially for transport and services, but they can also feel noisy and stressful. In the long term, I think peace is more important than convenience. So I would choose a calm place if possible.
+
+[TOPIC] Neighbourhood
+Theme: places_and_identity | Difficulty: easy | Frequency: common | Band: band_4_5
+1. What do you like about the area where you live?
+   Safe answer: I like that it is practical and familiar. Most of the things I need are not very far away.
+   Better answer: What I like about the area where I live is that it feels practical and familiar. Most of the things I need in daily life are not very far away, which makes life easier. I also feel more comfortable in places that I know well. So overall, convenience and familiarity are the main advantages.
+2. Is your neighbourhood quiet or lively?
+   Safe answer: It is more on the quiet side, and I prefer that because it feels less stressful.
+   Better answer: My neighbourhood is more on the quiet side, and I prefer that because it feels less stressful and more comfortable. A very noisy area can affect focus and rest, so I think a calmer environment is better for daily life. So for me, quietness is a real advantage.
+3. Do you know many people in your neighbourhood?
+   Safe answer: Not many, but I know some people. It is enough to make the area feel familiar.
+   Better answer: I do not know many people in my neighbourhood very closely, but I know some of them. That is enough to make the area feel familiar and comfortable. I think people do not need deep relationships with everyone around them, but some connection is still nice. So in that sense, I feel reasonably comfortable there.
+4. What facilities are useful in your neighbourhood?
+   Safe answer: I think shops, transport, and quiet places are the most useful things.
+   Better answer: I think the most useful facilities in a neighbourhood are shops, transport access, and quiet public spaces. These things make everyday life easier and reduce stress. For example, when daily needs are nearby, people do not waste too much time. So practical facilities really matter.
+5. Would you like to stay in the same neighbourhood for a long time?
+   Safe answer: I am not completely sure. It depends on my future study and work plans.
+   Better answer: I am not completely sure whether I would like to stay in the same neighbourhood for a long time. It depends on my future study and work plans, because my life may change in the next few years. However, if the area remains comfortable and practical, I would not mind staying. So my answer is flexible.
+
+[TOPIC] Free time
+Theme: home_and_daily_life | Difficulty: easy | Frequency: common | Band: band_4_5
+1. What do you do in your free time?
+   Safe answer: In my free time, I enjoy creating men’s fashion content for social media. I like planning outfits and shooting reels.
+   Better answer: In my free time, I enjoy creating men’s fashion content for social media. I like planning outfits, thinking about style, and shooting reels or visual content. It feels creative and personal at the same time. So for me, it is not just entertainment, but also a way to express myself.
+2. Do you prefer to spend free time alone or with others?
+   Safe answer: It depends, but I often like some time alone because it helps me relax. However, I also enjoy spending time with family or close friends.
+   Better answer: It depends on my mood, but I often enjoy spending some free time alone because it helps me relax and focus on my own interests. For example, creative activities or quiet walks feel better when I am alone. However, I also enjoy being with family or close friends when I want comfort or social energy. So I would say I like a balance.
+3. What activities help you relax?
+   Safe answer: Walking in quiet places and listening to music help me relax most. They reduce stress and make me feel calm.
+   Better answer: The activities that help me relax most are walking in quiet places and listening to music. They are simple, but they reduce stress and make me feel calmer very quickly. I think simple activities often work best because they do not require much effort. So in my case, those are my favourite ways to relax.
+4. Are hobbies important?
+   Safe answer: Yes, definitely. Hobbies help people relax and express themselves. They also make life more enjoyable.
+   Better answer: Yes, definitely, I think hobbies are very important. They help people relax, express themselves, and enjoy life more. In some cases, hobbies can also improve confidence because people feel good when they develop a personal interest. So overall, hobbies are useful both mentally and emotionally.
+5. Did you have the same hobbies when you were younger?
+   Safe answer: Not exactly. Some of my interests stayed the same, but others changed over time.
+   Better answer: Not exactly. Some of my interests stayed the same, but others changed over time as I grew older. Compared to the past, I now focus more on creative activities like content creation and visual style. So I would say my hobbies became more personal and more connected to my identity.
+
+[TOPIC] Social media
+Theme: technology_and_ai | Difficulty: medium | Frequency: very_common | Band: band_5_6
+1. Do you use social media regularly?
+   Safe answer: Yes, I do. I use it for communication, inspiration, and content creation.
+   Better answer: Yes, I use social media regularly. In my case, it is not only for communication, but also for inspiration and content creation. I often use it to watch creative videos, follow fashion ideas, and share my own content. So it is a real part of my daily routine.
+2. What do you usually use social media for?
+   Safe answer: I mainly use it for fashion content and sharing ideas. I also use it to watch creative videos.
+   Better answer: I mainly use social media for fashion content, visual inspiration, and sharing ideas. For example, I like watching creative reels, following style-related pages, and sometimes posting my own work. It is useful because it gives me both ideas and motivation. So for me, it is a creative tool as well as a social one.
+3. Is social media useful?
+   Safe answer: Yes, it can be useful if people use it carefully. It helps with ideas, communication, and promotion.
+   Better answer: Yes, I think social media can be very useful if people use it carefully. It helps with communication, learning ideas, and even promoting personal or professional work. However, it can also waste time if people use it without control. So overall, I would say it is useful, but balance is important.
+4. Does social media affect confidence?
+   Safe answer: Yes, I think it does. It can inspire people, but it can also create pressure and comparison.
+   Better answer: Yes, I think social media can definitely affect confidence. On the positive side, it can inspire people and help them express themselves. On the negative side, it can create pressure, comparison, and unrealistic expectations. So I would say it has both positive and negative effects depending on how people use it.
+5. Has social media changed in recent years?
+   Safe answer: Yes, definitely. It has become more visual, faster, and more connected to daily life.
+   Better answer: Yes, definitely. Compared to the past, social media has become more visual, faster, and more deeply connected to daily life. People now use it not only for social reasons, but also for work, promotion, and personal branding. So I think its role has expanded a lot over time.
+
+[TOPIC] Technology
+Theme: technology_and_ai | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Do you use technology a lot every day?
+   Safe answer: Yes, definitely. I use it every day for communication, study, and social media.
+   Better answer: Yes, I use technology a lot every day. It is part of my communication, study, and even my creative work. For example, I use it to organise tasks, search for information, and create or view content. So overall, it is a normal and necessary part of my life.
+2. What piece of technology is most useful to you?
+   Safe answer: My smartphone is the most useful device for me. I use it for communication, planning, and content creation.
+   Better answer: My smartphone is probably the most useful piece of technology for me. I use it for communication, planning, social media, and quick access to information. It saves me time and makes many daily tasks easier. So in my case, it is definitely the most important device.
+3. Has technology made your life easier?
+   Safe answer: Yes, it has. It helps me save time and find information quickly.
+   Better answer: Yes, I think technology has made my life easier in many ways. It helps me find information quickly, communicate instantly, and organise daily tasks more efficiently. Of course, it also has some disadvantages, but overall the benefits are clear for me.
+4. Are there disadvantages to technology?
+   Safe answer: Yes, of course. Too much technology can waste time and reduce concentration.
+   Better answer: Yes, of course there are disadvantages. Too much technology can waste time, reduce concentration, and create dependence. In some cases, people also become less patient because they get used to everything being fast. So I think technology is useful, but it needs to be used carefully.
+5. Do you enjoy learning to use new technology?
+   Safe answer: Yes, usually I do, especially if it is practical and useful.
+   Better answer: Yes, I usually enjoy learning to use new technology, especially when it is practical and useful in real life. I am more interested when a tool saves time or improves results. So I would say I like technology most when it has a clear purpose.
+
+[TOPIC] Languages
+Theme: education_and_skills | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Do you enjoy learning languages?
+   Safe answer: Yes, I do. I think learning languages is valuable because it improves communication and creates opportunities.
+   Better answer: Yes, I do enjoy learning languages. I think they are valuable because they improve communication and also create more opportunities in life. For example, a language can help with study, travel, and meeting new people. So for me, language learning is both practical and meaningful.
+2. What is the hardest part of learning English for you?
+   Safe answer: For me, the hardest part is speaking fluently. I often know the idea, but I need more practice to say it naturally.
+   Better answer: For me, the hardest part of learning English is speaking fluently and naturally. Sometimes I already know what I want to say, but I still need more practice to say it clearly and smoothly. That is why speaking practice is my main focus now. So I would say my biggest challenge is not ideas, but fluent expression.
+3. What helps you remember new words?
+   Safe answer: Repetition helps me most. If I use a word in speaking and writing, I remember it better.
+   Better answer: Repetition helps me remember new words best. If I use a word in both speaking and writing, it becomes easier to remember. I also think it helps when the word is connected to a real topic or situation. So in my case, active use is much better than only memorising.
+4. Do you prefer learning with a teacher or by yourself?
+   Safe answer: I think both are useful, but for me a teacher is especially helpful because I need correction and feedback.
+   Better answer: I think both are useful, but for me a teacher is especially helpful because I need correction and feedback. Self-study is good for review and repetition, but a teacher helps me notice mistakes more quickly. So I would say I need both, but teacher support is more important for speaking.
+5. Will foreign languages be important in the future?
+   Safe answer: Yes, definitely. I think they will become even more important because the world is more connected now.
+   Better answer: Yes, definitely. I think foreign languages will become even more important in the future because the world is more connected now. They are useful not only for travel, but also for education, work, and international communication. So I believe language ability will continue to matter a lot.
+
+[TOPIC] Teachers
+Theme: education_and_skills | Difficulty: easy | Frequency: common | Band: band_4_5
+1. What qualities make someone a good teacher?
+   Safe answer: I think a good teacher should be clear, patient, and supportive.
+   Better answer: I think a good teacher should be clear, patient, and supportive. These qualities help students feel more confident and less afraid of making mistakes. For me, good explanation is especially important because it makes difficult ideas feel manageable. So clarity is one of the most important teaching qualities.
+2. Do you remember a teacher who helped you a lot?
+   Safe answer: Yes, I do. I usually remember teachers who explained things clearly and made learning easier.
+   Better answer: Yes, I do remember teachers who helped me a lot. The ones I remember most are usually the teachers who explained things clearly and made learning feel easier instead of more stressful. A teacher like that can change how a student feels about a subject. So I think good teaching leaves a strong memory.
+3. How can teachers make lessons more interesting?
+   Safe answer: Teachers can make lessons more interesting by using practical examples and real-life topics.
+   Better answer: Teachers can make lessons more interesting by using practical examples, real-life topics, and more interaction. Students usually respond better when the lesson feels useful and connected to life outside the classroom. So I think relevance and participation make a big difference.
+4. Do teachers strongly influence students’ lives?
+   Safe answer: Yes, definitely. A good teacher can improve a student’s confidence and motivation.
+   Better answer: Yes, definitely. A good teacher can influence not only a student’s knowledge, but also their confidence, motivation, and even future goals. In some cases, teachers help students see what they are capable of. So their influence can be much bigger than only the subject they teach.
+5. Would you like to teach something one day?
+   Safe answer: Possibly yes. I think teaching can be meaningful because it allows a person to help others grow.
+   Better answer: Possibly yes, I think teaching can be very meaningful because it allows a person to help others grow and improve. However, teaching well also requires patience, organisation, and clear communication. So I respect it as an important and demanding role.
+
+[TOPIC] Family
+Theme: people_and_relationships | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Do you spend much time with your family?
+   Safe answer: Yes, I do. Family is important to me because it gives support and comfort.
+   Better answer: Yes, I do spend time with my family, and I think family is very important. It gives emotional support, comfort, and a sense of stability. Even when life is busy, family connection still matters a lot. So overall, family plays an important role in my life.
+2. Who are you closest to in your family?
+   Safe answer: I am closest to the person I can talk to most easily. That kind of support matters a lot to me.
+   Better answer: I am closest to the family member I can talk to most easily. For me, emotional support and understanding are very important in a close relationship. When someone listens to you and understands your goals, it makes a big difference. So that is why I feel closest to that person.
+3. Has your family influenced your life?
+   Safe answer: Yes, definitely. My family has influenced many of my ideas and goals.
+   Better answer: Yes, definitely. My family has influenced many of my ideas, values, and long-term goals. In many cases, family affects the way a person thinks about work, study, and the future. So I would say their influence on my life has been very strong.
+4. Is family support important in stressful times?
+   Safe answer: Yes, very important. Family support helps people feel calmer and stronger.
+   Better answer: Yes, family support is very important in stressful times. Even simple emotional support can make a person feel calmer and stronger. When someone feels understood and encouraged, it becomes easier to deal with pressure. So I think family support has real emotional value.
+5. Have family relationships changed in recent years?
+   Safe answer: I think in some ways they have. Modern life is busier now, and technology has changed communication.
+   Better answer: I think family relationships have changed in some ways over recent years. Modern life is busier, and technology has changed how people communicate. In some cases, this makes communication easier, but it can also reduce real face-to-face connection. So I would say the relationship is still important, but the style of communication has changed.
+
+[TOPIC] Friends
+Theme: people_and_relationships | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. What kind of people do you enjoy being friends with?
+   Safe answer: I like being friends with people who are calm, honest, and easy to talk to.
+   Better answer: I enjoy being friends with people who are calm, honest, and easy to talk to. I think trust and comfort are very important in friendship. If a person is respectful and sincere, the relationship feels much stronger. So those are the qualities I value most.
+2. Do you make friends easily?
+   Safe answer: It depends, but generally yes if I feel comfortable with the person.
+   Better answer: It depends on the situation, but generally yes if I feel comfortable with the person. I think friendship develops more naturally when people have similar interests or attitudes. So I do not usually force it; I prefer natural connection.
+3. Is it important to keep in touch with old friends?
+   Safe answer: Yes, I think so. Old friends understand your background and life history better.
+   Better answer: Yes, I think it is important to keep in touch with old friends. They usually understand your background and life history better than new people. That kind of long-term connection can feel very meaningful. So for me, old friendships are worth maintaining.
+4. Have friendships changed because of technology?
+   Safe answer: Yes, definitely. Technology makes communication easier, but sometimes it also makes friendships feel less personal.
+   Better answer: Yes, definitely. Technology makes communication easier and faster, which is a clear advantage. However, it can also make friendships feel less personal if everything becomes too digital. So I think it improves convenience, but not always emotional depth.
+5. What makes a friendship last a long time?
+   Safe answer: I think honesty, trust, and regular communication are the main things.
+   Better answer: I think honesty, trust, and regular communication are the main things that make a friendship last a long time. Long-term friendship usually depends on mutual respect and real support, especially in difficult times. So I would say a strong friendship needs both emotional connection and consistency.
+
+[TOPIC] Photography
+Theme: media_and_culture | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you like taking photos?
+   Safe answer: Yes, I do. I think photos are meaningful because they keep memories alive and also allow creative expression.
+   Better answer: Yes, I do like taking photos. I think photos are meaningful because they keep memories alive and also allow creative expression. In my case, visual content is something I enjoy a lot, so photography feels both personal and creative. So overall, I see it as more than just recording moments.
+2. What do you usually take photos of?
+   Safe answer: I often take photos or videos related to fashion content and visual ideas.
+   Better answer: I often take photos or videos related to fashion content, style, and visual ideas. Sometimes I also like capturing interesting places or moments that feel special. So I would say my photography is usually connected to creativity and personal taste.
+3. Do you prefer printed photos or digital ones?
+   Safe answer: I prefer digital photos because they are easier to store, share, and organise.
+   Better answer: I generally prefer digital photos because they are easier to store, share, and organise. Printed photos can feel more personal, but digital ones are much more practical in daily life. So for convenience, I would definitely choose digital.
+4. Do people take too many photos these days?
+   Safe answer: In some ways, yes. Phones make photography easy, so people often capture everything.
+   Better answer: In some ways, yes, I think people do take too many photos these days. Because phones make photography so easy, people often capture everything without thinking much about it. That said, photos can still be valuable if they have real meaning. So I think the problem is not the number, but the purpose.
+5. Why do some photos become especially meaningful?
+   Safe answer: I think a photo becomes meaningful when it is connected to a special memory, person, or time in life.
+   Better answer: I think a photo becomes especially meaningful when it is connected to a special memory, a person, or a certain time in life. It is not only about the image itself, but the feeling behind it. So emotional connection is what usually makes a photo memorable.
+
+[TOPIC] Clothes
+Theme: modern_life | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you care a lot about the clothes you wear?
+   Safe answer: Yes, I do. I like clothes that look good but also feel comfortable and practical.
+   Better answer: Yes, I do care about the clothes I wear. I like clothes that look good but also feel comfortable and practical. For me, fashion is a form of personal expression, not only something functional. So I think clothing can say something about identity and style.
+2. What kind of clothes do you feel most comfortable in?
+   Safe answer: I feel most comfortable in clothes that fit well and look neat without being too formal.
+   Better answer: I feel most comfortable in clothes that fit well, feel easy to wear, and still look neat. I do not usually prefer anything too formal for daily life. So for me, comfort and style should go together.
+3. Has your taste in clothes changed over time?
+   Safe answer: Yes, definitely. I now pay more attention to style, fit, and personal expression than before.
+   Better answer: Yes, definitely. Over time, I have started to pay more attention to style, fit, and personal expression. Compared to the past, my choices now feel more intentional and more connected to my own identity. So I would say my taste has become clearer.
+4. Do clothes say something about a person?
+   Safe answer: Yes, to some extent they do. Clothes can show a person’s taste, mood, or confidence.
+   Better answer: Yes, to some extent I think they do. Clothes can show a person’s taste, mood, or level of confidence. Of course, they do not show everything about someone, but they definitely create an impression. So I would say appearance has some communicative value.
+5. Are people under more pressure to dress well now?
+   Safe answer: I think yes, especially because of social media and visual culture.
+   Better answer: I think yes, especially because of social media and visual culture. People are more aware of appearance now, and this can create pressure to look good all the time. So while fashion can be creative, it can also become stressful.
+
+[TOPIC] Travel
+Theme: places_and_travel | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you enjoy travelling?
+   Safe answer: Yes, I do. Travel is exciting because it gives people new experiences and different perspectives.
+   Better answer: Yes, I do enjoy travelling. I think travel is exciting because it gives people new experiences and different perspectives on life. It can also make daily routine feel less repetitive. So overall, I see travel as something both enjoyable and educational.
+2. What kind of places would you like to visit?
+   Safe answer: I would like to visit places that are beautiful, interesting, and meaningful. Italy is especially important to me.
+   Better answer: I would like to visit places that are beautiful, interesting, and meaningful. Italy is especially important to me because of my study goals and personal interest. I like places that combine culture, beauty, and a strong atmosphere. So those are the destinations that attract me most.
+3. Do you prefer short trips or long journeys?
+   Safe answer: It depends, but I usually prefer shorter trips because they feel easier to manage.
+   Better answer: It depends on the purpose, but I usually prefer shorter trips because they feel easier to manage and less stressful. Long journeys can also be enjoyable, but they need more planning and energy. So in general, short trips suit me better.
+4. What can people learn from travelling?
+   Safe answer: People can learn about culture, independence, and different ways of thinking through travel.
+   Better answer: People can learn a lot from travelling, such as culture, independence, and different ways of thinking. Travel can make a person more open-minded because they see different habits and environments. So I think it is not only enjoyable, but also educational.
+5. Would you like to live abroad in the future?
+   Safe answer: Possibly yes, because living abroad could help me study, improve my English, and build a better future.
+   Better answer: Possibly yes, I would consider living abroad in the future because it could help me study, improve my English, and build a better future. It would also give me experience in a new environment. So I think it could be a valuable step in my life.
+
+[TOPIC] Public transport
+Theme: travel_and_transport | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you often use public transport?
+   Safe answer: Not very often, but I think it is useful when people need a practical way to move around.
+   Better answer: I do not use public transport all the time, but I think it is very useful when people need a practical and affordable way to move around. It can save money and reduce the stress of driving. So I think it plays an important role in daily life.
+2. What kind of public transport is common where you live?
+   Safe answer: Buses are common, and they are useful for many people in daily life.
+   Better answer: Buses are one of the most common forms of public transport where I live, and they are useful for many people in daily life. They help people travel for work, study, and other responsibilities. So even if the system is not perfect, it is still important.
+3. Is public transport better than private cars?
+   Safe answer: In some ways, yes, because it can be cheaper and better for traffic.
+   Better answer: In some ways, yes, public transport can be better because it is usually cheaper and can reduce traffic. However, private cars are often more comfortable and flexible. So I think the better option depends on the situation.
+4. Has public transport improved in recent years?
+   Safe answer: I think it has improved in some ways, especially in convenience.
+   Better answer: I think public transport has improved in some ways, especially in convenience and access. However, there is still room for improvement in comfort and reliability. So I would say the progress is visible, but not complete.
+5. How could public transport be made better?
+   Safe answer: It could be made better with cleaner vehicles, better timing, and more comfort.
+   Better answer: Public transport could be made better with cleaner vehicles, more reliable timing, and greater comfort for passengers. If the experience feels easier and less stressful, more people may choose it. So small improvements could make a big difference.
+
+[TOPIC] Daily routine
+Theme: home_and_daily_life | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you usually follow a daily routine?
+   Safe answer: Yes, most of the time I do. A simple routine helps me stay productive and manage my day.
+   Better answer: Yes, most of the time I do follow a daily routine. I think a simple routine helps me stay productive and manage my time more effectively. I do not like my day to feel completely disorganised. So for me, routine brings structure and focus.
+2. Which part of your day is usually the busiest?
+   Safe answer: Usually, the busiest part is when I am working or studying. That is when I need the most focus.
+   Better answer: The busiest part of my day is usually when I am working or studying. That is the time when I need the most concentration and mental energy. Because of that, I try to stay organised during those hours. So I would say the middle part of the day is usually the busiest for me.
+3. Do you prefer mornings or evenings?
+   Safe answer: It depends, but I often prefer evenings for calm activities. However, mornings can be better for serious tasks.
+   Better answer: It depends on what I need to do, but I often prefer evenings for calm or creative activities. That is when I feel more relaxed. However, mornings can be better for serious tasks that need concentration. So I think both have advantages.
+4. Has your routine changed in recent years?
+   Safe answer: Yes, definitely. I have become more aware of planning and using my time better.
+   Better answer: Yes, definitely. In recent years, I have become more aware of planning my time and using it better. This change happened especially because of my study goals and need for preparation. So I would say my routine has become more purposeful than before.
+5. How do you feel when your routine is interrupted?
+   Safe answer: I do not love it, to be honest, because it can reduce my focus. However, I can adapt if necessary.
+   Better answer: To be honest, I do not really like it when my routine is interrupted because it can reduce my focus and make the day feel less productive. However, I can adapt if the change is necessary. So I prefer routine, but I also try to stay flexible.
+
+[TOPIC] Weekends
+Theme: home_and_daily_life | Difficulty: easy | Frequency: common | Band: band_4_5
+1. How do you usually spend your weekends?
+   Safe answer: I usually spend my weekends relaxing, doing personal tasks, and sometimes creating content.
+   Better answer: I usually spend my weekends relaxing, doing personal tasks, and sometimes working on creative content. Compared to weekdays, weekends feel calmer and more flexible. So I try to use that time in a balanced way.
+2. Do your weekends differ from your weekdays a lot?
+   Safe answer: Yes, usually they do. Weekdays are more connected to work or study, while weekends feel freer.
+   Better answer: Yes, my weekends are usually quite different from my weekdays. Weekdays are more connected to work, study, or responsibilities, while weekends feel more open and flexible. So weekends usually give me more mental space.
+3. Do you prefer busy weekends or quiet ones?
+   Safe answer: I generally prefer quieter weekends because they help me recover mentally.
+   Better answer: I generally prefer quieter weekends because they help me recover mentally after a busy week. That said, I do not want them to be completely empty. So I prefer a balance between rest and useful activity.
+4. What kind of activities help you relax at weekends?
+   Safe answer: Simple activities help me most, such as walking, listening to music, or spending time in a calm environment.
+   Better answer: The activities that help me relax most at weekends are simple ones, such as walking, listening to music, or spending time in a calm environment. These things help me reset mentally without too much effort. So for me, simple relaxation works best.
+5. What would your ideal weekend look like?
+   Safe answer: My ideal weekend would include enough rest, some creative work, and a little time outdoors.
+   Better answer: My ideal weekend would include enough rest, some creative work, and a little time outdoors. I like weekends that feel balanced rather than too empty or too busy. So for me, the ideal weekend is peaceful, productive, and refreshing.
+
+[TOPIC] Music
+Theme: media_and_culture | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. Do you listen to music every day?
+   Safe answer: Yes, almost every day. Music affects my mood quickly, so I listen to it often.
+   Better answer: Yes, I listen to music almost every day. It affects my mood quickly, so I choose different kinds depending on how I feel or what I am doing. So for me, music is a normal part of daily life.
+2. What kind of music do you enjoy most?
+   Safe answer: I usually enjoy music that helps me feel calm or focused.
+   Better answer: I usually enjoy music that helps me feel calm, focused, or emotionally connected. It really depends on the moment, but I prefer music that creates a strong atmosphere. So mood matters more to me than genre.
+3. When do you usually listen to music?
+   Safe answer: I often listen to music when I want to relax, think, or take a short break.
+   Better answer: I often listen to music when I want to relax, think, or take a short break from stress. In some cases, it also helps me focus on creative work. So I use music for both relaxation and mood.
+4. Has your musical taste changed over time?
+   Safe answer: Yes, definitely. Over time, I have become more open to different styles.
+   Better answer: Yes, definitely. Over time, I have become more open to different styles and moods in music. Compared to the past, I now pay more attention to atmosphere and emotional effect. So I would say my taste has become broader.
+5. Can music change the way people feel?
+   Safe answer: Yes, absolutely. Music can make people feel calmer, happier, or more emotional.
+   Better answer: Yes, absolutely. Music can change the way people feel very quickly. It can make someone calmer, happier, more motivated, or even emotional. So I think it has a very strong effect on mood.
+
+[TOPIC] Films
+Theme: media_and_culture | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you enjoy watching films?
+   Safe answer: Yes, I do. Films can be relaxing and also interesting.
+   Better answer: Yes, I do enjoy watching films. I think they can be both relaxing and interesting, especially when they have a strong story or visual style. So for me, films are a good way to enjoy free time.
+2. What kind of films do you like?
+   Safe answer: I usually like films that are visually strong or emotionally interesting.
+   Better answer: I usually like films that are visually strong or emotionally interesting. I prefer stories that create a clear atmosphere and leave some impression after they finish. So I would say I like films that are memorable rather than just simple entertainment.
+3. Do you prefer watching films at home or at the cinema?
+   Safe answer: I usually prefer watching films at home because it is more comfortable.
+   Better answer: I usually prefer watching films at home because it is more comfortable and practical. The cinema can be exciting, but home feels easier and more relaxed. So in daily life, I would choose home.
+4. Have the ways people watch films changed?
+   Safe answer: Yes, definitely. Streaming and online platforms changed a lot.
+   Better answer: Yes, definitely. Streaming and online platforms have changed the way people watch films a lot. People now have more freedom and more choices than before. So watching films has become much more flexible.
+5. What makes a film memorable?
+   Safe answer: I think a film is memorable when it has a strong story or emotional effect.
+   Better answer: I think a film becomes memorable when it has a strong story, a clear emotional effect, or a visual style that stays in the mind. Sometimes one scene or one message is enough to make it unforgettable. So emotional connection is very important.
+
+[TOPIC] Reading
+Theme: media_and_culture | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you enjoy reading?
+   Safe answer: Yes, I do, especially when the topic is useful or interesting.
+   Better answer: Yes, I do enjoy reading, especially when the topic feels useful or personally interesting. I do not read everything equally, but I like reading things that give me ideas or information. So for me, interest is the key factor.
+2. What do you like to read?
+   Safe answer: I like reading things that are practical, informative, or connected to my interests.
+   Better answer: I usually like reading things that are practical, informative, or connected to my interests. For example, I prefer content that helps me learn something useful or think in a different way. So I would say I like meaningful reading more than casual reading.
+3. Do you prefer reading on paper or on a screen?
+   Safe answer: I usually prefer reading on a screen because it is more practical.
+   Better answer: I usually prefer reading on a screen because it is more practical and easier to access. Paper can feel nice too, but in daily life the screen is simply more convenient. So I prefer digital reading most of the time.
+4. Did you read more when you were younger?
+   Safe answer: In some ways, yes, but my reading habits changed over time.
+   Better answer: In some ways, yes, but my reading habits have changed over time. When I was younger, reading may have felt simpler, but now I focus more on useful or goal-related content. So the type of reading changed more than the amount.
+5. Why is reading useful?
+   Safe answer: Reading is useful because it improves knowledge and helps people think more clearly.
+   Better answer: Reading is useful because it improves knowledge, vocabulary, and the ability to think more clearly. It also gives people access to ideas they may not meet in daily conversation. So I think reading has both practical and mental value.
+
+[TOPIC] Writing
+Theme: education_and_skills | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you write often?
+   Safe answer: Yes, sometimes, especially for study or communication.
+   Better answer: Yes, I do write sometimes, especially for study, communication, or planning ideas. Writing helps me organise my thoughts better. So even if I do not write for pleasure all the time, I still find it useful.
+2. Do you prefer writing by hand or typing?
+   Safe answer: I prefer typing because it is faster and more practical.
+   Better answer: I prefer typing because it is faster, easier to edit, and more practical in daily life. Writing by hand can feel more personal, but typing is much more efficient for me. So I usually choose digital writing.
+3. Is writing important in work or study?
+   Safe answer: Yes, definitely. Writing is important because it helps people communicate clearly.
+   Better answer: Yes, definitely. Writing is important in both work and study because it helps people communicate clearly and organise information. Good writing can make ideas easier to understand. So I think it is a very necessary skill.
+4. Has technology changed the way people write?
+   Safe answer: Yes, definitely. People type more now and write faster.
+   Better answer: Yes, technology has changed writing a lot. People now type more, write faster, and often communicate in shorter forms. That can be useful, but it may also reduce attention to accuracy in some cases. So the change has both advantages and disadvantages.
+5. What makes writing difficult for some people?
+   Safe answer: I think writing is difficult when people do not know how to organise their ideas.
+   Better answer: I think writing becomes difficult when people are not sure how to organise their ideas or choose the right words. Sometimes the problem is not having no ideas, but not knowing how to present them clearly. So structure is very important in writing.
+
+[TOPIC] Food
+Theme: food_and_lifestyle | Difficulty: easy | Frequency: very_common | Band: band_4_5
+1. What kinds of food do you enjoy most?
+   Safe answer: I enjoy food that tastes good and also feels fresh and satisfying.
+   Better answer: I usually enjoy food that tastes good but also feels fresh and satisfying. I think food is not only about taste, but also about comfort and mood. So I like meals that are enjoyable and balanced.
+2. Do you usually eat at home or outside?
+   Safe answer: I usually eat at home because it is more comfortable and practical.
+   Better answer: I usually eat at home because it is more comfortable, practical, and often healthier. Eating outside can be enjoyable sometimes, but home meals feel more stable in daily life. So I prefer eating at home most of the time.
+3. Is healthy food important?
+   Safe answer: Yes, definitely. Healthy food is important for energy and general wellbeing.
+   Better answer: Yes, definitely. Healthy food is important because it affects energy, mood, and general wellbeing. People may not always eat perfectly, but I think health should still be part of the decision. So healthy eating matters in the long term.
+4. Have your eating habits changed over time?
+   Safe answer: Yes, a little. Over time, I became more aware of what I eat.
+   Better answer: Yes, my eating habits changed a little over time. I have become more aware of what I eat and how it affects my body and energy. So compared to the past, I think I pay more attention now.
+5. Why is food important in social life?
+   Safe answer: Food is important because it brings people together.
+   Better answer: Food is important in social life because it brings people together and creates a comfortable atmosphere. Many conversations and family moments happen around meals. So food has emotional as well as practical value.
+
+[TOPIC] Fast food
+Theme: food_and_lifestyle | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you eat fast food?
+   Safe answer: Sometimes, yes, but not very often.
+   Better answer: Sometimes, yes, I do eat fast food, but not very often. It can be convenient when people are busy, but I do not think it should become a regular habit. So for me, it is occasional rather than normal.
+2. Why is fast food popular?
+   Safe answer: It is popular because it is quick, easy, and easy to find.
+   Better answer: Fast food is popular because it is quick, easy, and available almost everywhere. Many people choose it when they are busy or tired. So convenience is probably the main reason for its popularity.
+3. Is fast food unhealthy?
+   Safe answer: In many cases, yes, especially if people eat it too often.
+   Better answer: In many cases, yes, especially if people eat it too often. It may be fine sometimes, but regular fast food can affect health badly. So I think the real problem is frequency, not only the food itself.
+4. Do young people eat more fast food than older people?
+   Safe answer: I think in many cases they do because it is convenient and popular.
+   Better answer: I think in many cases young people do eat more fast food because it is convenient, popular, and often connected to social life. Older people may care more about health or home cooking. So age can influence food habits.
+5. Can fast food still be part of a balanced lifestyle?
+   Safe answer: Yes, maybe, if people eat it only sometimes.
+   Better answer: Yes, I think fast food can still be part of a balanced lifestyle if people eat it only sometimes and not as a daily habit. Balance is more important than perfection. So occasional fast food is not necessarily a problem.
+
+[TOPIC] Walking and nature
+Theme: health_and_lifestyle | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you walk a lot in your daily life?
+   Safe answer: Not all the time, but I think walking is useful. It helps me clear my mind and feel less stressed.
+   Better answer: Not all the time, but I do think walking is very useful. It helps me clear my mind and feel less stressed, especially if the place is quiet and pleasant. So even a simple walk can improve my mood.
+2. Do you prefer walking alone or with someone?
+   Safe answer: I often prefer walking alone because it gives me time to think and relax.
+   Better answer: I often prefer walking alone because it gives me time to think, relax, and enjoy the atmosphere. However, walking with someone can also be enjoyable if I want company. So it depends on my mood and purpose.
+3. What makes a place pleasant for walking?
+   Safe answer: I think a place is pleasant for walking when it is clean, quiet, and has some natural beauty.
+   Better answer: I think a place becomes pleasant for walking when it is clean, quiet, and has some natural beauty. Green spaces and fresh air make a big difference. So for me, atmosphere is more important than size.
+4. Do you enjoy spending time in nature?
+   Safe answer: Yes, I do. Time in nature helps me feel calmer and more refreshed.
+   Better answer: Yes, I do enjoy spending time in nature. It helps me feel calmer, more refreshed, and less mentally tired. I think natural places give people a useful break from routine and pressure. So I find nature very relaxing.
+5. Why do people feel better in natural places?
+   Safe answer: I think natural places reduce stress because they are quieter and more peaceful than busy urban areas.
+   Better answer: I think people feel better in natural places because they are quieter, more peaceful, and less mentally heavy than busy urban areas. Natural environments often reduce stress and make people feel more balanced. So I believe nature has a strong positive effect on mood.
+
+[TOPIC] Sport and exercise
+Theme: health_and_lifestyle | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Do you do any sport or exercise regularly?
+   Safe answer: Not always regularly, but I think exercise is important for health and energy.
+   Better answer: I do not always exercise in a perfectly regular way, but I think it is very important for health and energy. Even simple physical activity can improve mood and reduce stress. So I think exercise matters, even if it is not intense.
+2. What kind of physical activity do you prefer?
+   Safe answer: I prefer simple activities like walking because they are easy and relaxing.
+   Better answer: I usually prefer simple physical activities like walking because they are easy, relaxing, and good for both the body and the mind. I do not always need something intense to feel better. So for me, simple movement is enough.
+3. Why do some people find it hard to exercise?
+   Safe answer: I think time and lack of motivation are the main reasons.
+   Better answer: I think time pressure and lack of motivation are two main reasons why people find it hard to exercise. Sometimes people are too busy, and sometimes they simply do not have enough energy after work or study. So the problem is often routine, not knowledge.
+4. Is exercise more important now than before?
+   Safe answer: Yes, I think so, because modern life is more inactive.
+   Better answer: Yes, I think exercise may be even more important now because modern life is often more inactive than before. Many people spend long hours sitting, studying, or using technology. So regular movement matters more than people sometimes realise.
+5. Do people in your area have enough places to exercise?
+   Safe answer: In some ways yes, but there is always room for improvement.
+   Better answer: In some ways yes, but I think there is still room for improvement. Good public spaces can encourage people to become more active. So access to safe and comfortable places matters a lot.
+
+[TOPIC] Weather
+Theme: environment_and_nature | Difficulty: easy | Frequency: common | Band: band_4_5
+1. What kind of weather do you like most?
+   Safe answer: I like weather that is mild, comfortable, and not too extreme.
+   Better answer: I like weather that is mild, comfortable, and not too extreme. When the weather feels balanced, daily life becomes easier and more enjoyable. So I prefer pleasant weather rather than very hot or very cold conditions.
+2. Does weather affect your mood?
+   Safe answer: Yes, it does. Good weather usually makes me feel more comfortable and positive.
+   Better answer: Yes, weather definitely affects my mood. Good weather usually makes me feel more comfortable, energetic, and positive, while difficult weather can reduce motivation. So I think weather has a real effect on daily feelings.
+3. What type of weather do you dislike?
+   Safe answer: I dislike very extreme weather, especially when it affects daily plans.
+   Better answer: I usually dislike very extreme weather, especially if it affects daily plans and comfort. Very strong heat or heavy cold can make normal activities more difficult. So I prefer more balanced conditions.
+4. Has the climate changed in your area?
+   Safe answer: I think it has changed a little, and people notice it more now.
+   Better answer: I think the climate has changed a little in my area, and people seem to notice it more now than before. Seasonal patterns may feel less predictable in some cases. So I think awareness of weather change has become stronger.
+5. Do people talk about the weather often?
+   Safe answer: Yes, I think they do, especially when the weather changes suddenly.
+   Better answer: Yes, I think people talk about the weather quite often, especially when it changes suddenly or affects daily life. Weather is a simple but common topic because everyone experiences it. So it naturally becomes part of conversation.
+
+[TOPIC] Seasons
+Theme: environment_and_nature | Difficulty: easy | Frequency: common | Band: band_4_5
+1. Which season do you like most?
+   Safe answer: I like the season that feels comfortable and has pleasant weather.
+   Better answer: I usually like the season that feels most comfortable and has pleasant weather. For me, that kind of season makes daily life easier and improves mood. So I prefer balance more than extremes.
+2. What do you enjoy doing in that season?
+   Safe answer: I enjoy spending time outside and feeling more relaxed.
+   Better answer: In that season, I enjoy spending more time outside and feeling more relaxed. Good weather often makes people more active and more positive. So I think the atmosphere is just better.
+3. Is there a season you find difficult?
+   Safe answer: Yes, very extreme seasons can be difficult for me.
+   Better answer: Yes, very extreme seasons can be difficult for me because they affect comfort and routine. When the weather is too hot or too cold, daily life becomes more tiring. So I definitely prefer moderate seasons.
+4. Do seasons affect people’s daily routine?
+   Safe answer: Yes, they do, especially because weather changes plans and energy.
+   Better answer: Yes, seasons definitely affect daily routine, mainly because weather changes plans, clothes, and energy levels. People often behave differently depending on the season. So I think seasonal change has a real effect on lifestyle.
+5. Did you have a favourite season as a child?
+   Safe answer: Yes, but my opinion changed a little over time.
+   Better answer: Yes, I did have a favourite season as a child, but my opinion changed a little over time. When people grow up, they start thinking more about comfort and routine. So my preference became more practical now.
+
+[TOPIC] Parks
+Theme: environment_and_nature | Difficulty: easy | Frequency: less_common | Band: band_4_5
+1. Do you often go to parks?
+   Safe answer: Not very often, but I think parks are useful and relaxing places.
+   Better answer: I do not go to parks very often, but I think they are useful and relaxing places. Parks give people fresh air and a break from busy life. So even if I do not go all the time, I still think they are important.
+2. Why are parks important?
+   Safe answer: Parks are important because they give people calm spaces in cities.
+   Better answer: Parks are important because they give people calm, green spaces inside busy urban areas. They can reduce stress and improve quality of life. So I think they have both mental and social value.
+3. What do people do in parks?
+   Safe answer: People usually walk, relax, or spend time with others.
+   Better answer: People usually walk, relax, exercise, or spend time with family and friends in parks. So parks serve different purposes for different people. That is one reason why they are useful public spaces.
+4. Are there enough parks where you live?
+   Safe answer: In some ways yes, but there could always be more.
+   Better answer: In some ways yes, but I think there could always be more. Green spaces are valuable in daily life, especially in busy places. So I would say more parks are usually a good idea.
+5. Should cities invest more in green spaces?
+   Safe answer: Yes, definitely, because green spaces improve daily life.
+   Better answer: Yes, definitely. Green spaces improve daily life by reducing stress, improving air quality, and making cities feel more balanced. So I think they are worth greater investment.
+
+[TOPIC] Time management
+Theme: education_and_skills | Difficulty: medium | Frequency: common | Band: band_5_6
+1. Are you good at managing your time?
+   Safe answer: I try to be. Time management is important for study and daily life.
+   Better answer: I try to be good at managing my time, especially because I have study goals and responsibilities. I do not manage it perfectly all the time, but I know it is very important. So I try to improve that skill gradually.
+2. What usually wastes people’s time?
+   Safe answer: I think distraction and poor planning waste a lot of time.
+   Better answer: I think distraction and poor planning waste a lot of time. For example, people often lose time when they do not decide clearly what they need to do first. So structure and focus are very important.
+3. Has technology helped or harmed time management?
+   Safe answer: I think it has done both, depending on how people use it.
+   Better answer: I think technology has both helped and harmed time management. It can save time through quick access and planning tools, but it can also waste time through distraction. So the effect depends on the user.
+4. Why are some people always in a hurry?
+   Safe answer: I think they may have too many responsibilities or poor planning.
+   Better answer: I think some people are always in a hurry because they may have too many responsibilities or poor planning habits. Sometimes they are busy, and sometimes they are simply disorganised. So there can be different reasons behind the same behaviour.
+5. What habit can improve time management?
+   Safe answer: I think planning the day clearly can improve time management a lot.
+   Better answer: I think planning the day clearly can improve time management a lot. Even a simple list of priorities can make work feel more manageable. So small planning habits can have a strong effect.
+
+[TOPIC] News
+Theme: society_and_communication | Difficulty: medium | Frequency: common | Band: band_5_6
+1. Do you follow the news regularly?
+   Safe answer: Sometimes, yes, but not all the time.
+   Better answer: Sometimes I follow the news, but not all the time. I prefer to check important information rather than follow everything constantly. So I would say I stay somewhat informed, but in a selective way.
+2. Where do you usually get news from?
+   Safe answer: I usually get news from online sources or social media.
+   Better answer: I usually get news from online sources or social media, because that is the quickest and easiest way now. However, I try to be careful about what I trust. So access is easy, but judgement is still important.
+3. Is it easy to trust news today?
+   Safe answer: Not always, because there is so much information online.
+   Better answer: Not always, because there is now so much information online and not all of it is reliable. People need to check sources more carefully than before. So I think trust has become more complicated.
+4. Has the way people follow news changed?
+   Safe answer: Yes, definitely. People now get news much faster through the internet.
+   Better answer: Yes, definitely. People now get news much faster through the internet and social media than in the past. This makes information more accessible, but it can also make it harder to judge quality. So the change has both benefits and risks.
+5. Should young people follow current events?
+   Safe answer: Yes, I think so, because it helps them understand the world better.
+   Better answer: Yes, I think young people should follow current events because it helps them understand the world better and think more critically. They do not need to follow every detail, but basic awareness is important. So I would say it is a useful habit.
+
+[TOPIC] Public speaking
+Theme: education_and_skills | Difficulty: medium | Frequency: less_common | Band: band_5_6
+1. Do you feel comfortable speaking in front of a group?
+   Safe answer: Not always, but I think practice can make it easier.
+   Better answer: I do not always feel completely comfortable speaking in front of a group, but I think practice can make it much easier. Confidence in public speaking usually grows step by step. So I see it as a skill that can be developed.
+2. Why is public speaking difficult for many people?
+   Safe answer: It is difficult because people feel nervous and fear mistakes.
+   Better answer: Public speaking is difficult for many people because they feel nervous and worry about making mistakes in front of others. The pressure of being watched can affect confidence. So fear is often a bigger problem than lack of ideas.
+3. Can people improve public speaking?
+   Safe answer: Yes, definitely. Practice and structure help a lot.
+   Better answer: Yes, definitely. Public speaking can improve a lot through practice, clear structure, and repeated experience. When people learn how to organise ideas, they usually feel more in control. So it is a learnable skill.
+4. Should schools teach speaking skills more?
+   Safe answer: Yes, I think so, because speaking is important in daily life and work.
+   Better answer: Yes, I think schools should teach speaking skills more directly because speaking is important in daily life, education, and work. Many students know ideas but still struggle to express them clearly. So speaking deserves more attention in education.
+5. What makes a speaker easy to listen to?
+   Safe answer: A speaker is easy to listen to when they are clear and organised.
+   Better answer: I think a speaker becomes easy to listen to when they are clear, organised, and calm. It also helps when they speak at a good speed and focus on one idea at a time. So clarity is the most important factor for me.
+
+PART 2 + PART 3
+[CUE CARD] Describe a person who influenced you in a positive way.
+Theme: people_and_relationships | Card type: person | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- who this person is
+- how you know this person
+- what this person did
+- and explain why this person influenced you
+Safe answer: I’d like to talk about my sister. She influenced me a lot because she studied architecture, and I saw her university life when I was younger. I remember visiting her and seeing her projects, and I was really impressed. That experience made me more interested in engineering and architecture. So that is why she had a strong influence on me.
+Better answer: I’d like to talk about my sister, who had a strong positive influence on me. She studied architecture, and when I was younger, I had the chance to visit her university and see the atmosphere there. I remember watching her projects and noticing how seriously she worked, and that made a strong impression on me. Before that, architecture and engineering were interesting ideas to me, but after that experience they started to feel real and meaningful. What made it even more important was the fact that she was someone close to me, so her example felt personal rather than distant. Because of that, she influenced the direction of my studies and my future goals.
+Part 3 follow-up questions:
+1. What qualities make a person influential?
+   Safe answer: I think honesty, experience, and consistency are important. People usually respect actions more than words.
+   Better answer: I think honesty, experience, and consistency are some of the most important qualities that make a person influential. People usually trust someone more when their actions match their words. For example, a person who gives useful advice and also lives responsibly is easier to respect. So influence often comes from character as much as from success.
+2. Do younger and older people admire the same qualities?
+   Safe answer: Not always. Younger people may admire confidence or success, while older people may value patience and responsibility more.
+   Better answer: Not always. Younger people may admire confidence, creativity, or visible success, while older people often value patience, responsibility, and emotional maturity more. I think admired qualities can change with age and experience. So the answer really depends on life stage and personal priorities.
+3. Should schools teach communication skills more directly?
+   Safe answer: Yes, definitely. Communication is important in school, work, and daily life.
+   Better answer: Yes, definitely. Communication is important not only in school, but also in work and daily life. If students learn how to express ideas clearly, listen carefully, and respond politely, it can help them in many future situations. So I think schools should give it more direct attention.
+4. Can social media make people influential today?
+   Safe answer: Yes, it can. Social media gives people a chance to share ideas quickly, but not every influence is positive.
+   Better answer: Yes, social media can definitely make people influential today because it gives them access to a much larger audience. People can share ideas, opinions, and personal content very quickly. However, I do not think all influence is positive just because it is popular. So social media increases influence, but it does not always improve quality.
+
+[CUE CARD] Describe a skill you would like to improve.
+Theme: education_and_skills | Card type: skill | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- what the skill is
+- why you want to improve it
+- what you are doing now
+- and explain how it can help you in the future
+Safe answer: The skill I want to improve most is English speaking. It is important for me because I need IELTS for university admission in Italy. Right now, I am practising regularly with my teacher and trying to speak more often. This skill can help me in my studies and in my future career. So overall, it is one of the most important skills for me now.
+Better answer: The skill I most want to improve is my English speaking. This is very important for me because I need IELTS for university admission in Italy, and I also want to feel more confident when I communicate in English. At the moment, I am practising regularly with my teacher, learning useful vocabulary, and trying to answer questions in a more natural way. The main problem for me is not always having ideas, but expressing them smoothly and clearly. If I improve this skill, it will help me not only in the IELTS exam, but also in future study, interviews, and professional communication. So for me, it is one of the most valuable skills to develop right now.
+Part 3 follow-up questions:
+1. Why do some people learn skills faster than others?
+   Safe answer: I think the main reason is regular practice. People who practise consistently usually improve faster.
+   Better answer: I think the main reason is regular practice. People who practise consistently usually improve faster than those who study only sometimes. Motivation also matters, because learners often improve more when the skill is connected to a real goal. So progress usually depends on effort and purpose more than luck.
+2. Is practice more important than talent?
+   Safe answer: In most cases, yes. Talent can help at the beginning, but practice is what really builds skill over time.
+   Better answer: In most cases, yes, I think practice is more important than talent. Talent may help someone begin more easily, but practice is what builds real skill over time. Even a naturally talented person may not improve much without consistent effort. So in the long run, practice usually matters more.
+3. What skills are important for young people today?
+   Safe answer: I think communication, digital skills, and problem-solving are very important today.
+   Better answer: I think communication, digital skills, and problem-solving are very important for young people today. I would also add flexibility, because modern life changes quickly and people need to adapt. So I think both practical and personal skills matter now.
+4. Should schools teach more practical skills?
+   Safe answer: Yes, I think so. Students need not only theory but also useful real-life skills.
+   Better answer: Yes, I think schools should teach more practical skills. Theory is important, but students also need useful real-life skills such as communication, time management, and teamwork. These are skills people use after school in daily and professional life. So I believe education should be more balanced.
+
+[CUE CARD] Describe a person who is very good at their job.
+Theme: people_and_relationships | Card type: person | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- who this person is
+- how you know them
+- what they do well
+- and explain why you admire them
+Safe answer: A person I admire is someone who works in architecture very professionally. What stands out about this person is their creativity, organisation, and seriousness. They are good at both technical work and explaining ideas clearly. Seeing a person like that makes me want to improve myself more. So that is why I respect them.
+Better answer: A person I admire is someone I know through architecture and design work. What stands out about this person is how professional, organised, and creative they are. They do not only have technical knowledge, but they also know how to explain ideas clearly and work seriously with other people. I admire them because they show that success is not only about talent, but also about discipline and consistency. When I see someone like that, I feel more motivated to improve my own habits and skills. So overall, I respect them because they represent the kind of professional quality I want to develop.
+Part 3 follow-up questions:
+1. What qualities are important in professional life?
+   Safe answer: I think responsibility, discipline, and communication are very important in professional life.
+   Better answer: I think responsibility, discipline, and communication are very important in professional life. Technical skill matters too, of course, but without communication and reliability it is difficult to work effectively with others. So I think professional success depends on both skill and character.
+2. Do schools prepare young people enough for work?
+   Safe answer: Not completely. Schools teach useful knowledge, but students also need more practical preparation.
+   Better answer: Not completely, in my opinion. Schools often teach useful knowledge, but many students still need more practical preparation for real work situations. For example, they may need more experience with teamwork, communication, and solving practical problems. So I think education helps, but it is not enough by itself.
+3. Is communication important at work?
+   Safe answer: Yes, definitely. Even a skilled person needs communication to work well with others.
+   Better answer: Yes, communication is extremely important at work. Even a highly skilled person still needs to explain ideas, listen carefully, and cooperate with others. In many cases, a good idea can fail if the communication is weak. So I would say communication is a core professional skill.
+4. Do people work differently now than before?
+   Safe answer: Yes, I think so. Technology has changed working habits a lot, and people need to adapt more quickly now.
+   Better answer: Yes, I think people do work differently now than in the past. Technology has changed working habits, speed, and communication methods a lot. People now often need to use digital tools and adapt more quickly to change. So modern work requires more flexibility than before.
+
+[CUE CARD] Describe a language-learning experience that helped you a lot.
+Theme: education_and_skills | Card type: skill | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- what the experience was
+- where it happened
+- what you learned
+- and explain why it helped you
+Safe answer: One language-learning experience that helped me a lot was practising speaking regularly with a teacher. Through regular practice, I became more aware of my weak points. I also learned how to organise my answers better. This experience helped me because it made speaking feel less stressful and more possible. So overall, it was very useful for me.
+Better answer: One language-learning experience that helped me a lot was regular speaking practice with a teacher. Before that, I often knew grammar or vocabulary, but I still struggled to express my ideas naturally and confidently. Through regular practice, I became much more aware of my weak points, especially in fluency and answer structure. I also learned that speaking improves more when I focus on one clear idea instead of trying to say too many things at once. What made this experience especially useful was the correction and feedback, because it helped me notice mistakes quickly. So overall, it changed the way I approach speaking in a positive way.
+Part 3 follow-up questions:
+1. What is the best way to build speaking confidence?
+   Safe answer: I think regular speaking practice is the best way. The more people speak, the less nervous they usually feel.
+   Better answer: I think regular speaking practice is the best way to build speaking confidence. The more people speak, the less strange and stressful it feels. Confidence usually comes from repeated experience, not from only reading rules. So practice is the key.
+2. Is formal study enough for language learning?
+   Safe answer: Not really. Formal study is useful, but real practice is also necessary.
+   Better answer: Not really. Formal study is useful because it gives structure and explanation, but real practice is also necessary. A person may know grammar well and still struggle to communicate in real situations. So language learning needs both study and active use.
+3. Can technology help language learning?
+   Safe answer: Yes, it can. Apps, videos, and AI tools can give students more chances to practise.
+   Better answer: Yes, technology can definitely help language learning. Apps, videos, and AI tools can give students more chances to practise and repeat important material. However, I think technology works best when it is combined with real speaking and feedback. So it is useful, but not complete by itself.
+4. Why do some people stop improving?
+   Safe answer: I think people often stop improving when they stop using the language actively.
+   Better answer: I think people often stop improving when they stop using the language actively. If learning becomes only passive, like reading without speaking, progress becomes slow. So regular active use is very important for continued improvement.
+
+[CUE CARD] Describe a goal you would like to achieve in the next few years.
+Theme: future_and_goals | Card type: future | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- what the goal is
+- why you want it
+- what may help you achieve it
+- and explain why it matters to you
+Safe answer: One goal I want to achieve is studying for a master’s degree in Italy. This goal matters to me because it is connected to both my academic interests and my future career. To achieve it, I need to improve my English and get the IELTS score I need. So overall, it is one of my biggest goals.
+Better answer: One goal I want to achieve in the next few years is studying for a master’s degree in Italy. I want this because it is directly connected to my interests in architecture and engineering, and also to the kind of future I want to build for myself. To achieve it, I need to improve my English, get the IELTS band I need, and stay focused on the admission process. This goal matters a lot to me because it could open important academic and professional opportunities. It also gives me motivation in the present, because I know what I am working toward. So overall, it is one of the most meaningful goals in my life.
+Part 3 follow-up questions:
+1. Why do some people make long-term plans?
+   Safe answer: I think long-term plans give people direction and purpose.
+   Better answer: I think long-term plans give people direction, purpose, and motivation. Without a goal, it is easier to lose focus or feel confused about the future. Even if plans change later, having a direction still helps a lot. So planning gives structure to effort.
+2. Do young people feel more pressure now about the future?
+   Safe answer: Yes, I think many young people feel pressure about study and career.
+   Better answer: Yes, I think many young people feel more pressure now than before. There is more competition in education and work, and people often feel they need to succeed quickly. Social comparison can also increase that pressure. So I think future planning often comes with stress as well as hope.
+3. What kinds of goals are important today?
+   Safe answer: Education, career growth, and mental balance are important goals today.
+   Better answer: I think education, career growth, and mental balance are all important goals today. In modern life, success is not only about work, but also about being stable and adaptable. So I believe people need both practical and personal goals.
+4. Is it better to have flexible plans?
+   Safe answer: Yes, I think so. A person needs clear direction, but life can change.
+   Better answer: Yes, I think flexible plans are usually better than very strict ones. A person needs a clear direction, but life can change unexpectedly, so some flexibility is necessary. So the best plan is one that is serious but still realistic.
+
+[CUE CARD] Describe a change you would like to make in your life.
+Theme: future_and_goals | Card type: future | Difficulty: medium | Frequency: common | Band: band_5_6
+You should say:
+- what the change is
+- why you want it
+- how you could make it happen
+- and explain why it matters
+Safe answer: A change I would like to make is becoming more fluent and confident in English. I want this because it will help me in IELTS, study, and communication. I think regular speaking practice and discipline will help me achieve it. So overall, it is a very important change for me.
+Better answer: A change I would really like to make in my life is becoming more fluent and confident in English. I want this because it will help me in IELTS, future study, and many communication situations. At the moment, I can express many ideas, but I still want to speak more naturally and with less hesitation. I think regular speaking practice, correction, and discipline will help me make this change. It matters because language ability is directly connected to my academic future and personal confidence. So overall, it is a change that could improve many parts of my life.
+Part 3 follow-up questions:
+1. Why do some people avoid change?
+   Safe answer: Many people avoid change because it feels uncertain or uncomfortable.
+   Better answer: Many people avoid change because it feels uncertain, uncomfortable, or difficult at the beginning. Even a positive change can feel stressful if it requires effort and patience. So I think fear of discomfort is a big reason.
+2. Is change usually good?
+   Safe answer: In many cases, yes, especially if it helps a person improve.
+   Better answer: In many cases, yes, change can be very good, especially when it helps a person grow or improve. However, change only becomes useful when it has a clear purpose and is handled in a realistic way. So I would say change is often good, but not automatically.
+3. How can people make change easier?
+   Safe answer: Small steps and regular habits make change easier.
+   Better answer: I think people can make change easier by taking small steps and building regular habits. Big changes often feel impossible at first, but they become more manageable through simple daily action. So consistency is more helpful than trying to change everything at once.
+4. Do people need support when changing?
+   Safe answer: Yes, definitely. Support from others can reduce stress.
+   Better answer: Yes, definitely. Support from teachers, family, or friends can reduce stress and increase motivation. When people feel encouraged, it becomes easier to continue even if the process is difficult. So support has both emotional and practical value.
+
+[CUE CARD] Describe a time when you were proud of your work.
+Theme: work_and_business | Card type: experience | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- when it happened
+- what you did
+- why it was important
+- and explain why you felt proud
+Safe answer: I felt proud of my work when I completed a project related to design or architecture successfully. It was important to me because I could see that my effort had a real effect. It also gave me more confidence in my abilities. So that is why I still remember it positively.
+Better answer: I felt proud of my work when I completed a design or architecture-related project successfully. I had spent a lot of time thinking about the details and improving the quality, so I was very satisfied with the final result. It was important to me because it showed that patience and effort really matter. I also felt proud because the result was not only good visually, but also meaningful in a practical way. Experiences like that increase confidence and make future work feel more possible. So overall, it is a memory that still motivates me.
+Part 3 follow-up questions:
+1. Why is recognition important?
+   Safe answer: Recognition is important because it motivates people.
+   Better answer: Recognition is important because it motivates people and makes them feel that their effort has value. Even simple appreciation can increase confidence and encourage better work. So I think recognition has a strong effect on motivation.
+2. Do people work better when they feel proud?
+   Safe answer: Yes, I think so. Pride often increases motivation.
+   Better answer: Yes, I think people usually work better when they feel proud of what they do. Pride often increases motivation, confidence, and the desire to improve. So positive feelings can support better performance.
+3. Is teamwork important in professional life?
+   Safe answer: Yes, definitely. Many jobs need teamwork.
+   Better answer: Yes, definitely. Many jobs require teamwork, so cooperation is very important in professional life. Even if someone is individually talented, they often need to communicate and work with others. So teamwork is a practical necessity in many fields.
+4. Should students value process as well as results?
+   Safe answer: Yes. Results matter, but process is where people build skills.
+   Better answer: Yes, I think students should value both process and results. Results are important, of course, but process is where people build discipline, patience, and real ability. So learning how to work well matters as much as the final score.
+
+[CUE CARD] Describe a useful website or app you often use.
+Theme: technology_and_ai | Card type: technology | Difficulty: medium | Frequency: common | Band: band_5_6
+You should say:
+- what it is
+- how you use it
+- what it helps you do
+- and explain why it is useful
+Safe answer: A useful app I often use is social media, especially for content creation and communication. It gives me ideas and helps me share my work. So overall, it is useful for me.
+Better answer: A useful app I often use is social media, especially for content creation and communication. I use it to watch fashion content, share ideas, and stay connected with people. It also gives me inspiration for reels, outfits, and visual style, which is important to me personally. What makes it especially useful is that it combines creativity, communication, and entertainment in one place. Of course, I try to use it carefully so it does not waste too much time. So overall, it is an app that is both practical and enjoyable for me.
+Part 3 follow-up questions:
+1. How has technology changed communication?
+   Safe answer: It has made communication much faster and easier.
+   Better answer: Technology has changed communication by making it much faster and easier. People can now share ideas instantly, even across long distances. However, faster communication does not always mean deeper communication. So I think technology improves speed more than emotional quality.
+2. Are there risks in depending too much on technology?
+   Safe answer: Yes, definitely. Too much dependence can create distraction.
+   Better answer: Yes, definitely. Depending too much on technology can reduce focus, create distraction, and make people less confident with simple real-life tasks. So I think technology is useful, but people still need balance and control.
+3. Should students learn digital skills?
+   Safe answer: Yes, of course. Digital skills are essential now.
+   Better answer: Yes, of course. Digital skills are essential in modern life, study, and work. Students need to know how to use technology effectively, but they should also learn how to use it responsibly. So digital education is very important now.
+4. Do useful apps always improve life?
+   Safe answer: Not always. They help if people use them wisely.
+   Better answer: Not always. Useful apps can improve life if people use them wisely and with purpose. However, they can also create bad habits, reduce focus, or waste time if used too much. So usefulness depends a lot on the user.
+
+[CUE CARD] Describe a time when practice helped you improve.
+Theme: education_and_skills | Card type: skill | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- when it happened
+- what you practised
+- how you improved
+- and explain why the experience was important
+Safe answer: A very clear example is my English speaking practice. With repeated practice, my answers became clearer and I felt more confident. So for me, it was a very useful lesson.
+Better answer: A very clear example of this is my English speaking practice. At first, I often struggled to organise my answers and speak smoothly, even when I had ideas in my mind. However, with repeated practice, I started to improve step by step. I noticed that my answers became clearer, and I felt slightly more confident each time I practised. This experience was important because it taught me that real improvement usually comes from repetition, not from waiting to feel ready. So overall, it was a very useful lesson for me.
+Part 3 follow-up questions:
+1. Is practice usually more important than talent?
+   Safe answer: Yes, in most cases. Practice builds real ability over time.
+   Better answer: Yes, in most cases I think practice is more important than talent. Talent may help in the beginning, but practice is what builds real ability over time. Even a talented person cannot improve much without effort. So in the long term, practice usually matters more.
+2. Why do some people give up too early?
+   Safe answer: I think they give up because progress can feel slow.
+   Better answer: I think some people give up too early because progress can feel slow, especially at the beginning. If they do not see quick results, they may feel discouraged. So patience is very important in any kind of learning.
+3. Can practice be boring?
+   Safe answer: Yes, sometimes it can, but it is still necessary.
+   Better answer: Yes, practice can sometimes feel boring, especially if it becomes repetitive. However, when a person has a clear goal, they usually understand why practice is necessary. So motivation and purpose make repetition easier.
+4. How can teachers make practice more effective?
+   Safe answer: Teachers can make practice more effective by giving clear feedback.
+   Better answer: Teachers can make practice more effective by giving clear feedback and using realistic, practical tasks. This helps students understand what they need to improve and why it matters. So good guidance makes practice much more useful.
+
+[CUE CARD] Describe a person who gave you useful advice.
+Theme: people_and_relationships | Card type: person | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- who the person was
+- when they gave you advice
+- what the advice was
+- and explain why it was useful
+Safe answer: A person who gave me useful advice was someone close to me who encouraged me to stay focused on my goals. The advice was simple and realistic, so I still remember it.
+Better answer: A person who gave me useful advice was someone close to me who encouraged me to stay focused on my long-term goals. The advice was simple but very meaningful: to work steadily, be patient, and not lose direction when things feel difficult. I found it useful because sometimes people do not need complicated advice; they need something realistic and clear. It matched my situation well, especially because I am working toward future study goals. What made it valuable was that it reminded me that progress usually takes time. So overall, it is advice that I still remember and try to follow.
+Part 3 follow-up questions:
+1. Why is good advice valuable?
+   Safe answer: Good advice can save time and help people think more clearly.
+   Better answer: Good advice is valuable because it can save time, reduce mistakes, and help people think more clearly. Sometimes one useful idea can change the way a person approaches a problem. So good advice can have a strong long-term effect.
+2. Do people listen to advice more when they are older?
+   Safe answer: In many cases, yes. Older people may take advice more seriously.
+   Better answer: In many cases, yes. Older people often have more life experience, so they may understand the value of advice better and take it more seriously. So I think age can affect how people respond to advice.
+3. Is personal advice more useful than general advice?
+   Safe answer: Usually yes, because it fits the real situation better.
+   Better answer: Usually yes, because personal advice fits the real situation more closely. General advice can still be useful, but personal advice often feels more practical and relevant. So I think personal advice has stronger value in most cases.
+4. Should young people ask for advice more often?
+   Safe answer: Yes, I think so. It can help them avoid mistakes.
+   Better answer: Yes, I think young people should ask for advice more often, especially when they face important decisions. Advice does not solve everything, but it can help people avoid unnecessary mistakes and learn from others’ experience. So asking for advice is a wise habit.
+
+[CUE CARD] Describe a future plan that excites you.
+Theme: future_and_goals | Card type: future | Difficulty: medium | Frequency: common | Band: band_5_6
+You should say:
+- what the plan is
+- why it excites you
+- what you need to do
+- and explain why it is important to you
+Safe answer: A future plan that excites me is studying in Italy for a master’s degree. It is connected to my future career and gives me motivation.
+Better answer: A future plan that excites me a lot is the possibility of studying in Italy for a master’s degree. It excites me because it is closely connected to my academic interests, my future career, and my personal growth. It would give me a chance to study in a new environment and improve my English at the same time. Of course, I still need to prepare seriously and achieve the IELTS score I need, so it is not something easy. However, even thinking about that possibility gives me motivation. So overall, it is a plan that feels both exciting and deeply meaningful.
+Part 3 follow-up questions:
+1. Why do future plans motivate people?
+   Safe answer: Future plans give people direction and hope.
+   Better answer: Future plans motivate people because they give direction, purpose, and hope. When people can imagine a better future, they usually feel more willing to work for it. So planning often strengthens motivation.
+2. Is it useful to tell other people about your plans?
+   Safe answer: It can be useful because support and encouragement help.
+   Better answer: It can be useful to tell other people about your plans because support and encouragement often help. However, some people prefer to keep plans private until they become more certain. So it depends on personality and trust.
+3. Why do some people avoid long-term planning?
+   Safe answer: I think uncertainty is one main reason.
+   Better answer: I think uncertainty is one of the main reasons people avoid long-term planning. If the future feels unstable, they may feel nervous about making clear plans. So fear of uncertainty often reduces planning.
+4. Do goals need to be realistic?
+   Safe answer: Yes. Ambition is good, but goals should be realistic too.
+   Better answer: Yes, I think goals should be realistic, even if they are ambitious. A goal needs to inspire effort, but it should also be practical enough to guide action. So the best goals are both motivating and realistic.
+
+[CUE CARD] Describe a place in your hometown that is special to you.
+Theme: places_and_travel | Card type: place | Difficulty: easy | Frequency: very_common | Band: band_4_5
+You should say:
+- what the place is
+- where it is
+- what you do there
+- and explain why it is special
+Safe answer: A place in my hometown that is special to me is a familiar place where I feel comfortable and relaxed. It matters to me because it is connected to memories.
+Better answer: A place in my hometown that is special to me is a familiar area where I feel comfortable and relaxed. It is not necessarily the most famous place, but it matters to me because it is connected to my memories and daily life. When I go there, I feel calm and more connected to the place I live in. Sometimes places become special not because they are extraordinary, but because they are emotionally meaningful. That is exactly how I feel about this place. So for me, it stands out because of comfort, familiarity, and personal connection.
+Part 3 follow-up questions:
+1. What makes a place memorable?
+   Safe answer: I think memories and feelings make a place memorable.
+   Better answer: I think memories and personal feelings are what usually make a place memorable. A place becomes meaningful when it is connected to important experiences. So emotional value often matters more than appearance.
+2. Do people value places more for practical or emotional reasons?
+   Safe answer: Usually both, but emotional reasons can be stronger.
+   Better answer: Usually both, but emotional reasons are often stronger in the long term. People may use a place for practical reasons, but remember it for emotional ones. So I think both matter, but emotion often lasts longer.
+3. Can a place shape a person’s identity?
+   Safe answer: Yes, definitely. The place where someone grows up can affect them.
+   Better answer: Yes, definitely. The place where someone grows up can affect their habits, feelings, and perspective. It often becomes part of how they see the world. So place can influence identity in a quiet but important way.
+4. Should cities protect meaningful public places?
+   Safe answer: Yes, I think so, because they matter to the community.
+   Better answer: Yes, I think cities should protect meaningful public places because they matter to the community and local identity. These places can have emotional and cultural value, not only practical value. So preserving them is important.
+
+[CUE CARD] Describe a place where you go to study or work.
+Theme: places_and_travel | Card type: place | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- what the place is
+- where it is
+- what you do there
+- and explain why it is useful
+Safe answer: A useful place where I study or work is a quiet space where I can focus well. It helps me because I feel less distracted there.
+Better answer: A useful place where I study or work is a quiet space where I can focus well. It may not be a famous place, but it is valuable because it gives me the calm environment I need. In that place, I can organise my ideas, study more seriously, and feel less distracted. I think environment affects concentration more than people sometimes realise. So for me, the usefulness of the place comes mainly from the atmosphere and the level of focus it allows.
+Part 3 follow-up questions:
+1. What kind of environment helps people concentrate?
+   Safe answer: A quiet and organised environment helps people concentrate better.
+   Better answer: I think a quiet, organised, and comfortable environment helps people concentrate best. If a place is too noisy or stressful, focus becomes much more difficult. So atmosphere and comfort both matter.
+2. Does physical space affect productivity?
+   Safe answer: Yes, definitely. A good space can improve focus and mood.
+   Better answer: Yes, definitely. Physical space affects productivity because it influences both focus and mood. A comfortable, calm place makes work feel easier and more manageable. So I think environment has a real effect on performance.
+3. Should cities provide more study spaces?
+   Safe answer: Yes, I think that would be useful for many people.
+   Better answer: Yes, I think cities should provide more useful public study spaces, especially for students and young people. Quiet and accessible spaces can reduce stress and improve concentration. So I think that kind of investment would be valuable.
+4. Do people work better alone or around others?
+   Safe answer: It depends on the person and the task.
+   Better answer: It depends on the person and the task. Some people focus better alone, while others feel more motivated around other people. So I do not think there is one correct answer for everyone.
+
+[CUE CARD] Describe a useful skill you learned.
+Theme: education_and_skills | Card type: skill | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- what the skill is
+- where you learned it
+- how you use it now
+- and explain why it is useful
+Safe answer: A useful skill I learned is how to organise my ideas before speaking. It helps me give clearer answers.
+Better answer: A useful skill I learned is how to organise my ideas before speaking. I learned this through practice and feedback, especially while preparing for speaking tasks. Before that, I often had ideas, but I did not always know how to present them clearly. Now I try to structure my answer with a main idea, a reason, and an example. This is useful because it makes my speech clearer and easier to understand. So even though it sounds simple, it has helped me a lot.
+Part 3 follow-up questions:
+1. What skills are important for young people today?
+   Safe answer: Communication, discipline, and digital skills are important.
+   Better answer: I think communication, discipline, and digital skills are very important for young people today. People also need flexibility because life changes quickly. So practical and personal skills both matter now.
+2. Can schools teach all useful skills?
+   Safe answer: Not all of them. Some skills also need real-life practice.
+   Better answer: Not all of them. Schools can teach many useful things, but some skills grow better through real-life practice and experience outside the classroom. So education is important, but not complete by itself.
+3. Is confidence a skill?
+   Safe answer: In a way, yes, because it can be developed through practice.
+   Better answer: In a way, yes, I think confidence can be treated like a skill because it grows through practice and repeated experience. It is not always something people simply have naturally. So confidence can definitely be developed.
+4. Why do practical skills matter?
+   Safe answer: Practical skills matter because they help in real life.
+   Better answer: Practical skills matter because they help people in real life, not only in theory. A person may know a lot of information, but practical skill shows whether they can use it effectively. So real ability matters a lot.
+
+[CUE CARD] Describe a time when you learned something from a mistake.
+Theme: education_and_skills | Card type: skill | Difficulty: medium | Frequency: very_common | Band: band_5_6
+You should say:
+- when it happened
+- what happened
+- what you learned
+- and explain why it was important
+Safe answer: I learned from a mistake when I realised that trying to say too many ideas at once made my speaking weaker. I learned that simple and clear is often better.
+Better answer: I learned something important from a mistake when I realised that trying to say too many ideas at once made my speaking weaker instead of stronger. I used to think that longer always meant better, but then I noticed that too many ideas created confusion. After that, I started focusing more on one clear main point, then adding a reason and an example. This was important because it improved my communication and reduced pressure at the same time. So the mistake actually helped me speak more effectively.
+Part 3 follow-up questions:
+1. Do people learn more from mistakes or success?
+   Safe answer: I think mistakes often teach people more.
+   Better answer: I think mistakes often teach people more because they show clearly what needs to change. Success is useful too, but mistakes often create stronger reflection. So both matter, but mistakes can be especially educational.
+2. Why do some people fear mistakes so much?
+   Safe answer: They fear mistakes because they do not want to fail or look weak.
+   Better answer: I think some people fear mistakes because they do not want to fail, look weak, or lose confidence. In many cases, the emotional reaction is stronger than the mistake itself. So fear often comes from pressure rather than reality.
+3. Should schools treat mistakes more positively?
+   Safe answer: Yes, I think so, because mistakes are part of learning.
+   Better answer: Yes, I think schools should treat mistakes more positively because mistakes are a normal part of learning. If students feel too afraid of them, they may stop trying. So a healthier attitude toward mistakes can improve learning.
+4. Can failure build character?
+   Safe answer: Yes, in many cases it can.
+   Better answer: Yes, in many cases failure can build character because it teaches patience, resilience, and self-awareness. However, it helps most when a person reflects on it and keeps going. So failure can be valuable if it is used well.
+
+[CUE CARD] Describe a time when you used technology creatively.
+Theme: technology_and_ai | Card type: technology | Difficulty: medium | Frequency: common | Band: band_5_6
+You should say:
+- when it happened
+- what technology you used
+- what you created
+- and explain why it was meaningful
+Safe answer: One time I used technology creatively was when I worked on visual or social media content. It helped me express ideas in a more interesting way.
+Better answer: One time I used technology creatively was when I worked on visual or social media content. I used digital tools to plan, create, and present ideas in a more attractive way. What I liked most was that technology gave me freedom to express my style and organise my ideas visually. It was meaningful because it was not only practical, but also personal and creative. So for me, that experience showed that technology can be more than just convenience.
+Part 3 follow-up questions:
+1. Can technology support creativity?
+   Safe answer: Yes, definitely. It gives people more tools and possibilities.
+   Better answer: Yes, definitely. Technology can support creativity by giving people more tools, more flexibility, and more ways to present ideas. It can make creative work faster and easier to develop. So I think it often increases creative possibilities.
+2. Is creativity important in modern work?
+   Safe answer: Yes, I think creativity is important in many fields now.
+   Better answer: Yes, I think creativity is very important in many modern fields because people often need fresh ideas and flexible thinking. Technical skill matters too, but creativity can make work stronger and more unique. So it has real professional value.
+3. Do digital tools make life too easy?
+   Safe answer: Sometimes yes, but they can still be useful.
+   Better answer: Sometimes they may make life too easy in certain tasks, but they can still be very useful if people use them wisely. The main issue is not the tool itself, but how people depend on it. So balance is the real key.
+4. Should students learn to use technology creatively?
+   Safe answer: Yes, definitely.
+   Better answer: Yes, definitely. Students should learn not only basic digital use, but also creative and responsible use of technology. That can help them in both study and future work. So I think it is a valuable skill.
+
+[CUE CARD] Describe a time when you felt very motivated.
+Theme: experiences_and_memories | Card type: experience | Difficulty: easy | Frequency: very_common | Band: band_4_5
+You should say:
+- when it happened
+- what you were doing
+- why you felt motivated
+- and explain why you remember it
+Safe answer: I felt very motivated when I became more serious about improving my English for IELTS. The goal felt clear, so I had more energy.
+Better answer: A time when I felt very motivated was when I became more serious about improving my English for IELTS and my future study plans. I felt motivated because the goal was clear and meaningful to me. It was not just about passing a test, but about opening a path toward studying in Italy and building a better future. When a goal feels real, motivation becomes stronger. I remember that time because it gave me energy, focus, and direction. So overall, it was a very important moment for me.
+Part 3 follow-up questions:
+1. What usually motivates people?
+   Safe answer: Clear goals and personal interest usually motivate people.
+   Better answer: I think clear goals, personal interest, and hope for the future are strong sources of motivation. People usually work harder when they know why something matters. So purpose is often the strongest motivation.
+2. Is motivation more important than discipline?
+   Safe answer: Motivation is important, but discipline is more reliable.
+   Better answer: Motivation is important, but discipline is often more reliable in the long term. Motivation can go up and down, while discipline helps people continue even when they feel tired or discouraged. So I think both matter, but discipline is more stable.
+3. Can teachers increase student motivation?
+   Safe answer: Yes, definitely.
+   Better answer: Yes, definitely. A good teacher can make learning feel more possible, more interesting, and less stressful. That can increase confidence and motivation a lot. So teachers can have a strong effect on student effort.
+4. Why do some people lose motivation quickly?
+   Safe answer: They may lose motivation because progress feels slow.
+   Better answer: I think some people lose motivation quickly because progress feels slow or the goal feels too far away. Without visible progress, it is easy to feel discouraged. So regular encouragement and small success matter a lot.
+
+[CUE CARD] Describe a time when you received unexpected good news.
+Theme: experiences_and_memories | Card type: experience | Difficulty: easy | Frequency: very_common | Band: band_4_5
+You should say:
+- when it happened
+- what the news was
+- how you felt
+- and explain why you remember it
+Safe answer: I remember a time when I received unexpected good news and felt very happy and relieved. It stayed in my mind because I was not expecting it.
+Better answer: I remember a time when I received unexpected good news and felt very happy and relieved. What made it memorable was that I was not expecting a positive result at that moment, so the emotional effect was stronger. Sometimes good news feels even more powerful when it comes after stress or uncertainty. I still remember the feeling of relief and happiness very clearly. So that is why the experience stayed in my mind.
+Part 3 follow-up questions:
+1. Why do surprises stay in people’s memory?
+   Safe answer: Surprises stay in memory because they create a strong feeling.
+   Better answer: Surprises often stay in people’s memory because they create a strong emotional reaction. When something is unexpected, the mind pays more attention to it. So surprise and emotion work together to make the memory stronger.
+2. Is good news more powerful when it is unexpected?
+   Safe answer: Yes, usually it is.
+   Better answer: Yes, usually it is. Unexpected good news often feels more powerful because people are not emotionally prepared for it, so the positive effect feels stronger. So surprise can increase happiness.
+3. Do people share good news quickly now because of technology?
+   Safe answer: Yes, definitely.
+   Better answer: Yes, definitely. Technology makes it much easier and faster for people to share good news immediately with others. That changes the social side of the experience as well. So modern communication affects how people celebrate.
+4. Can small good news still matter a lot?
+   Safe answer: Yes, of course.
+   Better answer: Yes, of course. Small good news can still matter a lot, especially if it comes at the right moment or after stress. So importance is not only about size, but also about timing and emotion.
+
+SAFE SHORT PART 3 MODEL
+Question: Why do some people learn skills faster than others?
+Safe answer: I think one reason is regular practice. People who practise more usually improve faster. For example, if someone studies every day, they often make better progress. So overall, practice is very important.
+Better answer: I think one major reason is regular practice. People who practise more often usually improve faster because they get repeated experience and make fewer mistakes over time. For example, if someone studies a little every day, they often improve more than a person who studies only once in a while. Motivation also matters because clear goals make people more consistent. So overall, practice and purpose are probably the most important reasons.
+
+Question: Should schools teach communication skills?
+Safe answer: Yes, I think they should. Communication is important in school, work, and daily life. For example, students need to express ideas clearly. So overall, it is a very useful skill.
+Better answer: Yes, I definitely think schools should teach communication skills more directly. Communication is important not only in school, but also in future work and daily life. For example, students need to express ideas clearly, ask questions, and work with others successfully. If they practise these things earlier, they may feel more confident later. So overall, communication is one of the most useful skills schools can teach.
+
+Question: Is technology always helpful?
+Safe answer: I think technology is helpful in many ways, but not always. It can save time and make life easier. However, it can also create distraction. So I would say balance is important.
+Better answer: I think technology is helpful in many ways, but not always. It can save time, improve communication, and make daily tasks easier, which is a clear advantage. However, it can also create distraction, reduce concentration, and make people too dependent if they are not careful. So I would say technology is useful, but balance and responsible use are very important.
+
+Question: Why is family support important?
+Safe answer: Family support is important because it helps people feel calmer and stronger in difficult times. So it has real emotional value.
+Better answer: Family support is important because it helps people feel calmer, stronger, and less alone in difficult times. Even simple emotional support can make a person feel more stable and more able to deal with stress. In many cases, family gives not only comfort but also confidence. So I think its value is both emotional and practical.
+
+Question: What makes a place memorable?
+Safe answer: I think memories and feelings make a place memorable. So emotional value is very important.
+Better answer: I think memories and feelings are what usually make a place memorable. A place can be beautiful, but it becomes truly meaningful when it is connected to important experiences or people. So emotional value often matters more than appearance alone.
+
+FINAL USE RULES
+1. Do not memorise every answer word for word.
+2. Learn the structure:
+   - answer
+   - reason
+   - example
+   - short ending
+3. Start with the Safe answer.
+4. Move to the Better answer after repetition.
+5. Change small details each time:
+   - city
+   - job
+   - person
+   - place
+   - goal
+6. Use real life:
+   - civil engineering
+   - architecture
+   - Can Art
+   - IELTS
+   - Italy
+   - fashion content
+   - social media
+   - sister
+7. Better short and clear than long and confusing.
+8. For Part 2:
+   - first learn the safe version
+   - then add one more detail
+   - then move to the better version
+9. For Part 3:
+   - give opinion
+   - give reason
+   - give example
+   - finish clearly
+
+END OF MASTER BANK`;
+
+    // ========================================================================
+    // 2) GLOBAL BANK STATE
+    // ========================================================================
+    let ieltsBank = null;
+    let p1Topics = [];
+    let p23Themes = [];
+    let allThemes = [];
+
+    // ========================================================================
+    // 3) HELPERS
+    // ========================================================================
+    function clean(value = "") {
+      return String(value).trim();
+    }
+
+    function slugify(value = "") {
+      return clean(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "");
+    }
+
+    function normalizeDifficulty(value = "") {
+      const normalized = clean(value).toLowerCase();
+      return ["easy", "medium", "hard"].includes(normalized) ? normalized : "medium";
+    }
+
+    function normalizeFrequency(value = "") {
+      const normalized = clean(value).toLowerCase();
+      return ["very_common", "common", "less_common"].includes(normalized)
+        ? normalized
+        : "common";
+    }
+
+    function normalizeBand(value = "") {
+      const normalized = clean(value).toLowerCase();
+      return ["band_4_5", "band_5_6", "band_6_7"].includes(normalized)
+        ? normalized
+        : "band_5_6";
+    }
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function shuffle(array) {
+      return [...array].sort(() => Math.random() - 0.5);
+    }
+
+    function formatThemeName(str) {
+      return String(str || "")
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    }
+
+    // ========================================================================
+    // 4) DATABASE FIXER
+    // This is the important part for your broken database examples.
+    // ========================================================================
+    function sentenceCase(text = "") {
+      const t = String(text || "").trim();
+      if (!t) return "";
+      return t.charAt(0).toUpperCase() + t.slice(1);
+    }
+
+    function cleanPunctuation(text = "") {
+      return String(text || "")
+        .replace(/\s+([,.?!:;])/g, "$1")
+        .replace(/\s{2,}/g, " ")
+        .replace(/,\./g, ".")
+        .replace(/\.\./g, ".")
+        .trim();
+    }
+
+    function fixMiniExample(text = "") {
+      let t = String(text || "").trim();
+      if (!t) return "";
+
+      const replacements = [
+        [/\bhelped I\b/gi, "helped me"],
+        [/\binfluenced I\b/gi, "influenced me"],
+        [/\bimpressed I\b/gi, "impressed me"],
+        [/\bgave I\b/gi, "gave me"],
+        [/\bmade I\b/gi, "made me"],
+        [/\bexcites I\b/gi, "excites me"],
+        [/\binterests I\b/gi, "interests me"],
+        [/\bconcerns I\b/gi, "concerns me"],
+        [/\breminds I\b/gi, "reminds me"],
+        [/\btaught I\b/gi, "taught me"],
+        [/\binspired I\b/gi, "inspired me"],
+        [/\bsupported I\b/gi, "supported me"],
+        [/\bwhen I were\b/gi, "when I was"],
+        [/\bI were\b/gi, "I was"],
+        [/\bI are\b/gi, "I am"],
+        [/\bI enjoys\b/gi, "I enjoy"],
+        [/\bI finds\b/gi, "I find"],
+        [/\bI likes\b/gi, "I like"],
+        [/\bI prefers\b/gi, "I prefer"],
+        [/\bI have used or seen\b/gi, "I have used or seen"],
+        [/\ba time when technology saved I time\b/gi, "a time when technology saved me time"],
+        [/\ba time when the internet helped I make a decision\b/gi, "a time when the internet helped me make a decision"],
+        [/\ba future career or role that interests I\b/gi, "a future career or role that interests me"],
+        [/\ba future plan that excites I\b/gi, "a future plan that excites me"],
+        [/\ba place in nature that impressed I\b/gi, "a place in nature that impressed me"],
+        [/\ba natural place that made I feel calm\b/gi, "a natural place that made me feel calm"],
+        [/\ban environmental problem that concerns I\b/gi, "an environmental problem that concerns me"],
+        [/\ban object that reminds I of a person\b/gi, "an object that reminds me of a person"],
+        [/\ba book or article that taught I something useful\b/gi, "a book or article that taught me something useful"],
+        [/\ba film that made I think deeply\b/gi, "a film that made me think deeply"],
+        [/\ba photograph or image that impressed I\b/gi, "a photograph or image that impressed me"],
+        [/\ba time when I were proud of my work\b/gi, "a time when I was proud of my work"],
+        [/\ba time when I were surprised by something good\b/gi, "a time when I was surprised by something good"],
+        [/\ba time when I were very busy but satisfied\b/gi, "a time when I was very busy but satisfied"],
+        [/\ba time when someone trusted I with something important\b/gi, "a time when someone trusted me with something important"],
+        [/\ba time when I tried to improve something around I\b/gi, "a time when I tried to improve something around me"],
+        [/\ba free-time activity that helps I relax\b/gi, "a free-time activity that helps me relax"],
+        [/\ba language-learning experience that helped I a lot\b/gi, "a language-learning experience that helped me a lot"],
+        [/\ba skill that gave I more confidence\b/gi, "a skill that gave me more confidence"],
+        [/\ba time when practice helped I improve\b/gi, "a time when practice helped me improve"],
+        [/\ba person who taught I a useful skill\b/gi, "a person who taught me a useful skill"],
+        [/\ba person who helped I during a difficult time\b/gi, "a person who helped me during a difficult time"],
+        [/\ba person who gave I useful advice\b/gi, "a person who gave me useful advice"],
+        [/\ba person who inspired I to study or work harder\b/gi, "a person who inspired me to study or work harder"],
+        [/\bsomething I are preparing for now\b/gi, "something I am preparing for now"],
+        [/\bthat changed my answer now\b/gi, "which changed how I think about it now"],
+      ];
+
+      replacements.forEach(([pattern, replacement]) => {
+        t = t.replace(pattern, replacement);
+      });
+
+      t = t.replace(/\bA good example would be a time when I was\b/gi, "A good example would be a time when I was");
+      t = t.replace(/\bA good example would be a time when I\b/gi, "A good example would be a time when I");
+      t = cleanPunctuation(t);
+      t = sentenceCase(t);
+
+      if (!/[.!?]$/.test(t)) t += ".";
+      return t;
+    }
+
+    function fixQuestionText(text = "") {
+      let t = String(text || "").trim();
+      if (!t) return "";
+
+      const replacements = [
+        [/\bwhat qualities (.+) influential or easy to trust\?/i, "What qualities make a person influential or easy to trust?"],
+      ];
+
+      replacements.forEach(([pattern, replacement]) => {
+        t = t.replace(pattern, replacement);
+      });
+
+      t = cleanPunctuation(t);
+      t = sentenceCase(t);
+      if (!/[?!]$/.test(t)) t += "?";
+      return t;
+    }
+
+    function fixPromptText(text = "") {
+      let t = String(text || "").trim();
+
+      const replacements = [
+        [/\bDescribe a person who taught I a useful skill\./gi, "Describe a person who taught you a useful skill."],
+        [/\bDescribe a person who helped I during a difficult time\./gi, "Describe a person who helped you during a difficult time."],
+        [/\bDescribe a person who gave I useful advice\./gi, "Describe a person who gave you useful advice."],
+        [/\bDescribe a person who inspired I to study or work harder\./gi, "Describe a person who inspired you to study or work harder."],
+        [/\bDescribe a natural place that made I feel calm\./gi, "Describe a natural place that made you feel calm."],
+        [/\bDescribe an environmental problem that concerns I\./gi, "Describe an environmental problem that concerns you."],
+        [/\bDescribe a place in nature that impressed I\./gi, "Describe a place in nature that impressed you."],
+        [/\bDescribe an object that reminds I of a person\./gi, "Describe an object that reminds you of a person."],
+        [/\bDescribe a book or article that taught I something useful\./gi, "Describe a book or article that taught you something useful."],
+        [/\bDescribe a photograph or image that impressed I\./gi, "Describe a photograph or image that impressed you."],
+        [/\bDescribe a film that made I think deeply\./gi, "Describe a film that made you think deeply."],
+        [/\bDescribe a free-time activity that helps I relax\./gi, "Describe a free-time activity that helps you relax."],
+        [/\bDescribe a skill that gave I more confidence\./gi, "Describe a skill that gave you more confidence."],
+        [/\bDescribe a language-learning experience that helped I a lot\./gi, "Describe a language-learning experience that helped you a lot."],
+        [/\bDescribe a time when practice helped I improve\./gi, "Describe a time when practice helped you improve."],
+        [/\bDescribe a time when technology saved I time\./gi, "Describe a time when technology saved you time."],
+        [/\bDescribe a time when the internet helped I make a decision\./gi, "Describe a time when the internet helped you make a decision."],
+        [/\bDescribe a future career or role that interests I\./gi, "Describe a future career or role that interests you."],
+        [/\bDescribe a future plan that excites I\./gi, "Describe a future plan that excites you."],
+      ];
+
+      replacements.forEach(([pattern, replacement]) => {
+        t = t.replace(pattern, replacement);
+      });
+
+      t = cleanPunctuation(t);
+      t = sentenceCase(t);
+      if (!/[.!?]$/.test(t)) t += ".";
+      return t;
+    }
+
+    function normalizeBankAfterParse(bank) {
+      if (!bank) return bank;
+
+      bank.part1.forEach((topic) => {
+        topic.topic_name = clean(topic.topic_name);
+        topic.question_entries.forEach((q) => {
+          q.text = fixQuestionText(q.text);
+          q.safe_answer = fixMiniExample(q.safe_answer);
+          q.better_answer = fixMiniExample(q.better_answer);
+          if (!q.mini_example) {
+            q.mini_example = q.better_answer || q.safe_answer;
+          }
+          q.mini_example = fixMiniExample(q.mini_example);
+        });
+      });
+
+      bank.part2.forEach((card) => {
+        card.prompt = fixPromptText(card.prompt);
+        card.safe_answer = fixMiniExample(card.safe_answer);
+        card.better_answer = fixMiniExample(card.better_answer);
+        if (!card.mini_example) {
+          card.mini_example = card.better_answer || card.safe_answer;
+        }
+        card.mini_example = fixMiniExample(card.mini_example);
+        card.notes = (card.notes || []).map((note) => clean(note));
+
+        (card.part3_followup_entries || []).forEach((q) => {
+          q.text = fixQuestionText(q.text);
+          q.safe_answer = fixMiniExample(q.safe_answer);
+          q.better_answer = fixMiniExample(q.better_answer);
+          if (!q.mini_example) {
+            q.mini_example = q.better_answer || q.safe_answer;
+          }
+          q.mini_example = fixMiniExample(q.mini_example);
+        });
+      });
+
+      return bank;
+    }
+
+    // ========================================================================
+    // 5) PARSER
+    // ========================================================================
+    function parseMetaLine(line) {
+      const output = {};
+      line
+        .split("|")
+        .map((part) => part.trim())
+        .forEach((part) => {
+          const pieces = part.split(":").map((item) => item.trim());
+          if (pieces.length < 2) return;
+
+          const key = pieces[0].toLowerCase();
+          const value = pieces.slice(1).join(":").trim();
+
+          if (key === "theme") output.theme = value;
+          if (key === "difficulty") output.difficulty = normalizeDifficulty(value);
+          if (key === "frequency") output.frequency = normalizeFrequency(value);
+          if (key === "band") output.band_range = normalizeBand(value);
+          if (key === "card type") output.card_type = value.toLowerCase();
+        });
+
+      return output;
+    }
+
+    function readExampleBlock(lines, startIndex) {
+      let index = startIndex;
+      let miniExample = "";
+      let safeAnswer = "";
+      let betterAnswer = "";
+
+      while (index + 1 < lines.length) {
+        const nextLine = clean(lines[index + 1] || "");
+
+        if (nextLine.startsWith("Mini example:")) {
+          miniExample = nextLine.replace(/^Mini example:\s*/, "").trim();
+          index += 1;
+          continue;
+        }
+
+        if (nextLine.startsWith("Safe answer:")) {
+          safeAnswer = nextLine.replace(/^Safe answer:\s*/, "").trim();
+          index += 1;
+          continue;
+        }
+
+        if (nextLine.startsWith("Better answer:")) {
+          betterAnswer = nextLine.replace(/^Better answer:\s*/, "").trim();
+          index += 1;
+          continue;
+        }
+
+        break;
+      }
+
+      return {
+        index,
+        miniExample: miniExample || betterAnswer || safeAnswer,
+        safeAnswer,
+        betterAnswer,
+      };
+    }
+
+    function parseIeltsBank(rawText) {
+      const lines = rawText.split(/\r?\n/).map((line) => line.trimRight());
+
+      const bank = {
+        meta: { name: "IELTS Speaking Bank", version: "7.0.0", language: "en" },
+        phrase_bank: { part1: {}, part2: {}, part3: {} },
+        part1: [],
+        part2: [],
+      };
+
+      let section = null;
+      let phrasePart = null;
+      let phraseCategory = null;
+      let currentTopic = null;
+      let currentCue = null;
+      let inFollowUps = false;
+
+      for (let index = 0; index < lines.length; index += 1) {
+        const line = clean(lines[index]);
+        if (!line) continue;
+
+        if (line.startsWith("Version:")) {
+          bank.meta.version = clean(line.replace(/^Version:\s*/, ""));
+          continue;
+        }
+
+        if (line === "PHRASE BANK") {
+          section = "phrase_bank";
+          continue;
+        }
+
+        if (line === "PART 1") {
+          section = "part1";
+          phrasePart = null;
+          continue;
+        }
+
+        if (line === "PART 2 + PART 3") {
+          section = "part23";
+          continue;
+        }
+
+        if (line === "[PART1]") {
+          phrasePart = "part1";
+          continue;
+        }
+
+        if (line === "[PART2]") {
+          phrasePart = "part2";
+          continue;
+        }
+
+        if (line === "[PART3]") {
+          phrasePart = "part3";
+          continue;
+        }
+
+        if (section === "phrase_bank" && phrasePart) {
+          const categoryMatch = line.match(/^([a-z_]+):$/i);
+          if (categoryMatch) {
+            phraseCategory = categoryMatch[1];
+            bank.phrase_bank[phrasePart][phraseCategory] = [];
+            continue;
+          }
+
+          const bulletMatch = line.match(/^\-\s+(.*)$/);
+          if (bulletMatch && phraseCategory) {
+            bank.phrase_bank[phrasePart][phraseCategory].push({
+              en: bulletMatch[1].trim(),
+            });
+            continue;
+          }
+        }
+
+        if (section === "part1") {
+          const topicMatch = line.match(/^\[TOPIC\]\s+(.+)$/);
+          if (topicMatch) {
+            const topicName = topicMatch[1].trim();
+
+            currentTopic = {
+              topic_id: slugify(topicName),
+              topic_name: topicName,
+              theme: "",
+              difficulty_overall: "medium",
+              frequency_overall: "common",
+              band_range_overall: "band_5_6",
+              question_entries: [],
+            };
+
+            bank.part1.push(currentTopic);
+            continue;
+          }
+
+          if (currentTopic && line.startsWith("Theme:")) {
+            const meta = parseMetaLine(line);
+            currentTopic.theme = meta.theme || "";
+            currentTopic.difficulty_overall = meta.difficulty || "medium";
+            currentTopic.frequency_overall = meta.frequency || "common";
+            currentTopic.band_range_overall = meta.band_range || "band_5_6";
+            continue;
+          }
+
+          const questionMatch = line.match(/^(\d+)\.\s+(.*)$/);
+          if (currentTopic && questionMatch) {
+            const exampleBlock = readExampleBlock(lines, index);
+            index = exampleBlock.index;
+
+            currentTopic.question_entries.push({
+              text: questionMatch[2].trim(),
+              mini_example: exampleBlock.miniExample,
+              safe_answer: exampleBlock.safeAnswer,
+              better_answer: exampleBlock.betterAnswer,
+            });
+          }
+
+          continue;
+        }
+
+        if (section === "part23") {
+          const cueMatch = line.match(/^\[CUE CARD\]\s+(.+)$/);
+          if (cueMatch) {
+            const prompt = cueMatch[1].trim();
+
+            currentCue = {
+              id: slugify(prompt).slice(0, 90),
+              prompt,
+              theme: "",
+              card_type: "experience",
+              difficulty: "medium",
+              frequency: "common",
+              band_range: "band_5_6",
+              notes: [],
+              mini_example: "",
+              safe_answer: "",
+              better_answer: "",
+              part3_followup_entries: [],
+            };
+
+            bank.part2.push(currentCue);
+            inFollowUps = false;
+            continue;
+          }
+
+          if (currentCue && line.startsWith("Theme:")) {
+            const meta = parseMetaLine(line);
+            currentCue.theme = meta.theme || "";
+            currentCue.card_type = meta.card_type || "experience";
+            currentCue.difficulty = meta.difficulty || "medium";
+            currentCue.frequency = meta.frequency || "common";
+            currentCue.band_range = meta.band_range || "band_5_6";
+            continue;
+          }
+
+          if (currentCue && line === "You should say:") {
+            inFollowUps = false;
+            continue;
+          }
+
+          if (currentCue && !inFollowUps && line.startsWith("- ")) {
+            currentCue.notes.push(line.replace(/^\-\s*/, "").trim());
+            continue;
+          }
+
+          if (currentCue && line.startsWith("Mini example:")) {
+            currentCue.mini_example = line.replace(/^Mini example:\s*/, "").trim();
+            continue;
+          }
+
+          if (currentCue && line.startsWith("Safe answer:")) {
+            currentCue.safe_answer = line.replace(/^Safe answer:\s*/, "").trim();
+            if (!currentCue.mini_example) {
+              currentCue.mini_example = currentCue.safe_answer;
+            }
+            continue;
+          }
+
+          if (currentCue && line.startsWith("Better answer:")) {
+            currentCue.better_answer = line.replace(/^Better answer:\s*/, "").trim();
+            currentCue.mini_example = currentCue.better_answer || currentCue.mini_example;
+            continue;
+          }
+
+          if (currentCue && line === "Part 3 follow-up questions:") {
+            inFollowUps = true;
+            continue;
+          }
+
+          if (currentCue && inFollowUps) {
+            const followUpMatch = line.match(/^(\d+)\.\s+(.*)$/);
+            if (!followUpMatch) continue;
+            const exampleBlock = readExampleBlock(lines, index);
+            index = exampleBlock.index;
+
+            currentCue.part3_followup_entries.push({
+              text: followUpMatch[2].trim(),
+              difficulty: currentCue.difficulty,
+              band_range: currentCue.band_range,
+              frequency: currentCue.frequency,
+              mini_example: exampleBlock.miniExample,
+              safe_answer: exampleBlock.safeAnswer,
+              better_answer: exampleBlock.betterAnswer,
+            });
+          }
+        }
+      }
+
+      return normalizeBankAfterParse(bank);
+    }
+
+    function rebuildThemeLists() {
+      p1Topics = Array.from(new Set(ieltsBank.part1.map((t) => t.topic_name))).sort();
+      p23Themes = Array.from(
+        new Set(ieltsBank.part2.map((c) => c.theme.replace(/_/g, " ")))
+      ).sort();
+      allThemes = Array.from(new Set([...p1Topics, ...p23Themes])).sort();
+    }
+
+    function loadIeltsBank() {
+      ieltsBank = parseIeltsBank(bankRaw);
+      rebuildThemeLists();
+    }
+
+    // ========================================================================
+    // 6) LIGHT TRANSLATION LAYER
+    // ========================================================================
+    const TRANSLATION_CACHE_KEY = "ielts_spin_tr_cache_v2";
+    const translationCache = new Map();
+    const translationRequests = new Map();
+
+    function normalizeWhitespace(text) {
+      return String(text || "").replace(/\s+/g, " ").trim();
+    }
+
+    function normalizeTranslationKey(text) {
+      return normalizeWhitespace(text).replace(/[’]/g, "'").toLowerCase();
+    }
+
+    function cleanupTranslation(text) {
+      return normalizeWhitespace(text)
+        .replace(/\s+([?.!,;:])/g, "$1")
+        .replace(/,\s*\./g, ".");
+    }
+
+    function restoreTranslationCache() {
+      try {
+        const raw = localStorage.getItem(TRANSLATION_CACHE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        Object.entries(parsed).forEach(([key, value]) => {
+          if (value && typeof value.text === "string") {
+            translationCache.set(key, value);
+          }
+        });
+      } catch (error) {
+        console.warn("Translation cache restore failed.", error);
+      }
+    }
+
+    function persistTranslationCache() {
+      try {
+        localStorage.setItem(
+          TRANSLATION_CACHE_KEY,
+          JSON.stringify(Object.fromEntries(translationCache))
+        );
+      } catch (error) {
+        console.warn("Translation cache save failed.", error);
+      }
+    }
+
+    function setTranslationEntry(source, translated, sourceType = "local") {
+      const key = normalizeTranslationKey(source);
+      const cleanText = cleanupTranslation(translated);
+      if (!key || !cleanText) return cleanText;
+      translationCache.set(key, { text: cleanText, source: sourceType });
+      persistTranslationCache();
+      return cleanText;
+    }
+
+    function getTranslationEntry(source) {
+      return translationCache.get(normalizeTranslationKey(source));
+    }
+
+    function rememberProvidedTranslation(source, translated) {
+      return translated ? setTranslationEntry(source, translated, "provided") : "";
+    }
+
+    const exactTranslationPairs = [
+      ["Yes, definitely.", "Evet, kesinlikle."],
+      ["Not really, to be honest.", "Dürüst olmak gerekirse, pek değil."],
+      ["Most of the time, yes.", "Çoğu zaman, evet."],
+      ["It depends, but generally...", "Duruma göre değişir, ama genel olarak..."],
+      ["I'd say so, yes.", "Sanırım öyle, evet."],
+      ["What I like about it is...", "Bunun sevdiğim yanı..."],
+      ["The main reason is that...", "Temel nedeni şu ki..."],
+      ["In my case,...", "Benim durumumda,..."],
+      ["One thing I notice is...", "Fark ettiğim bir şey..."],
+      ["So overall, it's something I value.", "Genel olarak, bu değer verdiğim bir şey."],
+      ["That's why I feel quite positive about it.", "Bu yüzden bu konuda oldukça olumlu hissediyorum."],
+      ["I'd like to talk about...", "... hakkında konuşmak istiyorum."],
+      ["To begin with,...", "Başlangıç olarak,..."],
+      ["After that,...", "Bundan sonra,..."],
+      ["In my view,...", "Bana göre,..."],
+      ["One reason for this is...", "Bunun bir nedeni..."],
+      ["At the same time,...", "Aynı zamanda,..."],
+      ["That said,...", "Bununla birlikte,..."],
+      ["who this person is", "bu kişinin kim olduğunu"],
+      ["how you know this person", "bu kişiyi nasıl tanıdığınızı"],
+      ["what this person did or what quality stands out most", "bu kişinin ne yaptığını veya hangi özelliğinin öne çıktığını"],
+      ["and explain why this person had an effect on you", "ve bu kişinin üzerinizde neden etkisi olduğunu açıklayın"],
+      ["what the object is", "nesnenin ne olduğunu"],
+      ["how you got it or first used it", "onu nasıl edindiğinizi veya ilk kez nasıl kullandığınızı"],
+      ["what you use it for or what it is like", "onu ne için kullandığınızı veya nasıl bir şey olduğunu"],
+      ["and explain why it is useful, special, or memorable", "ve neden faydalı, özel veya akılda kalıcı olduğunu açıklayın"],
+      ["what the place is and where it is", "yerin ne olduğunu ve nerede olduğunu"],
+      ["when you went there or how often you go there", "oraya ne zaman gittiğinizi veya ne sıklıkla gittiğinizi"],
+      ["what you did there or what you noticed there", "orada ne yaptığınızı veya neleri fark ettiğinizi"],
+      ["and explain why this place stands out to you", "ve bu yerin sizin için neden öne çıktığını açıklayın"],
+      ["when it happened", "ne zaman olduğunu"],
+      ["what happened", "ne olduğunu"],
+      ["who was involved or what you had to do", "kimlerin dahil olduğunu veya ne yapmanız gerektiğini"],
+      ["what this future plan, change, or goal is", "bu gelecek planının, değişiminin veya hedefinin ne olduğunu"],
+      ["why you want it", "bunu neden istediğinizi"],
+      ["what might help you achieve it", "ona ulaşmanıza nelerin yardımcı olabileceğini"],
+      ["and explain why it matters to you", "ve bunun sizin için neden önemli olduğunu açıklayın"],
+      ["what the skill is", "becerinin ne olduğunu"],
+      ["where or how you learned it", "onu nerede veya nasıl öğrendiğinizi"],
+      ["how you use it now", "onu şimdi nasıl kullandığınızı"],
+      ["and explain why it is useful or meaningful to you", "ve bunun neden sizin için faydalı veya anlamlı olduğunu açıklayın"],
+    ];
+
+    exactTranslationPairs.forEach(([en, tr]) => setTranslationEntry(en, tr));
+
+    async function fetchGoogleTranslation(text, signal) {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=tr&dt=t&q=${encodeURIComponent(text)}`;
+      const response = await fetch(url, { signal });
+      if (!response.ok) throw new Error(`Google Translate failed with ${response.status}`);
+      const payload = await response.json();
+      const translated = Array.isArray(payload?.[0])
+        ? payload[0].map((chunk) => (Array.isArray(chunk) ? chunk[0] : "")).join("")
+        : "";
+      return cleanupTranslation(translated);
+    }
+
+    async function fetchMyMemoryTranslation(text, signal) {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|tr`;
+      const response = await fetch(url, { signal });
+      if (!response.ok) throw new Error(`MyMemory failed with ${response.status}`);
+      const payload = await response.json();
+      const translated = payload?.responseData?.translatedText || "";
+      return cleanupTranslation(
+        translated.replace(/&#39;/g, "'").replace(/&quot;/g, '"')
+      );
+    }
+
+    function getImmediateTranslation(text) {
+      const cached = getTranslationEntry(text);
+      if (cached?.text) return cached.text;
+
+      const t = normalizeWhitespace(text);
+      if (!t) return "";
+
+      const map = [
+        [/^Describe (.+)\.$/i, (m, rest) => `${rest} anlatın.`],
+        [/^Do you (.+)\?$/i, (m, rest) => `${rest}?`],
+        [/^What do you like most about (.+)\?$/i, (m, rest) => `${rest} hakkında en çok neyi seviyorsunuz?`],
+        [/^What do you enjoy most about (.+)\?$/i, (m, rest) => `${rest} hakkında en çok neyden hoşlanıyorsunuz?`],
+        [/^Why do (.+)\?$/i, (m, rest) => `Neden ${rest}?`],
+        [/^Why is (.+)\?$/i, (m, rest) => `${rest} neden?`],
+        [/^How can (.+)\?$/i, (m, rest) => `${rest} nasıl olabilir?`],
+        [/^How do (.+)\?$/i, (m, rest) => `${rest} nasıl?`],
+        [/^How has (.+)\?$/i, (m, rest) => `${rest} nasıl değişti?`],
+        [/^How have (.+)\?$/i, (m, rest) => `${rest} nasıl değişti?`],
+        [/^Should (.+)\?$/i, (m, rest) => `${rest} gerekli mi?`],
+        [/^Is it (.+)\?$/i, (m, rest) => `${rest} mı?`],
+        [/^Can (.+)\?$/i, (m, rest) => `${rest} mi?`],
+      ];
+
+      for (const [pattern, fn] of map) {
+        if (pattern.test(t)) {
+          return setTranslationEntry(t, fn(...t.match(pattern)), "local");
+        }
+      }
+
+      return setTranslationEntry(t, t, "local");
+    }
+
+    async function requestLiveTranslation(text) {
+      const normalized = normalizeWhitespace(text);
+      if (!normalized) return "";
+
+      const cached = getTranslationEntry(normalized);
+      if (cached && cached.source !== "local") return cached.text;
+      if (translationRequests.has(normalized)) return translationRequests.get(normalized);
+
+      const requestPromise = (async () => {
+        for (const provider of [fetchGoogleTranslation, fetchMyMemoryTranslation]) {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 6000);
+          try {
+            const translated = await provider(normalized, controller.signal);
+            clearTimeout(timeoutId);
+            if (
+              translated &&
+              normalizeTranslationKey(translated) !== normalizeTranslationKey(normalized)
+            ) {
+              return setTranslationEntry(normalized, translated, "remote");
+            }
+          } catch (error) {
+            clearTimeout(timeoutId);
+          }
+        }
+
+        return getImmediateTranslation(normalized);
+      })().finally(() => {
+        translationRequests.delete(normalized);
+      });
+
+      translationRequests.set(normalized, requestPromise);
+      return requestPromise;
+    }
+
+    function hydrateTranslationNode(node, sourceText, explicitTranslation = "") {
+      if (!node) return;
+      const normalizedSource = normalizeWhitespace(sourceText);
+
+      if (!normalizedSource) {
+        node.textContent = "";
+        return;
+      }
+
+      node.dataset.translateSource = normalizedSource;
+
+      if (explicitTranslation) {
+        node.textContent = rememberProvidedTranslation(normalizedSource, explicitTranslation);
+        return;
+      }
+
+      node.textContent = getImmediateTranslation(normalizedSource);
+
+      requestLiveTranslation(normalizedSource).then((translated) => {
+        if (!translated || node.dataset.translateSource !== normalizedSource) return;
+        node.textContent = translated;
+      });
+    }
+
+    function hydrateTranslationTargets(container) {
+      if (!container) return;
+      container.querySelectorAll("[data-translate-source]").forEach((node) => {
+        hydrateTranslationNode(node, node.dataset.translateSource);
+      });
+    }
+
+    function isTouchTranslationMode() {
+      return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    }
+
+    function clearActiveTranslations(exceptGroup = null) {
+      document.querySelectorAll(".translation-group.translate-active").forEach((group) => {
+        if (group !== exceptGroup) group.classList.remove("translate-active");
+      });
+    }
+
+    function bindTranslationGroups(container) {
+      if (!container) return;
+
+      container.querySelectorAll(".translation-group").forEach((group) => {
+        if (group.dataset.translationBound === "true") return;
+        group.dataset.translationBound = "true";
+
+        group.addEventListener("click", (event) => {
+          if (!isTouchTranslationMode()) return;
+
+          const shouldActivate = !group.classList.contains("translate-active");
+          clearActiveTranslations(group);
+          group.classList.toggle("translate-active", shouldActivate);
+          event.preventDefault();
+        });
+      });
+    }
+
+    document.addEventListener("click", (event) => {
+      if (!isTouchTranslationMode()) return;
+      if (event.target.closest(".translation-group")) return;
+      clearActiveTranslations();
+    });
+
+    // ========================================================================
+    // 7) APP STATE
+    // ========================================================================
+    let partMode = "all";
+    let filterTheme = "all";
+    let filterFrequency = "all";
+    let filterDifficulty = "all";
+
+    let items = [];
+    let currentIndex = 0;
+    let isSpinning = false;
+    let historyIndices = [];
+    let activeTab = null;
+
+    let timerSeconds = 0;
+    let timerInitial = 0;
+    let isTimerRunning = false;
+    let timerInterval = null;
+
+    // ========================================================================
+    // 8) DOM
+    // ========================================================================
+    const els = {
+      html: document.documentElement,
+      partMode: document.getElementById("partMode"),
+      filterTheme: document.getElementById("filterTheme"),
+      filterDifficulty: document.getElementById("filterDifficulty"),
+      filterFrequency: document.getElementById("filterFrequency"),
+      prevItemText: document.getElementById("prevItemText"),
+      currentArea: document.getElementById("currentArea"),
+      currentLabel: document.getElementById("currentLabel"),
+      currentText: document.getElementById("currentText"),
+      currentTextTr: document.getElementById("currentTextTr"),
+      nextItemText: document.getElementById("nextItemText"),
+      cueCardArea: document.getElementById("cueCardArea"),
+      cueCardBullets: document.getElementById("cueCardBullets"),
+      supportDrawer: document.getElementById("supportDrawer"),
+      supportToggles: document.getElementById("supportToggles"),
+      supportContent: document.getElementById("supportContent"),
+      spinBtn: document.getElementById("spinBtn"),
+      spinIcon: document.getElementById("spinIcon"),
+      timerText: document.getElementById("timerText"),
+      timerRing: document.getElementById("timerRing"),
+      timerPlayBtn: document.getElementById("timerPlayBtn"),
+      timerPlayIcon: document.getElementById("timerPlayIcon"),
+      timerResetBtn: document.getElementById("timerResetBtn"),
+      presetBtns: document.querySelectorAll(".timer-preset-btn"),
+    };
+
+    const CIRCUMFERENCE = 2 * Math.PI * 46;
+    els.timerRing.style.strokeDasharray = CIRCUMFERENCE;
+    els.timerRing.style.strokeDashoffset = CIRCUMFERENCE;
+
+    // ========================================================================
+    // 9) THEME
+    // ========================================================================
+    function applyTheme() {
+      els.html.classList.remove("dark");
+    }
+
+    // ========================================================================
+    // 10) UI STATE
+    // ========================================================================
+    function setLoadingState(isLoading) {
+      [
+        els.partMode,
+        els.filterTheme,
+        els.filterDifficulty,
+        els.filterFrequency,
+        els.spinBtn,
+        els.timerPlayBtn,
+        els.timerResetBtn,
+        ...els.presetBtns,
+      ].forEach((element) => {
+        element.disabled = isLoading;
+      });
+    }
+
+    function updateThemeOptions() {
+      if (!ieltsBank) return;
+
+      let newOptions = allThemes;
+      if (partMode === "part1") newOptions = p1Topics;
+      if (partMode === "part2" || partMode === "part3") newOptions = p23Themes;
+
+      let html = `<option value="all">${partMode === "part1" ? "Any Topic" : "Any Theme"}</option>`;
+      newOptions.forEach((t) => {
+        html += `<option value="${escapeHtml(t)}" ${filterTheme === t ? "selected" : ""}>${escapeHtml(formatThemeName(t))}</option>`;
+      });
+
+      els.filterTheme.innerHTML = html;
+
+      if (filterTheme !== "all" && !newOptions.includes(filterTheme)) {
+        filterTheme = "all";
+        els.filterTheme.value = "all";
+      }
+    }
+
+    function applyFilters() {
+      if (!ieltsBank) return;
+
+      let pool = [];
+
+      ieltsBank.part1.forEach((topic) => {
+        topic.question_entries.forEach((q) => {
+          pool.push({
+            type: "part1",
+            text: q.text,
+            text_tr: q.text_tr,
+            topic: topic.topic_name,
+            theme: topic.theme,
+            band: q.band_range || topic.band_range_overall,
+            frequency: q.frequency || topic.frequency_overall,
+            difficulty: q.difficulty || topic.difficulty_overall,
+            label: `Part 1 • ${topic.topic_name}`,
+            item: q,
+            phrases: ieltsBank.phrase_bank.part1,
+          });
+        });
+      });
+
+      ieltsBank.part2.forEach((card) => {
+        const cleanTheme = card.theme.replace(/_/g, " ");
+
+        pool.push({
+          type: "part2",
+          text: card.prompt,
+          prompt_tr: card.prompt_tr,
+          topic: cleanTheme,
+          theme: cleanTheme,
+          band: card.band_range,
+          frequency: card.frequency,
+          difficulty: card.difficulty,
+          label: `Part 2 • ${formatThemeName(cleanTheme)}`,
+          item: card,
+          phrases: ieltsBank.phrase_bank.part2,
+        });
+
+        card.part3_followup_entries.forEach((q) => {
+          pool.push({
+            type: "part3",
+            text: q.text,
+            text_tr: q.text_tr,
+            topic: cleanTheme,
+            theme: cleanTheme,
+            band: q.band_range || card.band_range,
+            frequency: q.frequency || card.frequency,
+            difficulty: q.difficulty || card.difficulty,
+            label: `Part 3 • ${formatThemeName(cleanTheme)}`,
+            item: q,
+            phrases: ieltsBank.phrase_bank.part3,
+            parentCard: card,
+          });
+        });
+      });
+
+      let filtered = pool;
+
+      if (partMode !== "all") filtered = filtered.filter((i) => i.type === partMode);
+      if (filterFrequency !== "all") filtered = filtered.filter((i) => i.frequency === filterFrequency);
+      if (filterDifficulty !== "all") filtered = filtered.filter((i) => i.difficulty === filterDifficulty);
+      if (filterTheme !== "all") {
+        filtered = filtered.filter((i) => i.topic.toLowerCase() === filterTheme.toLowerCase());
+      }
+
+      if (filtered.length === 0) {
+        items = [{
+          type: "error",
+          text: "No questions match these exact filters.",
+          text_tr: "Bu filtrelere uygun soru bulunamadı.",
+          label: "Try changing the filters",
+          item: {},
+        }];
+      } else {
+        items = shuffle(filtered);
+      }
+
+      currentIndex = 0;
+      historyIndices = [];
+      activeTab = null;
+      renderSpinArea();
+    }
+
+    function renderSpinArea() {
+      const prevItem = items[(currentIndex - 1 + items.length) % items.length];
+      const currItem = items[currentIndex];
+      const nextItem = items[(currentIndex + 1) % items.length];
+
+      els.prevItemText.innerText = prevItem?.text || "Loading...";
+      els.nextItemText.innerText = nextItem?.text || "Loading...";
+
+      if (currItem && currItem.type !== "error") {
+        els.currentLabel.innerText = currItem.label;
+        els.currentLabel.classList.remove("hidden");
+      } else {
+        els.currentLabel.classList.add("hidden");
+      }
+
+      els.currentText.innerText = currItem?.text || "No questions found.";
+      hydrateTranslationNode(
+        els.currentTextTr,
+        currItem?.text || "",
+        currItem?.text_tr || currItem?.prompt_tr || ""
+      );
+
+      if (currItem?.type === "part2" && currItem.item?.notes) {
+        let bulletsHtml = "";
+
+        currItem.item.notes.forEach((note, i) => {
+          const trNote =
+            currItem.item.notes_tr && currItem.item.notes_tr[i]
+              ? rememberProvidedTranslation(note, currItem.item.notes_tr[i])
+              : getImmediateTranslation(note);
+
+          bulletsHtml += `
+            <li class="flex flex-col items-start group translation-group cursor-pointer w-full">
+              <span class="flex items-start group-hover:hidden">
+                <span class="text-indigo-400 mr-2 mt-0.5">•</span>
+                <span>${escapeHtml(note)}</span>
+              </span>
+              <span class="hidden group-hover:flex items-start">
+                <span class="text-emerald-500 mr-2 mt-0.5">•</span>
+                <span class="text-emerald-600 dark:text-emerald-400" data-translate-source="${escapeHtml(note)}">${escapeHtml(trNote)}</span>
+              </span>
+            </li>
+          `;
+        });
+
+        els.cueCardBullets.innerHTML = bulletsHtml;
+        els.cueCardArea.classList.remove("hidden");
+        hydrateTranslationTargets(els.cueCardBullets);
+        bindTranslationGroups(els.cueCardBullets);
+      } else {
+        els.cueCardArea.classList.add("hidden");
+      }
+
+      renderSupportDrawer(currItem);
+      bindTranslationGroups(els.currentArea);
+    }
+
+    function renderSupportDrawer(item) {
+      if (isSpinning || !item || item.type === "error") {
+        els.supportDrawer.classList.add("hidden");
+        return;
+      }
+
+      const hasPhrases = !!item.phrases;
+      const hasExample = !!(
+        item.item?.safe_answer ||
+        item.item?.better_answer ||
+        item.item?.mini_example
+      );
+
+      if (!hasPhrases && !hasExample) {
+        els.supportDrawer.classList.add("hidden");
+        return;
+      }
+
+      els.supportDrawer.classList.remove("hidden");
+
+      let togglesHtml = "";
+      const baseBtn = "px-4 py-2 rounded-xl text-sm font-bold border transition-colors shadow-sm ";
+      const inactiveBtn =
+        "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700";
+      const activeBtn = "bg-indigo-600 text-white border-indigo-600";
+
+      if (hasPhrases) {
+        togglesHtml += `<button onclick="toggleTab('phrases')" class="${activeTab === "phrases" ? activeBtn : inactiveBtn} ${baseBtn}">Phrases</button>`;
+      }
+
+      if (hasExample) {
+        togglesHtml += `<button onclick="toggleTab('example')" class="${activeTab === "example" ? activeBtn : inactiveBtn} ${baseBtn}">Example</button>`;
+      }
+
+      els.supportToggles.innerHTML = togglesHtml;
+
+      let contentHtml = "";
+
+      if (activeTab === "phrases" && hasPhrases) {
+        let gridHtml = "";
+
+        Object.entries(item.phrases).forEach(([cat, list]) => {
+          let listHtml = "";
+
+          list.forEach((p) => {
+            const en = typeof p === "string" ? p : p.en;
+            const tr = typeof p === "string" ? null : p.tr;
+            const resolvedTr = tr
+              ? rememberProvidedTranslation(en, tr)
+              : getImmediateTranslation(en);
+
+            listHtml += `
+              <li class="leading-tight border-l-2 border-slate-200 dark:border-slate-700 pl-2 mb-2 group translation-group cursor-pointer">
+                <span class="block group-hover:hidden text-slate-700 dark:text-slate-300">${escapeHtml(en)}</span>
+                <span class="hidden group-hover:block text-emerald-600 dark:text-emerald-400 italic" data-translate-source="${escapeHtml(en)}">${escapeHtml(resolvedTr)}</span>
+              </li>
+            `;
+          });
+
+          gridHtml += `
+            <div>
+              <span class="font-bold text-[10px] uppercase tracking-widest block mb-2 text-indigo-500">${escapeHtml(cat.replace(/_/g, " "))}</span>
+              <ul class="space-y-2 text-sm font-medium">${listHtml}</ul>
+            </div>
+          `;
+        });
+
+        contentHtml = `
+          <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center">
+              <i class="fas fa-comment-dots text-sm mr-2"></i> Useful Phrases
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">${gridHtml}</div>
+          </div>
+        `;
+      } else if (activeTab === "example" && hasExample) {
+        const exampleBlocks = [];
+
+        if (item.item.safe_answer) {
+          const safeEn = item.item.safe_answer;
+          const safeTr = item.item.safe_answer_tr;
+          const resolvedSafe = safeTr
+            ? rememberProvidedTranslation(safeEn, safeTr)
+            : getImmediateTranslation(safeEn);
+
+          exampleBlocks.push(`
+            <div class="group translation-group cursor-pointer relative z-10 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/40 p-4 sm:p-5">
+              <p class="mb-2 text-xs font-black uppercase tracking-widest text-indigo-500">Safe Answer</p>
+              <p class="text-slate-800 dark:text-slate-100 font-semibold leading-loose italic text-base sm:text-lg group-hover:hidden">
+                "${escapeHtml(safeEn)}"
+              </p>
+              <p class="hidden group-hover:block text-emerald-600 dark:text-emerald-400 font-semibold leading-loose italic text-base sm:text-lg" data-translate-source="${escapeHtml(safeEn)}">
+                "${escapeHtml(resolvedSafe)}"
+              </p>
+            </div>
+          `);
+        }
+
+        if (item.item.better_answer) {
+          const betterEn = item.item.better_answer;
+          const betterTr = item.item.better_answer_tr;
+          const resolvedBetter = betterTr
+            ? rememberProvidedTranslation(betterEn, betterTr)
+            : getImmediateTranslation(betterEn);
+
+          exampleBlocks.push(`
+            <div class="group translation-group cursor-pointer relative z-10 rounded-2xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50/80 dark:bg-indigo-900/20 p-4 sm:p-5">
+              <p class="mb-2 text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Better Answer</p>
+              <p class="text-slate-800 dark:text-slate-100 font-semibold leading-loose italic text-base sm:text-lg group-hover:hidden">
+                "${escapeHtml(betterEn)}"
+              </p>
+              <p class="hidden group-hover:block text-emerald-600 dark:text-emerald-400 font-semibold leading-loose italic text-base sm:text-lg" data-translate-source="${escapeHtml(betterEn)}">
+                "${escapeHtml(resolvedBetter)}"
+              </p>
+            </div>
+          `);
+        }
+
+        if (!exampleBlocks.length && item.item.mini_example) {
+          const enEx = item.item.mini_example;
+          const trEx = item.item.mini_example_tr;
+          const resolvedExample = trEx
+            ? rememberProvidedTranslation(enEx, trEx)
+            : getImmediateTranslation(enEx);
+
+          exampleBlocks.push(`
+            <div class="group translation-group cursor-pointer relative z-10">
+              <p class="text-slate-800 dark:text-slate-100 font-semibold leading-loose italic text-lg sm:text-xl lg:text-2xl group-hover:hidden">
+                "${escapeHtml(enEx)}"
+              </p>
+              <p class="hidden group-hover:block text-emerald-600 dark:text-emerald-400 font-semibold leading-loose italic text-lg sm:text-xl lg:text-2xl" data-translate-source="${escapeHtml(enEx)}">
+                "${escapeHtml(resolvedExample)}"
+              </p>
+            </div>
+          `);
+        }
+
+        contentHtml = `
+          <div class="p-6 sm:p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 relative overflow-hidden shadow-sm">
+            <div class="absolute top-0 right-0 p-5 opacity-5">
+              <i class="fas fa-book-open text-7xl text-slate-800 dark:text-white"></i>
+            </div>
+
+            <p class="text-sm font-extrabold text-slate-500 uppercase tracking-widest mb-4 flex items-center">
+              <i class="fas fa-exclamation-circle mr-2"></i> Structure Example
+            </p>
+
+            <div class="space-y-4">${exampleBlocks.join("")}</div>
+
+            <p class="mt-5 text-xs font-bold uppercase tracking-widest text-slate-400">
+              Hover or tap to see Turkish
+            </p>
+          </div>
+        `;
+      }
+
+      els.supportContent.innerHTML = contentHtml;
+      hydrateTranslationTargets(els.supportContent);
+      bindTranslationGroups(els.supportContent);
+    }
+
+    window.toggleTab = function (tabName) {
+      activeTab = activeTab === tabName ? null : tabName;
+      renderSupportDrawer(items[currentIndex]);
+    };
+
+    // ========================================================================
+    // 11) SPIN
+    // ========================================================================
+    function spin() {
+      if (!ieltsBank) return;
+      if (isSpinning || items.length <= 1) return;
+
+      isSpinning = true;
+      activeTab = null;
+      resetTimer();
+
+      els.spinBtn.disabled = true;
+      els.spinIcon.classList.add("fa-spin");
+      els.currentArea.classList.add("spin-blur");
+      els.currentArea.classList.replace("bg-transparent", "bg-slate-50");
+      els.currentArea.classList.add("dark:bg-slate-800/20");
+      renderSupportDrawer(null);
+
+      let duration = 1200;
+      let startT = performance.now();
+      let lastUpdate = startT;
+      let currentDelay = 40;
+
+      function animate(time) {
+        const elapsed = time - startT;
+
+        if (elapsed > duration) {
+          let newIndex = Math.floor(Math.random() * items.length);
+          let attempts = 0;
+
+          while (historyIndices.includes(newIndex) && attempts < 10) {
+            newIndex = Math.floor(Math.random() * items.length);
+            attempts++;
+          }
+
+          isSpinning = false;
+          currentIndex = newIndex;
+          historyIndices.unshift(newIndex);
+          if (historyIndices.length > 5) historyIndices.pop();
+
+          els.spinBtn.disabled = false;
+          els.spinIcon.classList.remove("fa-spin");
+          els.currentArea.classList.remove("spin-blur");
+          els.currentArea.classList.replace("bg-slate-50", "bg-transparent");
+          els.currentArea.classList.remove("dark:bg-slate-800/20");
+
+          renderSpinArea();
+          return;
+        }
+
+        if (time - lastUpdate > currentDelay) {
+          currentIndex = (currentIndex + 1) % items.length;
+          lastUpdate = time;
+          currentDelay = 40 + (elapsed / duration) * 100;
+          renderSpinArea();
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    // ========================================================================
+    // 12) TIMER
+    // ========================================================================
+    function formatTimerStr(totalSeconds) {
+      const m = Math.floor(totalSeconds / 60).toString().padStart(2, "0");
+      const s = (totalSeconds % 60).toString().padStart(2, "0");
+      return `${m}:${s}`;
+    }
+
+    function updateTimerUI() {
+      els.timerText.innerText = formatTimerStr(timerSeconds);
+
+      if (timerSeconds <= 10 && timerSeconds > 0) {
+        els.timerText.classList.add("text-rose-500", "animate-pulse");
+        els.timerText.classList.remove(
+          "text-indigo-600",
+          "dark:text-indigo-400",
+          "text-slate-800",
+          "dark:text-white"
+        );
+      } else if (timerInitial > 0 && timerSeconds > 0) {
+        els.timerText.classList.remove(
+          "text-rose-500",
+          "animate-pulse",
+          "text-slate-800",
+          "dark:text-white"
+        );
+        els.timerText.classList.add("text-indigo-600", "dark:text-indigo-400");
+      } else {
+        els.timerText.classList.remove(
+          "text-rose-500",
+          "animate-pulse",
+          "text-indigo-600",
+          "dark:text-indigo-400"
+        );
+        els.timerText.classList.add("text-slate-800", "dark:text-white");
+      }
+
+      const progress =
+        timerInitial > 0 ? ((timerInitial - timerSeconds) / timerInitial) * 100 : 0;
+      const offset = (progress / 100) * CIRCUMFERENCE;
+      els.timerRing.style.strokeDashoffset = CIRCUMFERENCE - offset;
+
+      els.timerPlayBtn.disabled = timerInitial === 0 || timerSeconds === 0;
+      els.timerResetBtn.disabled = timerInitial === 0;
+      els.timerPlayIcon.className = isTimerRunning
+        ? "fas fa-pause text-sm"
+        : "fas fa-play text-sm";
+
+      els.presetBtns.forEach((btn) => {
+        const val = parseInt(btn.dataset.time, 10);
+
+        if (timerInitial === val) {
+          btn.className =
+            "timer-preset-btn px-4 py-2 rounded-full text-xs font-bold transition-all border shadow-sm active:scale-95 bg-indigo-600 text-white border-indigo-600";
+        } else {
+          btn.className =
+            "timer-preset-btn px-4 py-2 rounded-full text-xs font-bold transition-all border shadow-sm active:scale-95 bg-white text-slate-600 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700 dark:hover:bg-slate-700";
+        }
+      });
+    }
+
+    function timerTick() {
+      if (isTimerRunning && timerSeconds > 0) {
+        timerSeconds--;
+        updateTimerUI();
+      } else if (isTimerRunning && timerSeconds === 0) {
+        isTimerRunning = false;
+        clearInterval(timerInterval);
+        updateTimerUI();
+      }
+    }
+
+    function startTimer() {
+      if (timerSeconds > 0) {
+        isTimerRunning = true;
+        clearInterval(timerInterval);
+        timerInterval = setInterval(timerTick, 1000);
+        updateTimerUI();
+      }
+    }
+
+    function pauseTimer() {
+      isTimerRunning = false;
+      clearInterval(timerInterval);
+      updateTimerUI();
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      timerSeconds = timerInitial;
+      updateTimerUI();
+    }
+
+    function setPreset(secs) {
+      pauseTimer();
+      timerInitial = secs;
+      timerSeconds = secs;
+      startTimer();
+    }
+
+    // ========================================================================
+    // 13) FILTER CHANGE
+    // ========================================================================
+    function setFilterState(id, value) {
+      if (id === "partMode") partMode = value;
+      if (id === "filterTheme") filterTheme = value;
+      if (id === "filterFrequency") filterFrequency = value;
+      if (id === "filterDifficulty") filterDifficulty = value;
+    }
+
+    // ========================================================================
+    // 14) EVENTS
+    // ========================================================================
+    ["partMode", "filterTheme", "filterFrequency", "filterDifficulty"].forEach((id) => {
+      document.getElementById(id).addEventListener("change", (e) => {
+        setFilterState(id, e.target.value);
+        if (id === "partMode") updateThemeOptions();
+        applyFilters();
+      });
+    });
+
+    els.spinBtn.addEventListener("click", spin);
+
+    els.timerPlayBtn.addEventListener("click", () => {
+      isTimerRunning ? pauseTimer() : startTimer();
+    });
+
+    els.timerResetBtn.addEventListener("click", resetTimer);
+
+    els.presetBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        setPreset(parseInt(e.currentTarget.dataset.time, 10));
+      });
+    });
+
+    // ========================================================================
+    // 15) BOOTSTRAP
+    // ========================================================================
+    async function bootstrap() {
+      restoreTranslationCache();
+      applyTheme();
+      setLoadingState(true);
+
+      els.currentLabel.classList.add("hidden");
+      els.currentText.innerText = "Loading full question bank...";
+      els.currentTextTr.innerText = "Loading full question bank...";
+      els.prevItemText.innerText = "Loading...";
+      els.nextItemText.innerText = "Loading...";
+
+      try {
+        loadIeltsBank();
+        updateThemeOptions();
+        applyFilters();
+      } catch (error) {
+        console.error(error);
+        els.currentText.innerText = "The full question bank could not be loaded.";
+        els.currentTextTr.innerText = "Soru bankası yüklenemedi.";
+        els.prevItemText.innerText = "Load error";
+        els.nextItemText.innerText = "Load error";
+      } finally {
+        setLoadingState(false);
+        updateTimerUI();
+      }
+    }
+
+    bootstrap();
+  </script>
+  <script src="assets/pwa.js?v=20260403" defer></script>
+</body>
+</html>

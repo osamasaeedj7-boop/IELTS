@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS Speaking Mastery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg?v=20260407">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=20260407">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=20260407">
+  <link rel="shortcut icon" href="assets/favicon-32.png?v=20260407">
+      <link rel="manifest" href="manifest.webmanifest?v=20260407">
+  <meta name="theme-color" content="#5954ec">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="IELTS Speaking Mastery">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260407">
+  <link rel="stylesheet" href="assets/platform.css?v=20260407">
+  <script src="assets/platform.js?v=20260331" defer></script>
+</head>
+<body class="platform-body text-slate-800 font-sans" data-vocab-start-date="2026-03-15">
+
+  <div class="platform-watermark">
+    <div class="text-slate-900/[0.03] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">
+      T. Osama Saeed
+    </div>
+  </div>
+
+  <main class="platform-shell mx-auto max-w-5xl px-4 py-6 sm:px-8 sm:py-10">
+
+    <section class="platform-hero glass-card rounded-[2rem] border border-white/80 px-6 py-10 shadow-xl sm:px-10 sm:py-14">
+      <div class="hero-layout flex flex-col gap-8 text-left lg:flex-row lg:items-center lg:justify-between">
+        <div class="hero-copy max-w-3xl">
+          <p class="hero-kicker inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">
+            <i class="fa-solid fa-graduation-cap hero-kicker-icon" aria-hidden="true"></i>
+            <span>IELTS Speaking Course by T. Osama Saeed</span>
+          </p>
+          <h1 class="hero-title mt-4 text-4xl font-black text-slate-900 sm:text-5xl">IELTS Speaking Mastery</h1>
+          <p class="hero-subtitle mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+            Practice your speaking step by step with simple interactive lessons.
+          </p>
+        </div>
+        <div class="hero-icon-wrap mx-auto lg:mx-0" aria-hidden="true">
+          <div class="hero-icon-shell">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 glass-card rounded-3xl border border-white/80 px-5 py-5 shadow-sm sm:px-6">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-lg font-bold text-slate-900">Your progress</p>
+          <p class="mt-1 text-sm text-slate-500">Your progress is saved on this device.</p>
+        </div>
+        <p id="course-progress-label" class="text-sm font-semibold text-slate-600">0 of 14 lessons completed</p>
+      </div>
+      <div class="mt-4 h-3 rounded-full bg-slate-200">
+        <div id="course-progress-bar" class="h-full w-0 rounded-full bg-indigo-600"></div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="section-kicker inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">
+            <i class="fa-solid fa-circle-info section-kicker-icon" aria-hidden="true"></i>
+            <span>Info</span>
+          </p>
+        </div>
+        <p class="text-sm font-semibold text-slate-500">T. Osama Saeed</p>
+      </div>
+
+      <section class="glass-card rounded-[2rem] border border-white/80 p-6 shadow-sm sm:p-7">
+        <div>
+          <article class="info-top-card rounded-[1.75rem] p-5 sm:p-6">
+            <div class="flex items-start gap-4">
+              <img class="info-top-avatar h-20 w-20 shrink-0" src="assets/profile-can.svg" alt="Can profile icon">
+              <div>
+                <p class="info-top-kicker text-xs font-bold uppercase tracking-[0.35em] text-white">Student</p>
+                <h3 class="info-top-name mt-2 text-2xl font-black text-slate-900">Can</h3>
+                <p class="info-top-copy mt-2 text-sm leading-7 text-slate-500">
+                  Private IELTS speaking classes with T. Osama Saeed.
+                </p>
+              </div>
+            </div>
+            <div class="info-top-meta-grid mt-6">
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Level</p>
+                <p class="info-top-meta-value mt-2 text-xl font-black">B2</p>
+              </article>
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Program Type</p>
+                <p class="info-top-meta-value mt-2 text-lg font-black">Private Classes</p>
+              </article>
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Purpose</p>
+                <p class="info-top-meta-value mt-2 text-lg font-black">IELTS Speaking</p>
+              </article>
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Schedule</p>
+                <p class="info-top-meta-value mt-2 text-lg font-black">5 days a week</p>
+              </article>
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Duration</p>
+                <p class="info-top-meta-value mt-2 text-lg font-black">One month</p>
+              </article>
+              <article class="info-top-meta-item rounded-3xl p-4">
+                <p class="info-top-meta-label text-xs font-bold uppercase tracking-[0.22em]">Teacher</p>
+                <p class="info-top-meta-value mt-2 text-lg font-black">T. Osama Saeed</p>
+              </article>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="status-summary-panel mt-5 rounded-[2rem] p-5 shadow-sm sm:p-6">
+        <div class="status-summary-grid">
+          <article class="status-summary-item">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-slate-600">Done</p>
+              <span class="status-pill" data-state="done">Done</span>
+            </div>
+            <p class="mt-3 text-3xl font-black text-slate-900">18</p>
+          </article>
+          <article class="status-summary-item">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-slate-600">Postponed</p>
+              <span class="status-pill" data-state="postponed">Postponed</span>
+            </div>
+            <p class="mt-3 text-3xl font-black text-slate-900">2</p>
+          </article>
+          <article class="status-summary-item">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-slate-600">Undone</p>
+              <span class="status-pill" data-state="undone">Undone</span>
+            </div>
+            <p class="mt-3 text-3xl font-black text-slate-900">0</p>
+          </article>
+          <article class="status-summary-item">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-slate-600">Make-up</p>
+              <span class="status-pill" data-state="makeup">Make-up</span>
+            </div>
+            <p class="mt-3 text-3xl font-black text-slate-900">2</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="calendar-shell mt-5 glass-card rounded-[2rem] border border-white/80 p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h3 class="calendar-title text-xl font-black sm:text-2xl">Study Calendar</h3>
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              A quick view of every day from your first class to your last one.
+            </p>
+          </div>
+          <div class="calendar-meta">
+            <span class="rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-700 sm:text-sm">20 class days</span>
+          </div>
+        </div>
+
+        <div class="calendar-legend mt-4">
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="done"></span>Done</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="postponed"></span>Postponed</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="undone"></span>Undone</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="makeup"></span>Make-up</span>
+          <span class="calendar-legend-item"><span class="calendar-dot" data-state="off"></span>No class</span>
+        </div>
+
+        <div class="study-month-grid mt-5">
+          <section class="study-month-track">
+            <div class="study-month-header">
+              <div>
+                <p class="study-month-label">March 2026</p>
+                <p class="study-month-subtitle">15 class days</p>
+              </div>
+            </div>
+
+            <div class="study-day-list">
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="done" title="Mon 9 Mar 2026, 05:00 P.M.">9</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="done" title="Tue 10 Mar 2026, 11:30 A.M.">10</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 11 Mar 2026, 11:30 A.M.">11</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="done" title="Thu 12 Mar 2026, 11:30 A.M.">12</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="done" title="Fri 13 Mar 2026, 11:30 A.M.">13</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 14 Mar 2026, no class">14</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 15 Mar 2026, no class">15</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="done" title="Mon 16 Mar 2026, 11:30 A.M.">16</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="done" title="Tue 17 Mar 2026, 11:30 A.M.">17</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 18 Mar 2026, 11:30 A.M.">18</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="done" title="Thu 19 Mar 2026, 11:30 A.M.">19</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="postponed" title="Fri 20 Mar 2026, postponed">20</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 21 Mar 2026, no class">21</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 22 Mar 2026, no class">22</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="done" title="Mon 23 Mar 2026, 11:30 A.M.">23</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="done" title="Tue 24 Mar 2026, 11:30 A.M.">24</span></span>
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 25 Mar 2026, 11:30 A.M.">25</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="done" title="Thu 26 Mar 2026, 11:30 A.M.">26</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="postponed" title="Fri 27 Mar 2026, postponed">27</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 28 Mar 2026, no class">28</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 29 Mar 2026, no class">29</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="done" title="Mon 30 Mar 2026, 11:30 A.M.">30</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="done" title="Tue 31 Mar 2026, 11:30 A.M.">31</span></span>
+            </div>
+          </section>
+
+          <section class="study-month-track">
+            <div class="study-month-header">
+              <div>
+                <p class="study-month-label">April 2026</p>
+                <p class="study-month-subtitle">5 class days</p>
+              </div>
+            </div>
+
+            <div class="study-day-list">
+              <span class="study-day-item"><span class="study-day-name">Wed</span><span class="study-day-dot" data-state="done" title="Wed 1 Apr 2026, 11:30 A.M.">1</span></span>
+              <span class="study-day-item"><span class="study-day-name">Thu</span><span class="study-day-dot" data-state="done" title="Thu 2 Apr 2026, 11:30 A.M.">2</span></span>
+              <span class="study-day-item"><span class="study-day-name">Fri</span><span class="study-day-dot" data-state="done" title="Fri 3 Apr 2026, 11:30 A.M.">3</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sat</span><span class="study-day-dot" data-state="off" title="Sat 4 Apr 2026, no class">4</span></span>
+              <span class="study-day-item"><span class="study-day-name">Sun</span><span class="study-day-dot" data-state="off" title="Sun 5 Apr 2026, no class">5</span></span>
+              <span class="study-day-item"><span class="study-day-name">Mon</span><span class="study-day-dot" data-state="makeup" title="Mon 6 Apr 2026, make-up class">6</span></span>
+              <span class="study-day-item"><span class="study-day-name">Tue</span><span class="study-day-dot" data-state="makeup" title="Tue 7 Apr 2026, make-up class">7</span></span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="upcoming-card mt-3 glass-card rounded-3xl border border-white/80 px-4 py-3 shadow-sm sm:px-5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p class="upcoming-copy text-sm font-semibold text-slate-700">
+            Next class: <span class="upcoming-time font-black text-slate-900">All the classes are done (09.03.2026 - 07.04.2026)</span>
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5">
+        <h2 class="section-kicker inline-flex items-center gap-3 text-2xl font-black sm:text-3xl">
+          <i class="fa-solid fa-book-open section-kicker-icon" aria-hidden="true"></i>
+          <span>Lessons</span>
+        </h2>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-indigo-200 p-6 shadow-md" data-lesson-id="lesson-1">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-xl font-black text-indigo-700">1</div>
+            <span class="status-pill" data-role="badge" data-state="live">Start Here</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Speaking Basics</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Learn the speaking format and the most important rules for better answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-indigo-600" data-role="status">Start with this lesson first.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson1.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-2">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">2</div>
+            <span class="status-pill" data-role="badge" data-state="live">Next</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Clear Answers</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practice clear sentences, one main idea, and stronger simple answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 1.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson2.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-3">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">3</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Developing Answers</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Make your answers longer, more organized, and more confident.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 2.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson3.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-4">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">4</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Speaking Feedback</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Review your band estimate, homework feedback, and next speaking targets.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 3.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 4.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-5">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">5</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Stronger Part 3 Answers</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Build clearer opinions, comparisons, advantages, and future ideas for better Part 3 answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 4.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 5.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-6">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">6</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Better Explanations</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practice causes, effects, problems, solutions, and more developed Part 3 answers.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 5.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson 6.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-7">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">7</div>
+            <span class="status-pill" data-role="badge" data-state="live">Then</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Natural Speaking</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Sound more natural, less robotic, and use stronger Band 6-7 speaking expressions.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Take this after Lesson 6.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 7.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-8">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">8</div>
+            <span class="status-pill" data-role="badge" data-state="live">Live</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Advanced Part 3</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Build longer Part 3 answers with clearer ideas, examples, and stronger smart development.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 8.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-9">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">9</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Part 2 Storytelling</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practise longer Part 2 answers with clear story order, better detail, and stronger development.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 9.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-10">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">10</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Natural Part 1 Fluency</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practise short, clear, natural Part 1 answers with better control, fluency, and confidence.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 10.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-11">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">11</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Full Speaking Mock</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Train with a full speaking mock and recovery strategies to stay calm and in control under pressure.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="lesson 11.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-12">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">12</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Full Mock Test</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Practise a full speaking mock test, check final gaps, and focus only on the biggest improvements.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 12.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-13">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">13</div>
+            <span class="status-pill" data-role="badge" data-state="live">New</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Part 3 Intensive</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Build stronger Part 3 control with clearer structure, safe ideas, and better answers for difficult questions.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 13.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="lesson-card glass-card flex h-full flex-col rounded-3xl border border-white/80 p-6 shadow-md" data-lesson-id="lesson-14">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-blue-700">14</div>
+            <span class="status-pill" data-role="badge" data-state="live">Final</span>
+          </div>
+          <h3 class="mt-5 text-2xl font-bold text-slate-900">Final Exam Readiness</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Review final exam strategy, calm control, and the last speaking reminders before the real test.
+          </p>
+          <p class="mt-3 text-sm font-semibold text-slate-500" data-role="status">Available now.</p>
+          <div class="mt-auto pt-6">
+            <a href="Lesson 14.html" data-role="action" class="inline-flex items-center justify-center rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-100">
+              Start Lesson <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5">
+        <h2 class="section-kicker inline-flex items-center gap-3 text-2xl font-black sm:text-3xl">
+          <i class="fa-solid fa-language section-kicker-icon" aria-hidden="true"></i>
+          <span>Vocabulary & Tasks</span>
+        </h2>
+      </div>
+
+      <section class="vocab-preview-shell glass-card rounded-[2rem] border border-white/80 p-6 shadow-sm sm:p-7">
+          <div class="grid gap-4 xl:grid-cols-3">
+            <article class="vocab-week-card">
+              <div class="vocab-week-head">
+                <div>
+                  <p class="vocab-week-kicker">Week 1</p>
+                  <h3 class="vocab-week-title">Foundation</h3>
+                </div>
+                <span class="vocab-week-pill">7 days</span>
+              </div>
+              <div class="vocab-day-grid">
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=1" class="vocab-day-link"><span class="vocab-day-name">Sun</span><span class="vocab-day-number">1</span></a><a href="Advanced Practice.html?day=1" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=2" class="vocab-day-link"><span class="vocab-day-name">Mon</span><span class="vocab-day-number">2</span></a><a href="Advanced Practice.html?day=2" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=3" class="vocab-day-link"><span class="vocab-day-name">Tue</span><span class="vocab-day-number">3</span></a><a href="Advanced Practice.html?day=3" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=4" class="vocab-day-link"><span class="vocab-day-name">Wed</span><span class="vocab-day-number">4</span></a><a href="Advanced Practice.html?day=4" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=5" class="vocab-day-link"><span class="vocab-day-name">Thu</span><span class="vocab-day-number">5</span></a><a href="Advanced Practice.html?day=5" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=6" class="vocab-day-link"><span class="vocab-day-name">Fri</span><span class="vocab-day-number">6</span></a><a href="Advanced Practice.html?day=6" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=7" class="vocab-day-link"><span class="vocab-day-name">Sat</span><span class="vocab-day-number">7</span></a><a href="Advanced Practice.html?day=7" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+              </div>
+            </article>
+
+            <article class="vocab-week-card">
+              <div class="vocab-week-head">
+                <div>
+                  <p class="vocab-week-kicker">Week 2</p>
+                  <h3 class="vocab-week-title">Development</h3>
+                </div>
+                <span class="vocab-week-pill">7 days</span>
+              </div>
+              <div class="vocab-day-grid">
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=8" class="vocab-day-link"><span class="vocab-day-name">Sun</span><span class="vocab-day-number">8</span></a><a href="Advanced Practice.html?day=8" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=9" class="vocab-day-link"><span class="vocab-day-name">Mon</span><span class="vocab-day-number">9</span></a><a href="Advanced Practice.html?day=9" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=10" class="vocab-day-link"><span class="vocab-day-name">Tue</span><span class="vocab-day-number">10</span></a><a href="Advanced Practice.html?day=10" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=11" class="vocab-day-link"><span class="vocab-day-name">Wed</span><span class="vocab-day-number">11</span></a><a href="Advanced Practice.html?day=11" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=12" class="vocab-day-link"><span class="vocab-day-name">Thu</span><span class="vocab-day-number">12</span></a><a href="Advanced Practice.html?day=12" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=13" class="vocab-day-link"><span class="vocab-day-name">Fri</span><span class="vocab-day-number">13</span></a><a href="Advanced Practice.html?day=13" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=14" class="vocab-day-link"><span class="vocab-day-name">Sat</span><span class="vocab-day-number">14</span></a><a href="Advanced Practice.html?day=14" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+              </div>
+            </article>
+
+            <article class="vocab-week-card">
+              <div class="vocab-week-head">
+                <div>
+                  <p class="vocab-week-kicker">Week 3</p>
+                  <h3 class="vocab-week-title">Final Push</h3>
+                </div>
+                <span class="vocab-week-pill">7 days</span>
+              </div>
+              <div class="vocab-day-grid">
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=15" class="vocab-day-link"><span class="vocab-day-name">Sun</span><span class="vocab-day-number">15</span></a><a href="Advanced Practice.html?day=15" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=16" class="vocab-day-link"><span class="vocab-day-name">Mon</span><span class="vocab-day-number">16</span></a><a href="Advanced Practice.html?day=16" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=17" class="vocab-day-link"><span class="vocab-day-name">Tue</span><span class="vocab-day-number">17</span></a><a href="Advanced Practice.html?day=17" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=18" class="vocab-day-link"><span class="vocab-day-name">Wed</span><span class="vocab-day-number">18</span></a><a href="Advanced Practice.html?day=18" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=19" class="vocab-day-link"><span class="vocab-day-name">Thu</span><span class="vocab-day-number">19</span></a><a href="Advanced Practice.html?day=19" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=20" class="vocab-day-link"><span class="vocab-day-name">Fri</span><span class="vocab-day-number">20</span></a><a href="Advanced Practice.html?day=20" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+                <div class="vocab-day-stack"><a href="Vocabulary & Tasks.html?day=21" class="vocab-day-link"><span class="vocab-day-name">Sat</span><span class="vocab-day-number">21</span></a><a href="Advanced Practice.html?day=21" class="practice-day-link-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Practice</span></a></div>
+              </div>
+            </article>
+          </div>
+      </section>
+    </section>
+
+    <section class="mt-8">
+      <div class="mb-5">
+        <h2 class="section-kicker inline-flex items-center gap-3 text-2xl font-black sm:text-3xl">
+          <i class="fa-solid fa-shuffle section-kicker-icon" aria-hidden="true"></i>
+          <span>Spin Practice</span>
+        </h2>
+      </div>
+
+      <section class="glass-card rounded-[2rem] border border-white/80 p-6 shadow-sm sm:p-7">
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-indigo-500">Random IELTS Practice</p>
+            <h3 class="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">Spin for a speaking prompt</h3>
+            <p class="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+              Open a random Part 1, Part 2, or Part 3 prompt and practise with filters, timer, phrases, and model structure support.
+            </p>
+          </div>
+          <div class="flex shrink-0">
+            <a href="spin.html" class="inline-flex items-center justify-center rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-indigo-700">
+              Open Spin <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="mt-10 pb-2 text-center text-sm text-slate-500">
+      <p class="font-semibold text-slate-600">T. Osama Saeed</p>
+    </footer>
+
+  </main>
+  <script src="assets/pwa.js?v=20260403" defer></script>
+</body>
+</html>
+
